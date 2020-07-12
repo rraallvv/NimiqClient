@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NimiqClient  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="NimiqClient  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">NimiqClient 0.0.2 Docs</a> (100% documented)</p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">NimiqClient Reference</a>
+        <img id="carat" src="img/carat.png" />
+        NimiqClient  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/NimiqClient.html">NimiqClient</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AccountType.html">AccountType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ConsensusState.html">ConsensusState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/Error.html">Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/LogLevel.html">LogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/PeerAddressState.html">PeerAddressState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/PeerConnectionState.html">PeerConnectionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/PeerStateCommand.html">PeerStateCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/PoolConnectionState.html">PoolConnectionState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Account.html">Account</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Block.html">Block</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BlockTemplate.html">BlockTemplate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BlockTemplateBody.html">BlockTemplateBody</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/BlockTemplateHeader.html">BlockTemplateHeader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Config.html">Config</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HTLC.html">HTLC</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/MempoolInfo.html">MempoolInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/OutgoingTransaction.html">OutgoingTransaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Peer.html">Peer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/SyncStatus.html">SyncStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Transaction.html">Transaction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TransactionReceipt.html">TransactionReceipt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/VestingContract.html">VestingContract</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Wallet.html">Wallet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/WorkInstructions.html">WorkInstructions</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:11NimiqClient7Addressa">Address</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:11NimiqClient4Hasha">Hash</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='nimiq-swift-client' class='heading'>Nimiq Swift Client</h1>
+
+<p><a href="https://travis-ci.org/rraallvv/NimiqClientSwift"><img src="https://travis-ci.org/rraallvv/NimiqClientSwift.svg?branch=master" alt="Build Status"></a>
+<img src="https://img.shields.io/badge/Dependency%20Manager-Swift%20PM-orange" alt="Swift PM">
+<a href="https://cocoapods.org/pods/NimiqClient"><img src="https://img.shields.io/cocoapods/v/NimiqClient" alt="Cocoapods version"></a>
+<a href="http://cocoapods.org/pods/NimiqClient"><img src="https://img.shields.io/cocoapods/p/NimiqClient" alt="Platforms"></a></p>
+
+<blockquote>
+<p>Swift implementation of the Nimiq RPC client specs.</p>
+</blockquote>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>Send requests to a Nimiq node with <code><a href="Classes/NimiqClient.html">NimiqClient</a></code> object.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">config</span> <span class="o">=</span> <span class="kt">Config</span><span class="p">(</span>
+    <span class="nv">scheme</span><span class="p">:</span> <span class="s">"http"</span><span class="p">,</span>
+    <span class="nv">host</span><span class="p">:</span> <span class="s">"127.0.0.1"</span><span class="p">,</span>
+    <span class="nv">port</span><span class="p">:</span> <span class="mi">8648</span><span class="p">,</span>
+    <span class="nv">user</span><span class="p">:</span> <span class="s">"luna"</span><span class="p">,</span>
+    <span class="nv">password</span><span class="p">:</span> <span class="s">"moon"</span>
+<span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">client</span> <span class="o">=</span> <span class="kt">NimiqClient</span><span class="p">(</span><span class="nv">config</span><span class="p">:</span> <span class="n">config</span><span class="p">)</span>
+</code></pre>
+
+<p>Once the client have been set up, we can call the methodes with the appropiate arguments to make requests to the Nimiq node.</p>
+
+<p>When no <code>config</code> object is passed in the initialization it will use defaults for the Nimiq node.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">client</span> <span class="o">=</span> <span class="kt">NimiqClient</span><span class="p">()</span>
+
+<span class="c1">// make rpc call to get the block number</span>
+<span class="k">let</span> <span class="nv">blockNumber</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="nf">blockNumber</span><span class="p">()</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">blockNumber</span><span class="p">)</span> <span class="c1">// displays the block number, for example 748883</span>
+</code></pre>
+<h2 id='api' class='heading'>API</h2>
+
+<p>The complete <a href="docs">API documentation</a> is available in the <code>/docs</code> folder.</p>
+
+<p>Check out the <a href="https://github.com/nimiq/core-js/wiki/JSON-RPC-API">Nimiq RPC specs</a> for behind the scene RPC calls.</p>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+
+<p>The recommended way to install Nimiq Swift Client is via Swift Package Manager (SPM). SPM is a dependency management tool built-in in Xcode that
+allows you to add Swift packages as dependencies directly from the IDE.</p>
+
+<p>From your project or workspace on Xcode Go to <strong>File &gt; Swift Packages &gt; Add Package Dependency</strong>. If it&rsquo;s a workspace select the project to include de package dependency in. Then enter this package&rsquo;s repository URL (like this <a href="https://github.com/rraallvv/NimiqClientSwift">https://github.com/rraallvv/NimiqClientSwift</a>). Select a version number from thos available for the pacakge and click next. Then select the product target to include the dependency in.</p>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+
+<p>Alternatively, you can install Nimiq Swift Client using CocoaPods. CocoaPods is a command line interface dependency management tool for Xcode projects.</p>
+
+<p>Install CocoaPods if you haven&rsquo;t done so:</p>
+<pre class="highlight shell"><code><span class="c"># Install CocoaPods</span>
+<span class="nv">$ </span><span class="nb">sudo </span>gem <span class="nb">install </span>cocoapods
+</code></pre>
+
+<p>To enable CocoaPods in your project, close Xcode and in your project directory run:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>pod init
+</code></pre>
+
+<p>Then you can add Nimiq Swift Client as a dependency modifying the created <code>Podfile</code>. To open the file for editing run <code>open -a Xcode Podfile</code> from the command line and the edit the file like so:</p>
+<pre class="highlight shell"><code>target <span class="s2">"MyApp"</span> <span class="k">do
+    </span>pod <span class="s1">'NimiqClient'</span>
+end
+</code></pre>
+
+<p>Finally install all the dependencies using CocoaPods from the command line: </p>
+<pre class="highlight shell"><code>pod <span class="nb">install</span>
+</code></pre>
+
+<p>You can find out more on how to install CocoaPods and how to configure your Xcode project for installing dependencies at <a href="https://cocoapods.org">CocoaPods.org</a>.</p>
+<h2 id='contributions' class='heading'>Contributions</h2>
+
+<p>This implementation was originally contributed by <a href="https://github.com/rraallvv/">rraallvv</a>.</p>
+
+<p>Please send your contributions as pull requests.</p>
+
+<p>Refer to the <a href="https://github.com/rraallvv/NimiqClientSwift/issues">issue tracker</a> for ideas.</p>
+<h3 id='develop' class='heading'>Develop</h3>
+
+<p>After cloning the repository, open the workspace file in NimiqClient/NimiqClient.xcworkspace instead of the project file.</p>
+
+<p>All done, happy coding!</p>
+<h3 id='testing' class='heading'>Testing</h3>
+
+<p>Tests are stored in the <code>/Tests</code> folder and can be run from Xcode.</p>
+<h3 id='documentation' class='heading'>Documentation</h3>
+
+<p>The documentation is generated automatically running Jazzy from the repository root directory. To install Jazzy run:</p>
+<pre class="highlight plaintext"><code>$ gem install jazzy
+</code></pre>
+
+<p>To generate the documentation run:</p>
+<pre class="highlight plaintext"><code>$ jazzy
+</code></pre>
+<h2 id='license' class='heading'>License</h2>
+
+<p><a href="LICENSE">MIT</a></p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://github.com/rraallvv/NimiqClientSwift" target="_blank" rel="external">Nimiq Comunity</a>. All rights reserved. (Last updated: 2020-07-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
