@@ -1,5 +1,5 @@
 //
-//  Car.swift
+//  NimiqJSONRPCClient.swift
 //  NimiqJSONRPCClient
 //
 //  Created by Rhody Lugo on 7/12/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class Car: CustomStringConvertible {
+public class NimiqJSONRPCClient: CustomStringConvertible {
 
     var name: String
     var miles: Int
@@ -23,7 +23,7 @@ public class Car: CustomStringConvertible {
     }
 
     public var description: String {
-        return "Car '\(name)' has \(miles) miles."
+        return "NimiqJSONRPCClient '\(name)' has \(miles) miles."
     }
     
 }
