@@ -20,31 +20,40 @@ public enum AccountType: Int, Decodable {
     case htlc = 2
 }
 
-public class Account: Decodable {
+public struct Account: Decodable {
     let id: String
     let address: String
     let balance: Int
     let type: AccountType
 }
 
-public class VestingContract : Account {
-    let owner: String? = nil
-    let ownerAddress: String? = nil
-    let vestingStart: Int? = nil
-    let vestingStepBlocks: Int? = nil
-    let vestingStepAmount: Int? = nil
-    let vestingTotalAmount: Int? = nil
+public struct VestingContract : Decodable {
+    let id: String
+    let address: String
+    let balance: Int
+    let type: AccountType
+    let owner: String
+    let ownerAddress: String
+    let vestingStart: Int
+    let vestingStepBlocks: Int
+    let vestingStepAmount: Int
+    let vestingTotalAmount: Int
 }
 
-public class HashedTimeLockedContract : Account {
-    let sender: String? = nil
-    let senderAddress: String? = nil
-    let recipient: String? = nil
-    let recipientAddress: String? = nil
-    let hashRoot: String? = nil
-    let hashCount: Int? = nil
-    let timeout: Int? = nil
-    let totalAmount: Int? = nil
+public struct HashedTimeLockedContract : Decodable {
+    let id: String
+    let address: String
+    let balance: Int
+    let type: AccountType
+    let sender: String
+    let senderAddress: String
+    let recipient: String
+    let recipientAddress: String
+    let hashRoot: String
+    let hashAlgorithm: Int
+    let hashCount: Int
+    let timeout: Int
+    let totalAmount: Int
 }
 
 enum RawAccount : Decodable {
@@ -70,12 +79,12 @@ enum RawAccount : Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         do {
-            self = .account(try container.decode(Account.self))
-        } catch DecodingError.typeMismatch {
+            self = .hashedTimeLockedContract(try container.decode(HashedTimeLockedContract.self))
+        } catch {
             do {
                 self = .vestingContract(try container.decode(VestingContract.self))
             } catch {
-                self = .hashedTimeLockedContract(try container.decode(HashedTimeLockedContract.self))
+                self = .account(try container.decode(Account.self))
             }
         }
     }
@@ -162,7 +171,7 @@ public struct Block : Decodable {
         size = try container.decode(Int.self, forKey: .size)
         do {
             transactions = try container.decode([Transaction].self, forKey: .transactions)
-        } catch DecodingError.typeMismatch {
+        } catch {
             transactions = try container.decode([Hash].self, forKey: .transactions)
         }
     }
@@ -278,7 +287,7 @@ enum HashOrTransaction : Decodable {
         let container = try decoder.singleValueContainer()
         do {
             self = .transaction(try container.decode(Transaction.self))
-        } catch DecodingError.typeMismatch {
+        } catch {
             self = .hash(try container.decode(Hash.self))
         }
     }
@@ -354,7 +363,7 @@ enum SyncStatusOrBool : Decodable {
         let container = try decoder.singleValueContainer()
         do {
             self = .syncStatus(try container.decode(SyncStatus.self))
-        } catch DecodingError.typeMismatch {
+        } catch {
             self = .bool(try container.decode(Bool.self))
         }
     }
