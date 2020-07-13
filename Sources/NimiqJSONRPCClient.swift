@@ -223,6 +223,14 @@ enum HashOrTransaction : Decodable {
     }
 }
 
+public enum PeerAddressState : Int, Decodable {
+    case new = 1
+    case established = 2
+    case tried = 3
+    case failed = 4
+    case banned = 5
+}
+
 public enum PeerConnectionState : Int, Decodable {
     case new = 1
     case connecting = 2
@@ -235,7 +243,7 @@ public enum PeerConnectionState : Int, Decodable {
 public struct Peer : Decodable {
     let id: String
     let address: String
-    let addressState: Int
+    let addressState: PeerAddressState
     let connectionState: PeerConnectionState?
     let version: Int?
     let timeOffset: Int?
@@ -284,18 +292,30 @@ enum SyncStatusOrBool : Decodable {
     }
 }
 
+public protocol URLSessionProtocol {
+    typealias DataTaskResult = (Data?, URLResponse?, Error?) -> Void
+    func dataTask(with request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol
+}
+
+public protocol URLSessionDataTaskProtocol {
+    func resume()
+}
+
 public class NimiqJSONRPCClient {
     
     private var id: Int = 0
     
-    private var url: String
+    private let url: String
     
+    public let session: URLSessionProtocol
+        
     convenience init(config c: Config) {
-        self.init(scheme: c.scheme, user: c.user, password: c.password, host: c.host, port: c.port)
+        self.init(scheme: c.scheme, user: c.user, password: c.password, host: c.host, port: c.port, session: URLSession.shared as! URLSessionProtocol)
     }
     
-    init(scheme: String, user: String, password: String, host: String, port: Int){
-        url = "\(scheme)://\(user):\(password)@\(host):\(port)"
+    init(scheme: String, user: String, password: String, host: String, port: Int, session: URLSessionProtocol){
+        self.url = "\(scheme)://\(user):\(password)@\(host):\(port)"
+        self.session = session
     }
     
     private func fetch<T:Decodable>(method: String, params: [Any], completionHandler: ((T?, Error?) -> Void)? = nil) -> T? {
@@ -324,7 +344,7 @@ public class NimiqJSONRPCClient {
                 semaphore = DispatchSemaphore(value: 0)
             }
                         
-            let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
+            let task = session.dataTask(with: request, completionHandler: { data, response, error in
                 // Check the response
                 //print(response)
                 
