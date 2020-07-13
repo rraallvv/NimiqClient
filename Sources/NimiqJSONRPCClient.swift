@@ -1,5 +1,6 @@
 import Foundation
 
+// used for convenience initializer
 public struct Config {
     let scheme: String
     let host: String
@@ -284,30 +285,25 @@ enum SyncStatusOrBool : Decodable {
     }
 }
 
-public protocol URLSessionProtocol {
-    typealias DataTaskResult = (Data?, URLResponse?, Error?) -> Void
-    func dataTask(with request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol
-}
-
-public protocol URLSessionDataTaskProtocol {
-    func resume()
-}
-
 public class NimiqJSONRPCClient {
     
     private var id: Int = 0
     
     private let url: String
     
-    public let session: URLSessionProtocol
+    private let session: URLSession
         
     convenience init(config c: Config) {
-        self.init(scheme: c.scheme, user: c.user, password: c.password, host: c.host, port: c.port, session: URLSession.shared as! URLSessionProtocol)
+        self.init(scheme: c.scheme, user: c.user, password: c.password, host: c.host, port: c.port)
     }
     
-    init(scheme: String, user: String, password: String, host: String, port: Int, session: URLSessionProtocol){
+    init(scheme: String, user: String, password: String, host: String, port: Int, session: URLSession? = nil){
         self.url = "\(scheme)://\(user):\(password)@\(host):\(port)"
-        self.session = session
+        if session != nil {
+            self.session = session!
+        } else {
+            self.session = URLSession.shared
+        }
     }
     
     private func fetch<T:Decodable>(method: String, params: [Any], completionHandler: ((_ result: T?, _ error: Error?) -> Void)? = nil) -> T? {

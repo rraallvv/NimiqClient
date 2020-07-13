@@ -1,32 +1,29 @@
 import XCTest
 
-class MockURLSession: URLSessionProtocol {
+class URLProtocolStub: URLProtocol {
+    // test data
+    static var testData: Data?
 
-    var nextDataTask = MockURLSessionDataTask()
-    var nextData: Data?
-    var nextError: Error?
-    
-    private (set) var lastURL: URL?
-    
-    func successHttpURLResponse(request: URLRequest) -> URLResponse {
-        return HTTPURLResponse(url: request.url!, statusCode: 200, httpVersion: "HTTP/1.1", headerFields: nil)!
-    }
-    
-    func dataTask(with request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTaskProtocol {
-        lastURL = request.url
-        
-        completionHandler(nextData, successHttpURLResponse(request: request), nextError)
-        return nextDataTask
+    // handle all types of request
+    override class func canInit(with request: URLRequest) -> Bool {
+        return true
     }
 
-}
-
-class MockURLSessionDataTask: URLSessionDataTaskProtocol {
-    private (set) var resumeWasCalled = false
-    
-    func resume() {
-        resumeWasCalled = true
+    // send back the request as is
+    override class func canonicalRequest(for request: URLRequest) -> URLRequest {
+        return request
     }
+
+    override func startLoading() {
+        // load test data
+        self.client?.urlProtocol(self, didLoad: URLProtocolStub.testData!)
+
+        // request has finished
+        self.client?.urlProtocolDidFinishLoading(self)
+    }
+
+    // doesn't need to do anything
+    override func stopLoading() { }
 }
 
 class NimiqJSONRPCClientTests: XCTestCase {
@@ -35,7 +32,17 @@ class NimiqJSONRPCClientTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        client = NimiqJSONRPCClient(scheme: "http", user: "user", password: "password", host: "127.0.0.1", port: 8648, session: MockURLSession())
+
+        // set up a configuration for the stub
+        let config = URLSessionConfiguration.ephemeral
+        config.protocolClasses = [URLProtocolStub.self]
+
+        // create URLSession from configuration
+        let session = URLSession(configuration: config)
+
+        // init our JSON RPC client with that
+        client = NimiqJSONRPCClient(scheme: "http", user: "user", password: "password", host: "127.0.0.1", port: 8648, session: session)
+        
     }
     
     override func tearDown() {
@@ -63,7 +70,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
         
         let actualData = client.accounts()!
         
@@ -91,7 +98,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
         
         let actualData = client.blockNumber()!
         
@@ -107,7 +114,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
         
         let actualData = client.consensus()!
         
@@ -123,7 +130,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
         
         let actualData = client.constant(constant: "BaseConsensus.MAX_ATTEMPTS_TO_FETCH", value: 10)
         
@@ -143,7 +150,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
         
         let actualData = client.createAccount()!
         
@@ -161,7 +168,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
         
         let actualData = client.createRawTransaction(transaction: OutgoingTransaction(
             from: "NQ94 VESA PKTA 9YQ0 XKGC HVH0 Q9DF VSFU STSP",
@@ -187,7 +194,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
         
         let actualData = client.getAccount(account: "ad25610feb43d75307763d3f010822a757027429")!
         
@@ -206,7 +213,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
         
         let actualData = client.getBalance(account: "ad25610feb43d75307763d3f010822a757027429")!
         
@@ -238,7 +245,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
         
         let actualData = client.getBlockByHash(hash: "14c91f6d6f3a0b62271e546bb09461231ab7e4d1ddc2c3e1b93de52d48a1da87", fullTransactions: false)!
         
@@ -284,7 +291,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
         
         let actualData = client.getBlockByNumber(number: 20, fullTransactions: false)!
         
@@ -337,7 +344,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.getBlockTemplate(address: "NQ46 NTNU QX94 MVD0 BBT0 GXAR QUHK VGNF 39ET", extraData: "")!
 
@@ -372,7 +379,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.getBlockTransactionCountByHash(hash: "dfe7d166f2c86bd10fa4b1f29cd06c13228f893167ce9826137c85758645572f")!
 
@@ -388,7 +395,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.getBlockTransactionCountByNumber(number: 76415)!
 
@@ -419,7 +426,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.getTransactionByBlockHashAndIndex(hash: "dfe7d166f2c86bd10fa4b1f29cd06c13228f893167ce9826137c85758645572f", index: 20)!
 
@@ -463,7 +470,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.getTransactionByBlockNumberAndIndex(number: 76415, index: 20)!
 
@@ -507,7 +514,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.getTransactionByHash(hash: "465a63b73aa0b9b54b777be9a585ea00b367a17898ad520e1f22cb2c986ff554")!
 
@@ -543,7 +550,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.getTransactionReceipt(hash: "465a63b73aa0b9b54b777be9a585ea00b367a17898ad520e1f22cb2c986ff554")!
 
@@ -581,7 +588,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.getTransactionsByAddress(address: "NQ69 9A4A MB83 HXDQ 4J46 BH5R 4JFF QMA9 C3GN")!
 
@@ -617,7 +624,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.getWork(address: "NQ46 NTNU QX94 MVD0 BBT0 GXAR QUHK VGNF 39ET", extraData: "")!
         
@@ -636,7 +643,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.hashrate()!
         
@@ -652,7 +659,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.log(tag: "BaseConsensus", level: LogLevel.debug)!
         
@@ -676,7 +683,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.mempool()!
         
@@ -699,7 +706,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         var actualData = client.mempoolContent()!
         
@@ -737,7 +744,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
         }
         """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         actualData = client.mempoolContent(fullTransactions: true)!
         
@@ -775,7 +782,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.minerAddress()!
         
@@ -791,7 +798,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.minerThreads()!
         
@@ -807,7 +814,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.minFeePerByte()!
         
@@ -823,7 +830,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.mining()!
         
@@ -839,7 +846,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.peerCount()!
         
@@ -873,7 +880,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.peerList()!
         
@@ -917,7 +924,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.peerState(address: "wss://seed1.nimiq-testnet.com:8080/b99034c552e9c0fd34eb95c1cdf17f5e")!
         
@@ -942,7 +949,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.pool()!
         
@@ -958,7 +965,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.poolConfirmedBalance()!
         
@@ -974,7 +981,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.poolConnectionState()!
         
@@ -990,7 +997,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.sendRawTransaction(transaction: "010000...abcdef")
         
@@ -1006,7 +1013,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.sendTransaction(transaction: OutgoingTransaction(
             from: "NQ94 VESA PKTA 9YQ0 XKGC HVH0 Q9DF VSFU STSP",
@@ -1026,7 +1033,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         let actualData = client.submitBlock("000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000f6ba2bbf7e1478a209057000471d73fbdc28df0b717747d929cfde829c4120f62e02da3d162e20fa982029dbde9cc20f6b431ab05df1764f34af4c62a4f2b33f1f010000000000015ac3185f000134990001000000000000000000000000000000000000000007546573744e657400000000")
         
@@ -1046,7 +1053,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
 
         var actualData = client.syncing()!
         
@@ -1064,7 +1071,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
             }
             """.data(using: .utf8)
         
-        (client.session as! MockURLSession).nextData = expectedData
+        URLProtocolStub.testData = expectedData
         
         actualData = client.syncing()!
 
