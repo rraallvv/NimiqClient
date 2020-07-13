@@ -52,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E42A66B024BC1F4300ACBAD4 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = .travis.yml; path = ../../.travis.yml; sourceTree = "<group>"; };
+		E42A66B124BC1F4E00ACBAD4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../../.gitignore; sourceTree = "<group>"; };
 		E4B63EDD24BBA877009AAC80 /* NimiqJSONRPCClientiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NimiqJSONRPCClientiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B63EDF24BBA877009AAC80 /* NimiqJSONRPCClientiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NimiqJSONRPCClientiOS.h; sourceTree = "<group>"; };
 		E4B63EE024BBA877009AAC80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +125,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E42A66AF24BC1F2800ACBAD4 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				E42A66B024BC1F4300ACBAD4 /* .travis.yml */,
+				E42A66B124BC1F4E00ACBAD4 /* .gitignore */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		E4B63EB424BBA4E6009AAC80 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +145,7 @@
 				E4B63F0524BBA930009AAC80 /* NimiqJSONRPCClientmacOSTests */,
 				E4B63F1624BBA963009AAC80 /* NimiqJSONRPCClienttvOS */,
 				E4B63F2124BBA965009AAC80 /* NimiqJSONRPCClienttvOSTests */,
+				E42A66AF24BC1F2800ACBAD4 /* Misc */,
 				E4B63EBF24BBA4E6009AAC80 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -210,7 +222,8 @@
 			children = (
 				E4BFF42524BBAE7F00A915D4 /* NimiqJSONRPCClient.swift */,
 			);
-			path = Sources;
+			name = Sources;
+			path = ../Sources;
 			sourceTree = "<group>";
 		};
 		E4BFF42924BBAF5900A915D4 /* Tests */ = {
@@ -218,7 +231,8 @@
 			children = (
 				E4BFF42A24BBAFA700A915D4 /* NimiqJSONRPCClientTests.swift */,
 			);
-			path = Tests;
+			name = Tests;
+			path = ../Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -676,7 +690,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.teknologika.NimiqJSONRPCClientiOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -703,7 +717,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.teknologika.NimiqJSONRPCClientiOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -766,7 +780,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.teknologika.NimiqJSONRPCClientmacOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -793,7 +807,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.teknologika.NimiqJSONRPCClientmacOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -857,7 +871,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.teknologika.NimiqJSONRPCClienttvOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -884,7 +898,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.teknologika.NimiqJSONRPCClienttvOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
+				SKIP_INSTALL = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 13.4;
