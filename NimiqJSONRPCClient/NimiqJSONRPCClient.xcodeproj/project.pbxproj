@@ -71,10 +71,6 @@
 		C5A02AC3BEA201D0C3457982 /* Pods-NimiqJSONRPCClientiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimiqJSONRPCClientiOS.debug.xcconfig"; path = "Target Support Files/Pods-NimiqJSONRPCClientiOS/Pods-NimiqJSONRPCClientiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CFA7DB40FAA73B978A0C4CDE /* Pods-NimiqJSONRPCClientmacOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimiqJSONRPCClientmacOSTests.release.xcconfig"; path = "Target Support Files/Pods-NimiqJSONRPCClientmacOSTests/Pods-NimiqJSONRPCClientmacOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		D15609BEEC1DD27E260773FA /* Pods_NimiqJSONRPCClientmacOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimiqJSONRPCClientmacOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E42A66B024BC1F4300ACBAD4 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
-		E42A66B124BC1F4E00ACBAD4 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
-		E42A66B224BC248D00ACBAD4 /* NimiqJSONRPCClient.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = NimiqJSONRPCClient.podspec; path = ../NimiqJSONRPCClient.podspec; sourceTree = "<group>"; };
-		E42A66B324BC291600ACBAD4 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		E4B63EDD24BBA877009AAC80 /* NimiqJSONRPCClientiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NimiqJSONRPCClientiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B63EDF24BBA877009AAC80 /* NimiqJSONRPCClientiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NimiqJSONRPCClientiOS.h; sourceTree = "<group>"; };
 		E4B63EE024BBA877009AAC80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -192,10 +188,6 @@
 		E4B63EB424BBA4E6009AAC80 = {
 			isa = PBXGroup;
 			children = (
-				E42A66B024BC1F4300ACBAD4 /* .travis.yml */,
-				E42A66B124BC1F4E00ACBAD4 /* .gitignore */,
-				E42A66B224BC248D00ACBAD4 /* NimiqJSONRPCClient.podspec */,
-				E42A66B324BC291600ACBAD4 /* Package.swift */,
 				E4BFF42424BBAE3B00A915D4 /* Sources */,
 				E4BFF42924BBAF5900A915D4 /* Tests */,
 				E4B63EDE24BBA877009AAC80 /* NimiqJSONRPCClientiOS */,

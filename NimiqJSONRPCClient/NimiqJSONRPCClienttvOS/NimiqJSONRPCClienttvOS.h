@@ -1,11 +1,3 @@
-//
-//  NimiqJSONRPCClienttvOS.h
-//  NimiqJSONRPCClienttvOS
-//
-//  Created by Rhody Lugo on 7/12/20.
-//  Copyright © 2020 Rhody Lugo. All rights reserved.
-//
-
 #import <Foundation/Foundation.h>
 
 //! Project version number for NimiqJSONRPCClienttvOS.

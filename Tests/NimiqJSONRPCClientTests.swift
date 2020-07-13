@@ -1,11 +1,3 @@
-//
-//  NimiqJSONRPCClientTests.swift
-//  NimiqJSONRPCClient
-//
-//  Created by Rhody Lugo on 7/12/20.
-//  Copyright © 2020 Rhody Lugo. All rights reserved.
-//
-
 import XCTest
 
 class MockURLSession: URLSessionProtocol {
