@@ -20,10 +20,65 @@ public enum AccountType: Int, Decodable {
     case htlc = 2
 }
 
-public struct Account: Decodable {
-    let id, address: String
+public class Account: Decodable {
+    let id: String
+    let address: String
     let balance: Int
     let type: AccountType
+}
+
+public class VestingContract : Account {
+    let owner: String? = nil
+    let ownerAddress: String? = nil
+    let vestingStart: Int? = nil
+    let vestingStepBlocks: Int? = nil
+    let vestingStepAmount: Int? = nil
+    let vestingTotalAmount: Int? = nil
+}
+
+public class HashedTimeLockedContract : Account {
+    let sender: String? = nil
+    let senderAddress: String? = nil
+    let recipient: String? = nil
+    let recipientAddress: String? = nil
+    let hashRoot: String? = nil
+    let hashCount: Int? = nil
+    let timeout: Int? = nil
+    let totalAmount: Int? = nil
+}
+
+enum RawAccount : Decodable {
+    case account(Account)
+    case vestingContract(VestingContract)
+    case hashedTimeLockedContract(HashedTimeLockedContract)
+    
+    var value: Any {
+         switch self {
+         case .account(let value):
+             return value
+         case .vestingContract(let value):
+             return value
+         case .hashedTimeLockedContract(let value):
+             return value
+         }
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case account, vestingContract, hashedTimeLockedContract
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        do {
+            self = .account(try container.decode(Account.self))
+        } catch DecodingError.typeMismatch {
+            do {
+                self = .vestingContract(try container.decode(VestingContract.self))
+            } catch {
+                self = .hashedTimeLockedContract(try container.decode(HashedTimeLockedContract.self))
+            }
+        }
+    }
 }
 
 public enum ConsensusState: String, Decodable {
@@ -385,8 +440,13 @@ public class NimiqJSONRPCClient {
         return result
     }
     
-    @discardableResult public func accounts(completionHandler: ((_ result: [Account]?, _ error: Error?) -> Void)? = nil) -> [Account]? {
-        return fetch(method: "accounts", params: [], completionHandler: completionHandler)
+    @discardableResult public func accounts(completionHandler: ((_ result: [Any]?, _ error: Error?) -> Void)? = nil) -> [Any]? {
+        let result: [RawAccount] = fetch(method: "accounts", params: [], completionHandler: completionHandler)!
+        var converted: [Any] = [Any]()
+        for rawAccount in result {
+            converted.append(rawAccount.value)
+        }
+        return converted
     }
     
     @discardableResult public func blockNumber(completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
@@ -430,8 +490,9 @@ public class NimiqJSONRPCClient {
         return fetch(method: "createRawTransaction", params: [params], completionHandler: completionHandler)
     }
     
-    @discardableResult public func getAccount(account: Address, completionHandler: ((_ result: Account?, _ error: Error?) -> Void)? = nil) -> Account? {
-        return fetch(method: "getAccount", params: [account], completionHandler: completionHandler)
+    @discardableResult public func getAccount(account: Address, completionHandler: ((_ result: Any?, _ error: Error?) -> Void)? = nil) -> Any? {
+        let result: RawAccount = fetch(method: "getAccount", params: [account], completionHandler: completionHandler)!
+        return result.value
     }
 
     @discardableResult public func getBalance(account: Address, completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {

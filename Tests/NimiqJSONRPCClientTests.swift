@@ -74,14 +74,14 @@ class NimiqJSONRPCClientTests: XCTestCase {
         
         let actualData = client.accounts()!
         
-        var account = actualData[0]
+        var account = actualData[0] as! Account
         
         XCTAssertEqual(account.id, "ad25610feb43d75307763d3f010822a757027429")
         XCTAssertEqual(account.address, "NQ15 MLJN 23YB 8FBM 61TN 7LYG 2212 LVBG 4V19")
         XCTAssertEqual(account.balance, 1200000)
         XCTAssertEqual(account.type, AccountType.basic)
 
-        account = actualData[1]
+        account = actualData[1] as! Account
         
         XCTAssertEqual(account.id, "824aa01033c89595479bab9d8deb3fc3a3e65e2d")
         XCTAssertEqual(account.address, "NQ44 G95A 041K R2AR AHUT MEEQ TSRY QEHX CPHD")
@@ -196,7 +196,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
         
         URLProtocolStub.testData = expectedData
         
-        let actualData = client.getAccount(account: "ad25610feb43d75307763d3f010822a757027429")!
+        let actualData = client.getAccount(account: "ad25610feb43d75307763d3f010822a757027429") as! Account
         
         XCTAssertEqual(actualData.id, "ad25610feb43d75307763d3f010822a757027429")
         XCTAssertEqual(actualData.address, "NQ15 MLJN 23YB 8FBM 61TN 7LYG 2212 LVBG 4V19")
