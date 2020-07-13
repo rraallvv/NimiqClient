@@ -1,0 +1,6 @@
+framework module Pods_NimiqJSONRPCClientiOSTests {
+  umbrella header "Pods-NimiqJSONRPCClientiOSTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

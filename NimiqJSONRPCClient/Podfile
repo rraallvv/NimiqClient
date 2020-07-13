@@ -1,0 +1,30 @@
+use_frameworks!
+
+def pods()
+    # Your favorite pods here
+    # pod 'SwiftyJSON'
+end
+
+target 'NimiqJSONRPCClientiOS' do
+    pods()
+end
+
+target 'NimiqJSONRPCClientiOSTests' do
+    pods()
+end
+
+target 'NimiqJSONRPCClientmacOS' do
+    pods()
+end
+
+target 'NimiqJSONRPCClientmacOSTests' do
+    pods()
+end
+
+target 'NimiqJSONRPCClienttvOS' do
+    pods()
+end
+
+target 'NimiqJSONRPCClienttvOSTests' do
+    pods()
+end
