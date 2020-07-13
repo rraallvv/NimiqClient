@@ -310,7 +310,7 @@ public class NimiqJSONRPCClient {
         self.session = session
     }
     
-    private func fetch<T:Decodable>(method: String, params: [Any], completionHandler: ((T?, Error?) -> Void)? = nil) -> T? {
+    private func fetch<T:Decodable>(method: String, params: [Any], completionHandler: ((_ result: T?, _ error: Error?) -> Void)? = nil) -> T? {
         var result: T? = nil
 
         //Make JSON to send to send to server
@@ -369,19 +369,19 @@ public class NimiqJSONRPCClient {
         return result
     }
     
-    @discardableResult public func accounts(completionHandler: (([Account]?, Error?) -> Void)? = nil) -> [Account]? {
+    @discardableResult public func accounts(completionHandler: ((_ result: [Account]?, _ error: Error?) -> Void)? = nil) -> [Account]? {
         return fetch(method: "accounts", params: [], completionHandler: completionHandler)
     }
     
-    @discardableResult public func blockNumber(completionHandler: ((Int?, Error?) -> Void)? = nil) -> Int? {
+    @discardableResult public func blockNumber(completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
         return fetch(method: "blockNumber", params: [], completionHandler: completionHandler)
     }
     
-    @discardableResult public func consensus(completionHandler: ((String?, Error?) -> Void)? = nil) -> String? {
+    @discardableResult public func consensus(completionHandler: ((_ result: String?, _ error: Error?) -> Void)? = nil) -> String? {
         return fetch(method: "consensus", params: [], completionHandler: completionHandler)
     }
     
-    @discardableResult public func constant(constant: String, value: Int? = nil, completionHandler: ((Int?, Error?) -> Void)? = nil) -> Int? {
+    @discardableResult public func constant(constant: String, value: Int? = nil, completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
         var params:[Any] = [constant]
         if value != nil {
             params.append(value!)
@@ -389,11 +389,11 @@ public class NimiqJSONRPCClient {
         return fetch(method: "constant", params: params, completionHandler: completionHandler)
     }
     
-    @discardableResult public func createAccount(completionHandler: ((Wallet?, Error?) -> Void)? = nil) -> Wallet? {
+    @discardableResult public func createAccount(completionHandler: ((_ result: Wallet?, _ error: Error?) -> Void)? = nil) -> Wallet? {
         return fetch(method: "createAccount", params: [], completionHandler: completionHandler)
     }
     
-    @discardableResult public func createRawTransaction(transaction: OutgoingTransaction, completionHandler: ((String?, Error?) -> Void)? = nil) -> String? {
+    @discardableResult public func createRawTransaction(transaction: OutgoingTransaction, completionHandler: ((_ result: String?, _ error: Error?) -> Void)? = nil) -> String? {
         var params:[String:Any] = [
             "from": transaction.from,
             "to": transaction.to,
@@ -414,71 +414,71 @@ public class NimiqJSONRPCClient {
         return fetch(method: "createRawTransaction", params: [params], completionHandler: completionHandler)
     }
     
-    @discardableResult public func getAccount(account: Address, completionHandler: ((Account?, Error?) -> Void)? = nil) -> Account? {
+    @discardableResult public func getAccount(account: Address, completionHandler: ((_ result: Account?, _ error: Error?) -> Void)? = nil) -> Account? {
         return fetch(method: "getAccount", params: [account], completionHandler: completionHandler)
     }
 
-    @discardableResult public func getBalance(account: Address, completionHandler: ((Int?, Error?) -> Void)? = nil) -> Int? {
+    @discardableResult public func getBalance(account: Address, completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
         return fetch(method: "getBalance", params: [account], completionHandler: completionHandler)
     }
     
-    @discardableResult public func getBlockByHash(hash: Hash, fullTransactions: Bool = false, completionHandler: ((Block?, Error?) -> Void)? = nil) -> Block? {
+    @discardableResult public func getBlockByHash(hash: Hash, fullTransactions: Bool = false, completionHandler: ((_ result: Block?, _ error: Error?) -> Void)? = nil) -> Block? {
         return fetch(method: "getBlockByHash", params: [hash, fullTransactions], completionHandler: completionHandler)
     }
     
-    @discardableResult public func getBlockByNumber(number: Int, fullTransactions: Bool = false, completionHandler: ((Block?, Error?) -> Void)? = nil) -> Block? {
+    @discardableResult public func getBlockByNumber(number: Int, fullTransactions: Bool = false, completionHandler: ((_ result: Block?, _ error: Error?) -> Void)? = nil) -> Block? {
         return fetch(method: "getBlockByNumber", params: [number, fullTransactions], completionHandler: completionHandler)
     }
     
-    @discardableResult public func getBlockTemplate(address: Address, extraData: String, completionHandler: ((BlockTemplate?, Error?) -> Void)? = nil) -> BlockTemplate? {
+    @discardableResult public func getBlockTemplate(address: Address, extraData: String, completionHandler: ((_ result: BlockTemplate?, _ error: Error?) -> Void)? = nil) -> BlockTemplate? {
         return fetch(method: "getBlockTemplate", params: [address, extraData], completionHandler: completionHandler)
     }
     
-    @discardableResult public func getBlockTransactionCountByHash(hash: Hash, completionHandler: ((Int?, Error?) -> Void)? = nil) -> Int? {
+    @discardableResult public func getBlockTransactionCountByHash(hash: Hash, completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
         return fetch(method: "getBlockTransactionCountByHash", params: [hash], completionHandler: completionHandler)
     }
 
-    @discardableResult public func getBlockTransactionCountByNumber(number: Int, completionHandler: ((Int?, Error?) -> Void)? = nil) -> Int? {
+    @discardableResult public func getBlockTransactionCountByNumber(number: Int, completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
         return fetch(method: "getBlockTransactionCountByNumber", params: [number], completionHandler: completionHandler)
     }
     
-    @discardableResult public func getTransactionByBlockHashAndIndex(hash: Hash, index: Int, completionHandler: ((Transaction?, Error?) -> Void)? = nil) -> Transaction? {
+    @discardableResult public func getTransactionByBlockHashAndIndex(hash: Hash, index: Int, completionHandler: ((_ result: Transaction?, _ error: Error?) -> Void)? = nil) -> Transaction? {
         return fetch(method: "getTransactionByBlockHashAndIndex", params: [hash, index], completionHandler: completionHandler)
     }
     
-    @discardableResult public func getTransactionByBlockNumberAndIndex(number: Int, index: Int, completionHandler: ((Transaction?, Error?) -> Void)? = nil) -> Transaction? {
+    @discardableResult public func getTransactionByBlockNumberAndIndex(number: Int, index: Int, completionHandler: ((_ result: Transaction?, _ error: Error?) -> Void)? = nil) -> Transaction? {
         return fetch(method: "getTransactionByBlockNumberAndIndex", params: [number, index], completionHandler: completionHandler)
     }
     
-    @discardableResult public func getTransactionByHash(hash: Hash, completionHandler: ((Transaction?, Error?) -> Void)? = nil) -> Transaction? {
+    @discardableResult public func getTransactionByHash(hash: Hash, completionHandler: ((_ result: Transaction?, _ error: Error?) -> Void)? = nil) -> Transaction? {
         return fetch(method: "getTransactionByHash", params: [hash], completionHandler: completionHandler)
     }
     
-    @discardableResult public func getTransactionReceipt(hash: Hash, completionHandler: ((TransactionReceipt?, Error?) -> Void)? = nil) -> TransactionReceipt? {
+    @discardableResult public func getTransactionReceipt(hash: Hash, completionHandler: ((_ result: TransactionReceipt?, _ error: Error?) -> Void)? = nil) -> TransactionReceipt? {
         return fetch(method: "getTransactionReceipt", params: [hash], completionHandler: completionHandler)
     }
     
-    @discardableResult public func getTransactionsByAddress(address: Address, numberOfTransactions: Int = 1000, completionHandler: (([Transaction]?, Error?) -> Void)? = nil) -> [Transaction]? {
+    @discardableResult public func getTransactionsByAddress(address: Address, numberOfTransactions: Int = 1000, completionHandler: ((_ result: [Transaction]?, _ error: Error?) -> Void)? = nil) -> [Transaction]? {
         return fetch(method: "getTransactionsByAddress", params: [address, numberOfTransactions], completionHandler: completionHandler)
     }
     
-    @discardableResult public func getWork(address: Address, extraData: String, completionHandler: ((WorkInstructions?, Error?) -> Void)? = nil) -> WorkInstructions? {
+    @discardableResult public func getWork(address: Address, extraData: String, completionHandler: ((_ result: WorkInstructions?, _ error: Error?) -> Void)? = nil) -> WorkInstructions? {
         return fetch(method: "getWork", params: [address, extraData], completionHandler: completionHandler)
     }
     
-    @discardableResult public func hashrate(completionHandler: ((Float?, Error?) -> Void)? = nil) -> Float? {
+    @discardableResult public func hashrate(completionHandler: ((_ result: Float?, _ error: Error?) -> Void)? = nil) -> Float? {
         return fetch(method: "hashrate", params: [], completionHandler: completionHandler)
     }
     
-    @discardableResult public func log(tag: String, level: LogLevel, completionHandler: ((Bool?, Error?) -> Void)? = nil) -> Bool? {
+    @discardableResult public func log(tag: String, level: LogLevel, completionHandler: ((_ result: Bool?, _ error: Error?) -> Void)? = nil) -> Bool? {
         return fetch(method: "log", params: [tag, level.rawValue], completionHandler: completionHandler)
     }
     
-    @discardableResult public func mempool(completionHandler: ((MempoolInfo?, Error?) -> Void)? = nil) -> MempoolInfo? {
+    @discardableResult public func mempool(completionHandler: ((_ result: MempoolInfo?, _ error: Error?) -> Void)? = nil) -> MempoolInfo? {
         return fetch(method: "mempool", params: [], completionHandler: completionHandler)
     }
     
-    @discardableResult public func mempoolContent(fullTransactions: Bool = false, completionHandler: (([Any]?, Error?) -> Void)? = nil) -> [Any]? {
+    @discardableResult public func mempoolContent(fullTransactions: Bool = false, completionHandler: ((_ result: [Any]?, _ error: Error?) -> Void)? = nil) -> [Any]? {
         let result: [HashOrTransaction] = fetch(method: "mempoolContent", params: [fullTransactions], completionHandler: completionHandler)!
         var converted: [Any] = [Any]()
         for transaction in result {
@@ -487,11 +487,11 @@ public class NimiqJSONRPCClient {
         return converted
     }
     
-    @discardableResult public func minerAddress(completionHandler: ((String?, Error?) -> Void)? = nil) -> String? {
+    @discardableResult public func minerAddress(completionHandler: ((_ result: String?, _ error: Error?) -> Void)? = nil) -> String? {
         return fetch(method: "minerAddress", params: [], completionHandler: completionHandler)
     }
     
-    @discardableResult public func minerThreads(threads: Int? = nil, completionHandler: ((Int?, Error?) -> Void)? = nil) -> Int? {
+    @discardableResult public func minerThreads(threads: Int? = nil, completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
         var params: [Int] = [Int]()
         if threads != nil {
             params.append(threads!)
@@ -499,7 +499,7 @@ public class NimiqJSONRPCClient {
         return fetch(method: "minerThreads", params: params, completionHandler: completionHandler)
     }
     
-    @discardableResult public func minFeePerByte(fee: Int? = nil, completionHandler: ((Int?, Error?) -> Void)? = nil) -> Int? {
+    @discardableResult public func minFeePerByte(fee: Int? = nil, completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
         var params: [Int] = [Int]()
         if fee != nil {
             params.append(fee!)
@@ -507,23 +507,23 @@ public class NimiqJSONRPCClient {
         return fetch(method: "minFeePerByte", params: params, completionHandler: completionHandler)
     }
     
-    @discardableResult public func mining(completionHandler: ((Bool?, Error?) -> Void)? = nil) -> Bool? {
+    @discardableResult public func mining(completionHandler: ((_ result: Bool?, _ error: Error?) -> Void)? = nil) -> Bool? {
         return fetch(method: "mining", params: [], completionHandler: completionHandler)
     }
     
-    @discardableResult public func peerCount(completionHandler: ((Int?, Error?) -> Void)? = nil) -> Int? {
+    @discardableResult public func peerCount(completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
         return fetch(method: "peerCount", params: [], completionHandler: completionHandler)
     }
     
-    @discardableResult public func peerList(completionHandler: (([Peer]?, Error?) -> Void)? = nil) -> [Peer]? {
+    @discardableResult public func peerList(completionHandler: ((_ result: [Peer]?, _ error: Error?) -> Void)? = nil) -> [Peer]? {
         return fetch(method: "peerList", params: [], completionHandler: completionHandler)
     }
     
-    @discardableResult public func peerState(address: String, completionHandler: ((Peer?, Error?) -> Void)? = nil) -> Peer? {
+    @discardableResult public func peerState(address: String, completionHandler: ((_ result: Peer?, _ error: Error?) -> Void)? = nil) -> Peer? {
         return fetch(method: "peerState", params: [address], completionHandler: completionHandler)
     }
     
-    @discardableResult public func pool(address: Any? = nil, completionHandler: ((String?, Error?) -> Void)? = nil) -> String? {
+    @discardableResult public func pool(address: Any? = nil, completionHandler: ((_ result: String?, _ error: Error?) -> Void)? = nil) -> String? {
         var params: [Any] = [Any]()
         if let stringAddress = address as? String {
             params.append(stringAddress)
@@ -533,19 +533,19 @@ public class NimiqJSONRPCClient {
         return fetch(method: "pool", params: params, completionHandler: completionHandler)
     }
     
-    @discardableResult public func poolConfirmedBalance(completionHandler: ((Int?, Error?) -> Void)? = nil) -> Int? {
+    @discardableResult public func poolConfirmedBalance(completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
         return fetch(method: "poolConfirmedBalance", params: [], completionHandler: completionHandler)
     }
     
-    @discardableResult public func poolConnectionState(completionHandler: ((PoolConnectionState?, Error?) -> Void)? = nil) -> PoolConnectionState? {
+    @discardableResult public func poolConnectionState(completionHandler: ((_ result: PoolConnectionState?, _ error: Error?) -> Void)? = nil) -> PoolConnectionState? {
         return fetch(method: "poolConnectionState", params: [], completionHandler: completionHandler)
     }
     
-    @discardableResult public func sendRawTransaction(transaction: String, completionHandler: ((Hash?, Error?) -> Void)? = nil) -> Hash? {
+    @discardableResult public func sendRawTransaction(transaction: String, completionHandler: ((_ result: Hash?, _ error: Error?) -> Void)? = nil) -> Hash? {
         return fetch(method: "sendRawTransaction", params: [transaction], completionHandler: completionHandler)
     }
     
-    @discardableResult public func sendTransaction(transaction: OutgoingTransaction, completionHandler: ((Hash?, Error?) -> Void)? = nil) -> Hash? {
+    @discardableResult public func sendTransaction(transaction: OutgoingTransaction, completionHandler: ((_ result: Hash?, _ error: Error?) -> Void)? = nil) -> Hash? {
         var params:[String:Any] = [
             "from": transaction.from,
             "to": transaction.to,
@@ -566,11 +566,11 @@ public class NimiqJSONRPCClient {
         return fetch(method: "sendTransaction", params: [params], completionHandler: completionHandler)
     }
     
-    @discardableResult public func submitBlock(_ block: String, completionHandler: ((String?, Error?) -> Void)? = nil) -> String? {
+    @discardableResult public func submitBlock(_ block: String, completionHandler: ((_ result: String?, _ error: Error?) -> Void)? = nil) -> String? {
         return fetch(method: "submitBlock", params: [block], completionHandler: completionHandler)
     }
     
-    @discardableResult public func syncing(completionHandler: ((Any?, Error?) -> Void)? = nil) -> Any? {
+    @discardableResult public func syncing(completionHandler: ((_ result: Any?, _ error: Error?) -> Void)? = nil) -> Any? {
         let result: SyncStatusOrBool = fetch(method: "syncing", params: [], completionHandler: completionHandler)!
         return result.value
     }
