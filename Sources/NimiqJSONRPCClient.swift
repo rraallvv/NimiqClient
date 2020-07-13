@@ -1,6 +1,5 @@
 import Foundation
 
-// used for convenience initializer
 public struct Config {
     let scheme: String
     let host: String
@@ -15,9 +14,22 @@ struct Root<T:Decodable>: Decodable {
     let id: Int
 }
 
+public enum AccountType: Int, Decodable {
+    case basic = 0
+    case vesting = 1
+    case htlc = 2
+}
+
 public struct Account: Decodable {
     let id, address: String
-    let balance, type: Int
+    let balance: Int
+    let type: AccountType
+}
+
+public enum ConsensusState: String, Decodable {
+    case connecting = "connecting"
+    case syncing = "syncing"
+    case established = "established"
 }
 
 public struct Wallet: Decodable {
@@ -29,9 +41,9 @@ public typealias Address = String
 
 public struct OutgoingTransaction {
     let from: Address
-    let fromType: Int? = nil
+    let fromType: AccountType? = nil
     let to: Address
-    let toType: Int? = nil
+    let toType: AccountType? = nil
     let value: Int
     let fee: Int
     let data: String? = nil
@@ -134,6 +146,7 @@ public struct TransactionReceipt : Decodable {
     let confirmations: Int
     let timestamp: Int
 }
+
 
 public struct WorkInstructions : Decodable {
     let data: String
@@ -244,6 +257,13 @@ public struct Peer : Decodable {
     let latency: Int?
     let rx: Int?
     let tx: Int?
+}
+
+public enum PeerStateCommand : String {
+    case connect = "connect"
+    case disconnect = "disconnect"
+    case ban = "ban"
+    case unban = "unban"
 }
 
 public enum PoolConnectionState : Int, Decodable {
@@ -373,7 +393,7 @@ public class NimiqJSONRPCClient {
         return fetch(method: "blockNumber", params: [], completionHandler: completionHandler)
     }
     
-    @discardableResult public func consensus(completionHandler: ((_ result: String?, _ error: Error?) -> Void)? = nil) -> String? {
+    @discardableResult public func consensus(completionHandler: ((_ result: ConsensusState?, _ error: Error?) -> Void)? = nil) -> ConsensusState? {
         return fetch(method: "consensus", params: [], completionHandler: completionHandler)
     }
     
@@ -515,8 +535,13 @@ public class NimiqJSONRPCClient {
         return fetch(method: "peerList", params: [], completionHandler: completionHandler)
     }
     
-    @discardableResult public func peerState(address: String, completionHandler: ((_ result: Peer?, _ error: Error?) -> Void)? = nil) -> Peer? {
-        return fetch(method: "peerState", params: [address], completionHandler: completionHandler)
+    @discardableResult public func peerState(address: String, command: PeerStateCommand? = nil, completionHandler: ((_ result: Peer?, _ error: Error?) -> Void)? = nil) -> Peer? {
+        var params: [Any] = [Any]()
+        params.append(address)
+        if command != nil {
+            params.append(command!)
+        }
+        return fetch(method: "peerState", params: params, completionHandler: completionHandler)
     }
     
     @discardableResult public func pool(address: Any? = nil, completionHandler: ((_ result: String?, _ error: Error?) -> Void)? = nil) -> String? {

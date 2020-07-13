@@ -79,14 +79,14 @@ class NimiqJSONRPCClientTests: XCTestCase {
         XCTAssertEqual(account.id, "ad25610feb43d75307763d3f010822a757027429")
         XCTAssertEqual(account.address, "NQ15 MLJN 23YB 8FBM 61TN 7LYG 2212 LVBG 4V19")
         XCTAssertEqual(account.balance, 1200000)
-        XCTAssertEqual(account.type, 0)
+        XCTAssertEqual(account.type, AccountType.basic)
 
         account = actualData[1]
         
         XCTAssertEqual(account.id, "824aa01033c89595479bab9d8deb3fc3a3e65e2d")
         XCTAssertEqual(account.address, "NQ44 G95A 041K R2AR AHUT MEEQ TSRY QEHX CPHD")
         XCTAssertEqual(account.balance, 2400000)
-        XCTAssertEqual(account.type, 0)
+        XCTAssertEqual(account.type, AccountType.basic)
     }
     
     func test_blockNumber() {
@@ -118,7 +118,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
         
         let actualData = client.consensus()!
         
-        XCTAssertEqual(actualData, "established")
+        XCTAssertEqual(actualData, ConsensusState.established)
     }
     
     func test_constant() {
@@ -201,7 +201,7 @@ class NimiqJSONRPCClientTests: XCTestCase {
         XCTAssertEqual(actualData.id, "ad25610feb43d75307763d3f010822a757027429")
         XCTAssertEqual(actualData.address, "NQ15 MLJN 23YB 8FBM 61TN 7LYG 2212 LVBG 4V19")
         XCTAssertEqual(actualData.balance, 1200000)
-        XCTAssertEqual(actualData.type, 0)
+        XCTAssertEqual(actualData.type, AccountType.basic)
     }
     
     func test_getBalance() {
