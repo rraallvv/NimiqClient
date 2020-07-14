@@ -21,6 +21,9 @@
 		E4B63F1E24BBA965009AAC80 /* NimiqJSONRPCClienttvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B63F1524BBA963009AAC80 /* NimiqJSONRPCClienttvOS.framework */; };
 		E4B63F2324BBA965009AAC80 /* NimiqJSONRPCClienttvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B63F2224BBA965009AAC80 /* NimiqJSONRPCClienttvOSTests.swift */; };
 		E4B63F2524BBA965009AAC80 /* NimiqJSONRPCClienttvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E4B63F1724BBA963009AAC80 /* NimiqJSONRPCClienttvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4BD968124BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968024BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift */; };
+		E4BD968224BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968024BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift */; };
+		E4BD968324BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968024BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift */; };
 		E4BFF42624BBAE7F00A915D4 /* NimiqJSONRPCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BFF42524BBAE7F00A915D4 /* NimiqJSONRPCClient.swift */; };
 		E4BFF42724BBAE7F00A915D4 /* NimiqJSONRPCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BFF42524BBAE7F00A915D4 /* NimiqJSONRPCClient.swift */; };
 		E4BFF42824BBAE7F00A915D4 /* NimiqJSONRPCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BFF42524BBAE7F00A915D4 /* NimiqJSONRPCClient.swift */; };
@@ -89,6 +92,7 @@
 		E4B63F1D24BBA964009AAC80 /* NimiqJSONRPCClienttvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NimiqJSONRPCClienttvOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B63F2224BBA965009AAC80 /* NimiqJSONRPCClienttvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimiqJSONRPCClienttvOSTests.swift; sourceTree = "<group>"; };
 		E4B63F2424BBA965009AAC80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4BD968024BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NimiqJSONRPCClientTests+Fixtures.swift"; sourceTree = "<group>"; };
 		E4BFF42524BBAE7F00A915D4 /* NimiqJSONRPCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimiqJSONRPCClient.swift; sourceTree = "<group>"; };
 		E4BFF42A24BBAFA700A915D4 /* NimiqJSONRPCClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimiqJSONRPCClientTests.swift; sourceTree = "<group>"; };
 		E8677B9220DB81514ACC78A9 /* Pods-NimiqJSONRPCClientmacOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimiqJSONRPCClientmacOSTests.debug.xcconfig"; path = "Target Support Files/Pods-NimiqJSONRPCClientmacOSTests/Pods-NimiqJSONRPCClientmacOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -282,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				E4BFF42A24BBAFA700A915D4 /* NimiqJSONRPCClientTests.swift */,
+				E4BD968024BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift */,
 			);
 			name = Tests;
 			path = ../Tests;
@@ -681,6 +686,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4BFF42B24BBAFA700A915D4 /* NimiqJSONRPCClientTests.swift in Sources */,
+				E4BD968124BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift in Sources */,
 				E4B63EEB24BBA878009AAC80 /* NimiqJSONRPCClientiOSTests.swift in Sources */,
 				E4BFF42E24BBB01800A915D4 /* NimiqJSONRPCClient.swift in Sources */,
 			);
@@ -699,6 +705,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4BFF42C24BBAFA700A915D4 /* NimiqJSONRPCClientTests.swift in Sources */,
+				E4BD968224BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift in Sources */,
 				E4B63F0724BBA930009AAC80 /* NimiqJSONRPCClientmacOSTests.swift in Sources */,
 				E4BFF42F24BBB01900A915D4 /* NimiqJSONRPCClient.swift in Sources */,
 			);
@@ -717,6 +724,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4BFF42D24BBAFA700A915D4 /* NimiqJSONRPCClientTests.swift in Sources */,
+				E4BD968324BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift in Sources */,
 				E4B63F2324BBA965009AAC80 /* NimiqJSONRPCClienttvOSTests.swift in Sources */,
 				E4BFF43024BBB01A00A915D4 /* NimiqJSONRPCClient.swift in Sources */,
 			);
