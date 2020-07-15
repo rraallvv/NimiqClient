@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "Nimiq JSONRPC Client."
   s.homepage     = "https://github.com/rraallvv/NimiqClient"
   s.license      = "MIT"
-  s.author       = { "Rhody Lugo" => "rhodylugo@gmail.com" }
+  s.author       = { "Nimiq Comunity" => "info@nimiq.com" }
   s.swift_version = "5.2.4"
 
   s.ios.deployment_target = "8.0"
