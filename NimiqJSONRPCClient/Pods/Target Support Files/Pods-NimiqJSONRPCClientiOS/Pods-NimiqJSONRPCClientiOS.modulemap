@@ -1,6 +1,0 @@
-framework module Pods_NimiqJSONRPCClientiOS {
-  umbrella header "Pods-NimiqJSONRPCClientiOS-umbrella.h"
-
-  export *
-  module * { export * }
-}

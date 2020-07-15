@@ -1,0 +1,29 @@
+use_frameworks!
+
+def pods()
+    # Other pods go here
+end
+
+target 'NimiqClientiOS' do
+    pods()
+end
+
+target 'NimiqClientiOSTests' do
+    pods()
+end
+
+target 'NimiqClientMacOS' do
+    pods()
+end
+
+target 'NimiqClientMacOSTests' do
+    pods()
+end
+
+target 'NimiqClientTvOS' do
+    pods()
+end
+
+target 'NimiqClientTvOSTests' do
+    pods()
+end
