@@ -1,8 +1,8 @@
 import Foundation
 
-extension NimiqJSONRPCClientTests {
+class Fixtures {
 
-    static func fixtureAccounts() -> Data {
+    static func accounts() -> Data {
         return """
             {
                 "jsonrpc": "2.0",
@@ -46,7 +46,7 @@ extension NimiqJSONRPCClientTests {
             """.data(using: .utf8)!
     }
     
-    static func fixtureBlockNumber() -> Data {
+    static func blockNumber() -> Data {
         return """
             {
                 "jsonrpc": "2.0",
@@ -397,7 +397,7 @@ extension NimiqJSONRPCClientTests {
             """.data(using: .utf8)!
     }
     
-    static func getTransactionsNoFound() -> Data {
+    static func getTransactionsNotFound() -> Data {
         return """
             {
                 "jsonrpc": "2.0",

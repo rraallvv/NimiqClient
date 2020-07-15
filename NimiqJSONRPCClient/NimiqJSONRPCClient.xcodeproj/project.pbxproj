@@ -24,6 +24,9 @@
 		E4BD968124BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968024BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift */; };
 		E4BD968224BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968024BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift */; };
 		E4BD968324BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968024BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift */; };
+		E4BD968524BD4A4B005E6957 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968424BD4A4B005E6957 /* URLProtocolStub.swift */; };
+		E4BD968624BD4A4B005E6957 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968424BD4A4B005E6957 /* URLProtocolStub.swift */; };
+		E4BD968724BD4A4B005E6957 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968424BD4A4B005E6957 /* URLProtocolStub.swift */; };
 		E4BFF42624BBAE7F00A915D4 /* NimiqJSONRPCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BFF42524BBAE7F00A915D4 /* NimiqJSONRPCClient.swift */; };
 		E4BFF42724BBAE7F00A915D4 /* NimiqJSONRPCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BFF42524BBAE7F00A915D4 /* NimiqJSONRPCClient.swift */; };
 		E4BFF42824BBAE7F00A915D4 /* NimiqJSONRPCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BFF42524BBAE7F00A915D4 /* NimiqJSONRPCClient.swift */; };
@@ -93,6 +96,7 @@
 		E4B63F2224BBA965009AAC80 /* NimiqJSONRPCClienttvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimiqJSONRPCClienttvOSTests.swift; sourceTree = "<group>"; };
 		E4B63F2424BBA965009AAC80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4BD968024BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NimiqJSONRPCClientTests+Fixtures.swift"; sourceTree = "<group>"; };
+		E4BD968424BD4A4B005E6957 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 		E4BFF42524BBAE7F00A915D4 /* NimiqJSONRPCClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimiqJSONRPCClient.swift; sourceTree = "<group>"; };
 		E4BFF42A24BBAFA700A915D4 /* NimiqJSONRPCClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimiqJSONRPCClientTests.swift; sourceTree = "<group>"; };
 		E8677B9220DB81514ACC78A9 /* Pods-NimiqJSONRPCClientmacOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimiqJSONRPCClientmacOSTests.debug.xcconfig"; path = "Target Support Files/Pods-NimiqJSONRPCClientmacOSTests/Pods-NimiqJSONRPCClientmacOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -287,6 +291,7 @@
 			children = (
 				E4BFF42A24BBAFA700A915D4 /* NimiqJSONRPCClientTests.swift */,
 				E4BD968024BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift */,
+				E4BD968424BD4A4B005E6957 /* URLProtocolStub.swift */,
 			);
 			name = Tests;
 			path = ../Tests;
@@ -689,6 +694,7 @@
 				E4BD968124BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift in Sources */,
 				E4B63EEB24BBA878009AAC80 /* NimiqJSONRPCClientiOSTests.swift in Sources */,
 				E4BFF42E24BBB01800A915D4 /* NimiqJSONRPCClient.swift in Sources */,
+				E4BD968524BD4A4B005E6957 /* URLProtocolStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +714,7 @@
 				E4BD968224BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift in Sources */,
 				E4B63F0724BBA930009AAC80 /* NimiqJSONRPCClientmacOSTests.swift in Sources */,
 				E4BFF42F24BBB01900A915D4 /* NimiqJSONRPCClient.swift in Sources */,
+				E4BD968624BD4A4B005E6957 /* URLProtocolStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,6 +734,7 @@
 				E4BD968324BD3905005E6957 /* NimiqJSONRPCClientTests+Fixtures.swift in Sources */,
 				E4B63F2324BBA965009AAC80 /* NimiqJSONRPCClienttvOSTests.swift in Sources */,
 				E4BFF43024BBB01A00A915D4 /* NimiqJSONRPCClient.swift in Sources */,
+				E4BD968724BD4A4B005E6957 /* URLProtocolStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

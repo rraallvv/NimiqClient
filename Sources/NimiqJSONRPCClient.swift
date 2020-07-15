@@ -1,17 +1,23 @@
 import Foundation
 
 public struct Config {
-    let scheme: String
-    let host: String
-    let port: Int
-    let user: String
-    let password: String
+    var scheme: String
+    var host: String
+    var port: Int
+    var user: String
+    var password: String
+}
+
+struct ResponseError: Decodable {
+    var code: Int
+    var message: String
 }
 
 struct Root<T:Decodable>: Decodable {
-    let jsonrpc: String
-    let result: T
-    let id: Int
+    var jsonrpc: String
+    var result: T?
+    var id: Int
+    var error: ResponseError?
 }
 
 public enum AccountType: Int, Decodable {
@@ -21,39 +27,39 @@ public enum AccountType: Int, Decodable {
 }
 
 public struct Account: Decodable {
-    let id: String
-    let address: String
-    let balance: Int
-    let type: AccountType
+    var id: String
+    var address: String
+    var balance: Int
+    var type: AccountType
 }
 
 public struct VestingContract : Decodable {
-    let id: String
-    let address: String
-    let balance: Int
-    let type: AccountType
-    let owner: String
-    let ownerAddress: String
-    let vestingStart: Int
-    let vestingStepBlocks: Int
-    let vestingStepAmount: Int
-    let vestingTotalAmount: Int
+    var id: String
+    var address: String
+    var balance: Int
+    var type: AccountType
+    var owner: String
+    var ownerAddress: String
+    var vestingStart: Int
+    var vestingStepBlocks: Int
+    var vestingStepAmount: Int
+    var vestingTotalAmount: Int
 }
 
 public struct HashedTimeLockedContract : Decodable {
-    let id: String
-    let address: String
-    let balance: Int
-    let type: AccountType
-    let sender: String
-    let senderAddress: String
-    let recipient: String
-    let recipientAddress: String
-    let hashRoot: String
-    let hashAlgorithm: Int
-    let hashCount: Int
-    let timeout: Int
-    let totalAmount: Int
+    var id: String
+    var address: String
+    var balance: Int
+    var type: AccountType
+    var sender: String
+    var senderAddress: String
+    var recipient: String
+    var recipientAddress: String
+    var hashRoot: String
+    var hashAlgorithm: Int
+    var hashCount: Int
+    var timeout: Int
+    var totalAmount: Int
 }
 
 enum RawAccount : Decodable {
@@ -91,63 +97,63 @@ enum RawAccount : Decodable {
 }
 
 public enum ConsensusState: String, Decodable {
-    case connecting = "connecting"
-    case syncing = "syncing"
-    case established = "established"
+    case connecting
+    case syncing
+    case established
 }
 
 public struct Wallet: Decodable {
-    let id, address, publicKey: String
-    let privateKey: String?
+    var id, address, publicKey: String
+    var privateKey: String?
 }
 
 public typealias Address = String
 
 public struct OutgoingTransaction {
-    let from: Address
-    let fromType: AccountType? = nil
-    let to: Address
-    let toType: AccountType? = nil
-    let value: Int
-    let fee: Int
-    let data: String? = nil
+    var from: Address
+    var fromType: AccountType? = .basic
+    var to: Address
+    var toType: AccountType? = .basic
+    var value: Int
+    var fee: Int
+    var data: String? = nil
 }
 
 public typealias Hash = String
 
 public struct Transaction : Decodable {
-    let hash: Hash
-    let blockHash: Hash?
-    let blockNumber: Int?
-    let timestamp: Int?
-    let confirmations: Int?
-    let transactionIndex: Int?
-    let from: String
-    let fromAddress: Address
-    let to: String
-    let toAddress: Address
-    let value: Int
-    let fee: Int
-    let data: String?
-    let flags: Int
+    var hash: Hash
+    var blockHash: Hash?
+    var blockNumber: Int?
+    var timestamp: Int?
+    var confirmations: Int? = 0
+    var transactionIndex: Int?
+    var from: String
+    var fromAddress: Address
+    var to: String
+    var toAddress: Address
+    var value: Int
+    var fee: Int
+    var data: String? = nil
+    var flags: Int
 }
 
 public struct Block : Decodable {
-    let number: Int
-    let hash: Hash
-    let pow: Hash
-    let parentHash: Hash
-    let nonce: Int
-    let bodyHash: Hash
-    let accountsHash: Hash
-    let difficulty: String
-    let timestamp: Int
-    let confirmations: Int
-    let miner: String
-    let minerAddress: Address
-    let extraData: String
-    let size: Int
-    let transactions: [Any]
+    var number: Int
+    var hash: Hash
+    var pow: Hash
+    var parentHash: Hash
+    var nonce: Int
+    var bodyHash: Hash
+    var accountsHash: Hash
+    var difficulty: String
+    var timestamp: Int
+    var confirmations: Int
+    var miner: String
+    var minerAddress: Address
+    var extraData: String
+    var size: Int
+    var transactions: [Any]
     
     private enum CodingKeys: String, CodingKey {
         case number, hash, pow, parentHash, nonce, bodyHash, accountsHash, difficulty, timestamp, confirmations, miner, minerAddress, extraData, size, transactions
@@ -178,61 +184,61 @@ public struct Block : Decodable {
 }
 
 public struct BlockTemplateHeader : Decodable {
-    let version: Int
-    let prevHash: Hash
-    let interlinkHash: Hash
-    let accountsHash: Hash
-    let nBits: Int
-    let height: Int
+    var version: Int
+    var prevHash: Hash
+    var interlinkHash: Hash
+    var accountsHash: Hash
+    var nBits: Int
+    var height: Int
 }
 
 public struct BlockTemplateBody : Decodable {
-    let hash: Hash
-    let minerAddr: String
-    let extraData: String
-    let transactions: [String]
-    let prunedAccounts: [String]
-    let merkleHashes: [Hash]
+    var hash: Hash
+    var minerAddr: String
+    var extraData: String
+    var transactions: [String]
+    var prunedAccounts: [String]
+    var merkleHashes: [Hash]
 }
 
 public struct BlockTemplate : Decodable {
-    let header: BlockTemplateHeader
-    let interlink: String
-    let body: BlockTemplateBody
-    let target: Int
+    var header: BlockTemplateHeader
+    var interlink: String
+    var body: BlockTemplateBody
+    var target: Int
 }
 
 public struct TransactionReceipt : Decodable {
-    let transactionHash: Hash
-    let transactionIndex: Int
-    let blockHash: Hash
-    let blockNumber: Int
-    let confirmations: Int
-    let timestamp: Int
+    var transactionHash: Hash
+    var transactionIndex: Int
+    var blockHash: Hash
+    var blockNumber: Int
+    var confirmations: Int
+    var timestamp: Int
 }
 
 
 public struct WorkInstructions : Decodable {
-    let data: String
-    let suffix: String
-    let target: Int
-    let algorithm: String
+    var data: String
+    var suffix: String
+    var target: Int
+    var algorithm: String
 }
 
 public enum LogLevel : String {
-    case trace = "trace"
-    case verbose = "verbose"
-    case debug = "debug"
-    case info = "info"
-    case warn = "warn"
-    case error = "error"
-    case assert = "assert"
+    case trace
+    case verbose
+    case debug
+    case info
+    case warn
+    case error
+    case assert
 }
 
 public struct MempoolInfo : Decodable {
-    let total: Int
-    let buckets: [Int]
-    var transactions: [Int:Int]
+    var total: Int
+    var buckets: [Int]
+    var transactionsPerBucket: [Int:Int]
     
     private enum CodingKeys: String, CodingKey {
         case total, buckets
@@ -256,12 +262,12 @@ public struct MempoolInfo : Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         total = try container.decode(Int.self, forKey: .total)
         buckets = try container.decode([Int].self, forKey: .buckets)
-        transactions = [Int:Int]()
+        transactionsPerBucket = [Int:Int]()
         for key in container.allKeys {
             guard let intKey = Int(key.stringValue) else {
                 continue
             }
-            transactions[intKey] = try container.decode(Int.self, forKey: key)
+            transactionsPerBucket[intKey] = try container.decode(Int.self, forKey: key)
         }
     }
 }
@@ -311,23 +317,23 @@ public enum PeerConnectionState : Int, Decodable {
 }
 
 public struct Peer : Decodable {
-    let id: String
-    let address: String
-    let addressState: PeerAddressState
-    let connectionState: PeerConnectionState?
-    let version: Int?
-    let timeOffset: Int?
-    let headHash: Hash?
-    let latency: Int?
-    let rx: Int?
-    let tx: Int?
+    var id: String
+    var address: String
+    var addressState: PeerAddressState
+    var connectionState: PeerConnectionState?
+    var version: Int?
+    var timeOffset: Int?
+    var headHash: Hash?
+    var latency: Int?
+    var rx: Int?
+    var tx: Int?
 }
 
 public enum PeerStateCommand : String {
-    case connect = "connect"
-    case disconnect = "disconnect"
-    case ban = "ban"
-    case unban = "unban"
+    case connect
+    case disconnect
+    case ban
+    case unban
 }
 
 public enum PoolConnectionState : Int, Decodable {
@@ -337,9 +343,9 @@ public enum PoolConnectionState : Int, Decodable {
 }
 
 public struct SyncStatus : Decodable {
-    let startingBlock: Int
-    let currentBlock: Int
-    let highestBlock: Int
+    var startingBlock: Int
+    var currentBlock: Int
+    var highestBlock: Int
 }
 
 enum SyncStatusOrBool : Decodable {
@@ -376,7 +382,12 @@ public class NimiqJSONRPCClient {
     private let url: String
     
     private let session: URLSession
-        
+    
+    public enum Error: Swift.Error, Equatable {
+        case wrongFormat(_ message: String)
+        case badMethodCall(_ message: String)
+    }
+    
     convenience init(config c: Config) {
         self.init(scheme: c.scheme, user: c.user, password: c.password, host: c.host, port: c.port)
     }
@@ -390,67 +401,57 @@ public class NimiqJSONRPCClient {
         }
     }
     
-    private func fetch<T:Decodable>(method: String, params: [Any], completionHandler: ((_ result: T?, _ error: Error?) -> Void)? = nil) -> T? {
-        var result: T? = nil
+    private func fetch<T:Decodable>(method: String, params: [Any]) throws -> T? {
+        var responseObject: Root<T>? = nil
+        var clientError: NimiqJSONRPCClient.Error? = nil
 
         //Make JSON to send to send to server
-        let json:[String:Any] = [
+        let callObject:[String:Any] = [
             "jsonrpc": "2.0",
             "method": method,
             "params": params,
             "id": id
         ]
 
-        do {
-            let data = try JSONSerialization.data(withJSONObject: json, options: [])
-            var request = URLRequest(url: URL(string: url)!)
-            request.httpMethod = "POST"
-            request.httpBody = data
-            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.addValue("application/json", forHTTPHeaderField: "Accept")
-            request.addValue("close", forHTTPHeaderField: "Connection")
+        let data = try JSONSerialization.data(withJSONObject: callObject, options: [])
+        var request = URLRequest(url: URL(string: url)!)
+        request.httpMethod = "POST"
+        request.httpBody = data
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.addValue("close", forHTTPHeaderField: "Connection")
 
-            var semaphore: DispatchSemaphore? = nil
-            
-            if completionHandler == nil {
-                semaphore = DispatchSemaphore(value: 0)
-            }
-                        
-            let task = session.dataTask(with: request, completionHandler: { data, response, error in
-                // Check the response
-                //print(response)
-                
-                // Serialize the data into an object
-                do {
-                    let json = try JSONDecoder().decode(Root<T?>.self, from: data! )
-                    self.id = self.id + 1
-                    result = json.result
+        let semaphore = DispatchSemaphore(value: 0)
                     
-                } catch {
-                    let string = String(bytes: data!, encoding: String.Encoding.utf8)
-                    print("Response: \(string!)")
-                    print("Error: \(error)")
-                }
+        let task = session.dataTask(with: request, completionHandler: { data, response, error in
+            // Serialize the data into an object
+            do {
+                responseObject = try JSONDecoder().decode(Root<T>.self, from: data! )
                 
-                if completionHandler == nil {
-                    semaphore!.signal()
-                } else {
-                    completionHandler!(result, error)
-                }
-            })
-            task.resume()
-            if completionHandler == nil {
-                semaphore!.wait()
+            } catch {
+                clientError = NimiqJSONRPCClient.Error.wrongFormat(error.localizedDescription)
             }
-        } catch {
             
+            semaphore.signal()
+        })
+        task.resume()
+        semaphore.wait()
+        
+        if clientError != nil {
+            throw clientError!
         }
         
-        return result
+        if let error = responseObject?.error {
+            throw NimiqJSONRPCClient.Error.badMethodCall("\(error.message) (Code: \(error.code)")
+        }
+        
+        self.id = self.id + 1
+        
+        return responseObject?.result
     }
     
-    @discardableResult public func accounts(completionHandler: ((_ result: [Any]?, _ error: Error?) -> Void)? = nil) -> [Any]? {
-        let result: [RawAccount] = fetch(method: "accounts", params: [], completionHandler: completionHandler)!
+    public func accounts() throws -> [Any]? {
+        let result: [RawAccount] = try fetch(method: "accounts", params: [])!
         var converted: [Any] = [Any]()
         for rawAccount in result {
             converted.append(rawAccount.value)
@@ -458,114 +459,117 @@ public class NimiqJSONRPCClient {
         return converted
     }
     
-    @discardableResult public func blockNumber(completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
-        return fetch(method: "blockNumber", params: [], completionHandler: completionHandler)
+    public func blockNumber() throws -> Int? {
+        return try fetch(method: "blockNumber", params: [])
     }
     
-    @discardableResult public func consensus(completionHandler: ((_ result: ConsensusState?, _ error: Error?) -> Void)? = nil) -> ConsensusState? {
-        return fetch(method: "consensus", params: [], completionHandler: completionHandler)
+    public func consensus() throws -> ConsensusState? {
+        return try fetch(method: "consensus", params: [])
     }
     
-    @discardableResult public func constant(constant: String, value: Int? = nil, completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
+    public func constant(constant: String, value: Int? = nil) throws -> Int? {
         var params:[Any] = [constant]
         if value != nil {
             params.append(value!)
         }
-        return fetch(method: "constant", params: params, completionHandler: completionHandler)
+        return try fetch(method: "constant", params: params)
     }
     
-    @discardableResult public func createAccount(completionHandler: ((_ result: Wallet?, _ error: Error?) -> Void)? = nil) -> Wallet? {
-        return fetch(method: "createAccount", params: [], completionHandler: completionHandler)
+    public func createAccount() throws -> Wallet? {
+        return try fetch(method: "createAccount", params: [])
     }
     
-    @discardableResult public func createRawTransaction(transaction: OutgoingTransaction, completionHandler: ((_ result: String?, _ error: Error?) -> Void)? = nil) -> String? {
-        var params:[String:Any] = [
+    public func createRawTransaction(transaction: OutgoingTransaction) throws -> String? {
+        let params:[String:Any?] = [
             "from": transaction.from,
+            "fromType": transaction.fromType?.rawValue,
             "to": transaction.to,
+            "toType": transaction.toType?.rawValue,
             "value": transaction.value,
-            "fee": transaction.fee
+            "fee": transaction.fee,
+            "data": transaction.data
         ]
-
-        if transaction.fromType != nil {
-            params["fromType"] = transaction.fromType
-        }
-        if transaction.toType != nil {
-            params["toType"] = transaction.toType
-        }
-        if transaction.data != nil {
-            params["data"] = transaction.data
-        }
-        
-        return fetch(method: "createRawTransaction", params: [params], completionHandler: completionHandler)
+        return try fetch(method: "createRawTransaction", params: [params])
     }
     
-    @discardableResult public func getAccount(account: Address, completionHandler: ((_ result: Any?, _ error: Error?) -> Void)? = nil) -> Any? {
-        let result: RawAccount = fetch(method: "getAccount", params: [account], completionHandler: completionHandler)!
+    public func getAccount(account: Address) throws -> Any? {
+        let result: RawAccount = try fetch(method: "getAccount", params: [account])!
         return result.value
     }
 
-    @discardableResult public func getBalance(account: Address, completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
-        return fetch(method: "getBalance", params: [account], completionHandler: completionHandler)
+    public func getBalance(account: Address) throws -> Int? {
+        return try fetch(method: "getBalance", params: [account])
     }
     
-    @discardableResult public func getBlockByHash(hash: Hash, fullTransactions: Bool = false, completionHandler: ((_ result: Block?, _ error: Error?) -> Void)? = nil) -> Block? {
-        return fetch(method: "getBlockByHash", params: [hash, fullTransactions], completionHandler: completionHandler)
+    public func getBlockByHash(hash: Hash, fullTransactions: Bool = false) throws -> Block? {
+        return try fetch(method: "getBlockByHash", params: [hash, fullTransactions])
     }
     
-    @discardableResult public func getBlockByNumber(number: Int, fullTransactions: Bool = false, completionHandler: ((_ result: Block?, _ error: Error?) -> Void)? = nil) -> Block? {
-        return fetch(method: "getBlockByNumber", params: [number, fullTransactions], completionHandler: completionHandler)
+    public func getBlockByNumber(number: Int, fullTransactions: Bool = false) throws -> Block? {
+        return try fetch(method: "getBlockByNumber", params: [number, fullTransactions])
     }
     
-    @discardableResult public func getBlockTemplate(address: Address, extraData: String, completionHandler: ((_ result: BlockTemplate?, _ error: Error?) -> Void)? = nil) -> BlockTemplate? {
-        return fetch(method: "getBlockTemplate", params: [address, extraData], completionHandler: completionHandler)
+    public func getBlockTemplate(address: Address? = nil, extraData: String = "") throws -> BlockTemplate? {
+        var params: [Any] = [Any]()
+        if address != nil {
+            params.append(address!)
+            params.append(extraData)
+        }
+        return try fetch(method: "getBlockTemplate", params: params)
+
     }
     
-    @discardableResult public func getBlockTransactionCountByHash(hash: Hash, completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
-        return fetch(method: "getBlockTransactionCountByHash", params: [hash], completionHandler: completionHandler)
+    public func getBlockTransactionCountByHash(hash: Hash) throws -> Int? {
+        return try fetch(method: "getBlockTransactionCountByHash", params: [hash])
     }
 
-    @discardableResult public func getBlockTransactionCountByNumber(number: Int, completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
-        return fetch(method: "getBlockTransactionCountByNumber", params: [number], completionHandler: completionHandler)
+    public func getBlockTransactionCountByNumber(number: Int) throws -> Int? {
+        return try fetch(method: "getBlockTransactionCountByNumber", params: [number])
     }
     
-    @discardableResult public func getTransactionByBlockHashAndIndex(hash: Hash, index: Int, completionHandler: ((_ result: Transaction?, _ error: Error?) -> Void)? = nil) -> Transaction? {
-        return fetch(method: "getTransactionByBlockHashAndIndex", params: [hash, index], completionHandler: completionHandler)
+    public func getTransactionByBlockHashAndIndex(hash: Hash, index: Int) throws -> Transaction? {
+        return try fetch(method: "getTransactionByBlockHashAndIndex", params: [hash, index])
     }
     
-    @discardableResult public func getTransactionByBlockNumberAndIndex(number: Int, index: Int, completionHandler: ((_ result: Transaction?, _ error: Error?) -> Void)? = nil) -> Transaction? {
-        return fetch(method: "getTransactionByBlockNumberAndIndex", params: [number, index], completionHandler: completionHandler)
+    public func getTransactionByBlockNumberAndIndex(number: Int, index: Int) throws -> Transaction? {
+        return try fetch(method: "getTransactionByBlockNumberAndIndex", params: [number, index])
     }
     
-    @discardableResult public func getTransactionByHash(hash: Hash, completionHandler: ((_ result: Transaction?, _ error: Error?) -> Void)? = nil) -> Transaction? {
-        return fetch(method: "getTransactionByHash", params: [hash], completionHandler: completionHandler)
+    public func getTransactionByHash(hash: Hash) throws -> Transaction? {
+        return try fetch(method: "getTransactionByHash", params: [hash])
     }
     
-    @discardableResult public func getTransactionReceipt(hash: Hash, completionHandler: ((_ result: TransactionReceipt?, _ error: Error?) -> Void)? = nil) -> TransactionReceipt? {
-        return fetch(method: "getTransactionReceipt", params: [hash], completionHandler: completionHandler)
+    public func getTransactionReceipt(hash: Hash) throws -> TransactionReceipt? {
+        return try fetch(method: "getTransactionReceipt", params: [hash])
     }
     
-    @discardableResult public func getTransactionsByAddress(address: Address, numberOfTransactions: Int = 1000, completionHandler: ((_ result: [Transaction]?, _ error: Error?) -> Void)? = nil) -> [Transaction]? {
-        return fetch(method: "getTransactionsByAddress", params: [address, numberOfTransactions], completionHandler: completionHandler)
+    public func getTransactionsByAddress(address: Address, numberOfTransactions: Int = 1000) throws -> [Transaction]? {
+        return try fetch(method: "getTransactionsByAddress", params: [address, numberOfTransactions])
     }
     
-    @discardableResult public func getWork(address: Address, extraData: String, completionHandler: ((_ result: WorkInstructions?, _ error: Error?) -> Void)? = nil) -> WorkInstructions? {
-        return fetch(method: "getWork", params: [address, extraData], completionHandler: completionHandler)
+    public func getWork(address: Address? = nil, extraData: String = "") throws -> WorkInstructions? {
+        var params: [Any] = [Any]()
+        if address != nil {
+            params.append(address!)
+            params.append(extraData)
+        }
+        return try fetch(method: "getWork", params: params)
     }
     
-    @discardableResult public func hashrate(completionHandler: ((_ result: Float?, _ error: Error?) -> Void)? = nil) -> Float? {
-        return fetch(method: "hashrate", params: [], completionHandler: completionHandler)
+    public func hashrate() throws -> Float? {
+        return try fetch(method: "hashrate", params: [])
     }
     
-    @discardableResult public func log(tag: String, level: LogLevel, completionHandler: ((_ result: Bool?, _ error: Error?) -> Void)? = nil) -> Bool? {
-        return fetch(method: "log", params: [tag, level.rawValue], completionHandler: completionHandler)
+    public func log(tag: String, level: LogLevel) throws -> Bool? {
+        return try fetch(method: "log", params: [tag, level.rawValue])
     }
     
-    @discardableResult public func mempool(completionHandler: ((_ result: MempoolInfo?, _ error: Error?) -> Void)? = nil) -> MempoolInfo? {
-        return fetch(method: "mempool", params: [], completionHandler: completionHandler)
+    public func mempool() throws -> MempoolInfo? {
+        return try fetch(method: "mempool", params: [])
     }
     
-    @discardableResult public func mempoolContent(fullTransactions: Bool = false, completionHandler: ((_ result: [Any]?, _ error: Error?) -> Void)? = nil) -> [Any]? {
-        let result: [HashOrTransaction] = fetch(method: "mempoolContent", params: [fullTransactions], completionHandler: completionHandler)!
+    public func mempoolContent(fullTransactions: Bool = false) throws -> [Any]? {
+        let result: [HashOrTransaction] = try fetch(method: "mempoolContent", params: [fullTransactions])!
         var converted: [Any] = [Any]()
         for transaction in result {
             converted.append(transaction.value)
@@ -573,97 +577,104 @@ public class NimiqJSONRPCClient {
         return converted
     }
     
-    @discardableResult public func minerAddress(completionHandler: ((_ result: String?, _ error: Error?) -> Void)? = nil) -> String? {
-        return fetch(method: "minerAddress", params: [], completionHandler: completionHandler)
+    public func minerAddress() throws -> String? {
+        return try fetch(method: "minerAddress", params: [])
     }
     
-    @discardableResult public func minerThreads(threads: Int? = nil, completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
+    public func minerThreads(threads: Int? = nil) throws -> Int? {
         var params: [Int] = [Int]()
         if threads != nil {
             params.append(threads!)
         }
-        return fetch(method: "minerThreads", params: params, completionHandler: completionHandler)
+        return try fetch(method: "minerThreads", params: params)
     }
     
-    @discardableResult public func minFeePerByte(fee: Int? = nil, completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
+    public func minFeePerByte(fee: Int? = nil) throws -> Int? {
         var params: [Int] = [Int]()
         if fee != nil {
             params.append(fee!)
         }
-        return fetch(method: "minFeePerByte", params: params, completionHandler: completionHandler)
+        return try fetch(method: "minFeePerByte", params: params)
     }
     
-    @discardableResult public func mining(completionHandler: ((_ result: Bool?, _ error: Error?) -> Void)? = nil) -> Bool? {
-        return fetch(method: "mining", params: [], completionHandler: completionHandler)
+    public func mining(state: Bool? = nil) throws -> Bool? {
+        var params: [Bool] = [Bool]()
+        if state != nil {
+            params.append(state!)
+        }
+        return try fetch(method: "mining", params: params)
     }
     
-    @discardableResult public func peerCount(completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
-        return fetch(method: "peerCount", params: [], completionHandler: completionHandler)
+    public func peerCount() throws -> Int? {
+        return try fetch(method: "peerCount", params: [])
     }
     
-    @discardableResult public func peerList(completionHandler: ((_ result: [Peer]?, _ error: Error?) -> Void)? = nil) -> [Peer]? {
-        return fetch(method: "peerList", params: [], completionHandler: completionHandler)
+    public func peerList() throws -> [Peer]? {
+        return try fetch(method: "peerList", params: [])
     }
     
-    @discardableResult public func peerState(address: String, command: PeerStateCommand? = nil, completionHandler: ((_ result: Peer?, _ error: Error?) -> Void)? = nil) -> Peer? {
+    public func peerState(address: String, command: PeerStateCommand? = nil) throws -> Peer? {
         var params: [Any] = [Any]()
         params.append(address)
-        if command != nil {
-            params.append(command!)
+        if let commandString = command?.rawValue  {
+            params.append(commandString)
         }
-        return fetch(method: "peerState", params: params, completionHandler: completionHandler)
+        return try fetch(method: "peerState", params: params)
     }
     
-    @discardableResult public func pool(address: Any? = nil, completionHandler: ((_ result: String?, _ error: Error?) -> Void)? = nil) -> String? {
+    public func pool(address: Any? = nil) throws -> String? {
         var params: [Any] = [Any]()
-        if let stringAddress = address as? String {
-            params.append(stringAddress)
-        } else if let stringBool = address as? Bool {
-            params.append(stringBool)
+        if let addressString = address as? String {
+            params.append(addressString)
+        } else if let addressBool = address as? Bool {
+            params.append(addressBool)
         }
-        return fetch(method: "pool", params: params, completionHandler: completionHandler)
+        return try fetch(method: "pool", params: params)
     }
     
-    @discardableResult public func poolConfirmedBalance(completionHandler: ((_ result: Int?, _ error: Error?) -> Void)? = nil) -> Int? {
-        return fetch(method: "poolConfirmedBalance", params: [], completionHandler: completionHandler)
+    public func poolConfirmedBalance() throws -> Int? {
+        return try fetch(method: "poolConfirmedBalance", params: [])
     }
     
-    @discardableResult public func poolConnectionState(completionHandler: ((_ result: PoolConnectionState?, _ error: Error?) -> Void)? = nil) -> PoolConnectionState? {
-        return fetch(method: "poolConnectionState", params: [], completionHandler: completionHandler)
+    public func poolConnectionState() throws -> PoolConnectionState? {
+        return try fetch(method: "poolConnectionState", params: [])
     }
     
-    @discardableResult public func sendRawTransaction(transaction: String, completionHandler: ((_ result: Hash?, _ error: Error?) -> Void)? = nil) -> Hash? {
-        return fetch(method: "sendRawTransaction", params: [transaction], completionHandler: completionHandler)
+    public func sendRawTransaction(transaction: String) throws -> Hash? {
+        return try fetch(method: "sendRawTransaction", params: [transaction])
     }
     
-    @discardableResult public func sendTransaction(transaction: OutgoingTransaction, completionHandler: ((_ result: Hash?, _ error: Error?) -> Void)? = nil) -> Hash? {
-        var params:[String:Any] = [
+    public func sendTransaction(transaction: OutgoingTransaction) throws -> Hash? {
+        let params:[String:Any?] = [
             "from": transaction.from,
+            "fromType": transaction.fromType?.rawValue,
             "to": transaction.to,
+            "toType": transaction.toType?.rawValue,
             "value": transaction.value,
-            "fee": transaction.fee
+            "fee": transaction.fee,
+            "data": transaction.data
         ]
+        return try fetch(method: "sendTransaction", params: [params])
+    }
 
-        if transaction.fromType != nil {
-            params["fromType"] = transaction.fromType
-        }
-        if transaction.toType != nil {
-            params["toType"] = transaction.toType
-        }
-        if transaction.data != nil {
-            params["data"] = transaction.data
-        }
-        
-        return fetch(method: "sendTransaction", params: [params], completionHandler: completionHandler)
+    @discardableResult public func submitBlock(_ block: String) throws -> String? {
+        return try fetch(method: "submitBlock", params: [block])
     }
     
-    @discardableResult public func submitBlock(_ block: String, completionHandler: ((_ result: String?, _ error: Error?) -> Void)? = nil) -> String? {
-        return fetch(method: "submitBlock", params: [block], completionHandler: completionHandler)
-    }
-    
-    @discardableResult public func syncing(completionHandler: ((_ result: Any?, _ error: Error?) -> Void)? = nil) -> Any? {
-        let result: SyncStatusOrBool = fetch(method: "syncing", params: [], completionHandler: completionHandler)!
+    public func syncing() throws -> Any? {
+        let result: SyncStatusOrBool = try fetch(method: "syncing", params: [])!
         return result.value
     }
     
+    public func getRawTransactionInfo(transaction: String) throws -> Transaction? {
+        return try fetch(method: "getRawTransactionInfo", params: [transaction])
+    }
+    
+    public func transactionsPerBucket(transaction: String) throws -> Transaction? {
+        return try fetch(method: "transactionsPerBucket", params: [transaction])
+    }
+    
+    public func resetConstant(constant: String) throws -> Int? {
+        return try fetch(method: "constant", params: [constant, "reset"])
+    }
 }
