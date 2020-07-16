@@ -450,7 +450,7 @@ public class NimiqClient {
 
     /// Client initialization from a Config structure using shared URLSession.
     /// - Parameter config: Options used for the configuration.
-    convenience init(config: Config) {
+    public convenience init(config: Config) {
         self.init(scheme: config.scheme, user: config.user, password: config.password, host: config.host, port: config.port)
     }
 
@@ -461,7 +461,7 @@ public class NimiqClient {
     /// - Parameter host: Host IP address.
     /// - Parameter port: Host port.
     /// - Parameter session: Used to make all requests. If ommited the shared URLSession is used.
-    init(scheme: String, user: String, password: String, host: String, port: Int, session: URLSession? = nil){
+    public init(scheme: String, user: String, password: String, host: String, port: Int, session: URLSession? = nil){
         self.url = "\(scheme)://\(user):\(password)@\(host):\(port)"
         if session != nil {
             self.session = session!
