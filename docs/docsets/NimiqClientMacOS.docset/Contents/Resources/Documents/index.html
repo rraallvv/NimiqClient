@@ -187,29 +187,33 @@
 <p>Check out the <a href="https://github.com/nimiq/core-js/wiki/JSON-RPC-API">Nimiq RPC specs</a> for behind the scene RPC calls.</p>
 <h2 id='installation' class='heading'>Installation</h2>
 
-<p>The recommended way to install Nimiq PHP Client is with Composer. Composer is a dependency management tool for PHP that
+<p>The recommended way to install Nimiq Swift Client is with CocoaPods. CocoaPods is a dependency management tool for Xcode projects that
 allows you to declare the dependencies your project needs and installs them into your project.</p>
-<pre class="highlight shell"><code><span class="c"># Install Composer</span>
-curl <span class="nt">-sS</span> https://getcomposer.org/installer | php
+<pre class="highlight shell"><code><span class="c"># Install CocoaPods</span>
+<span class="nv">$ </span><span class="nb">sudo </span>gem <span class="nb">install </span>cocoapods
 </code></pre>
 
-<p>You can add Nimiq PHP Client as a dependency using the composer.phar CLI:</p>
-<pre class="highlight shell"><code>php composer.phar require nimiq-community/php-client
+<p>To enable CocoaPods in your project, close Xcode and in your project directory run:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>pod init
 </code></pre>
 
-<p>Alternatively, you can specify it as a dependency in your project&rsquo;s existing composer.json file:</p>
-<pre class="highlight json"><code><span class="p">{</span><span class="w">
-    </span><span class="nl">"require"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"nimiq-community/php-client"</span><span class="p">:</span><span class="w"> </span><span class="s2">"^1.0"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>After installing, you need to require Composer&rsquo;s autoloader:</p>
-<pre class="highlight php"><code><span class="k">require</span> <span class="s1">'vendor/autoload.php'</span><span class="p">;</span>
+<p>Then you can add Nimiq Swift Client as a dependency modifying the created <code>Podfile</code>. To open the file for editing run <code>open -a Xcode Podfile</code>:</p>
+<pre class="highlight shell"><code>target <span class="s2">"MyApp"</span> <span class="k">do
+    </span>pod <span class="s1">'NimiqClient'</span>
+end
 </code></pre>
 
-<p>You can find out more on how to install Composer, configure autoloading, and other best-practices for defining dependencies at <a href="https://getcomposer.org">getcomposer.org</a>.</p>
+<p>Finally install all the dependencies using CocoaPods: </p>
+<pre class="highlight shell"><code>pod <span class="nb">install</span>
+</code></pre>
+
+<p>Alternatively, you can archive the framework target from Xcode &gt; Product &gt; Archive and add it to your application target.</p>
+
+<p>Make sure the framework is added with the option Embed &amp; Sign:</p>
+
+<p><img src="Images/1.png" alt="Embed &amp; Sign"></p>
+
+<p>You can find out more on how to install CocoaPods and how to configure your Xcode proyecto to use it and install dependencies at <a href="https://cocoapods.org">CocoaPods.org</a>.</p>
 <h2 id='contributions' class='heading'>Contributions</h2>
 
 <p>This implementation was originally contributed by <a href="https://github.com/rraallvv/">rraallvv</a>.</p>
@@ -219,32 +223,24 @@ curl <span class="nt">-sS</span> https://getcomposer.org/installer | php
 <p>Refer to the <a href="https://github.com/nimiq-community/swift-client/issues">issue tracker</a> for ideas.</p>
 <h3 id='develop' class='heading'>Develop</h3>
 
-<p>After cloning the repository, install the dependencies:</p>
-<pre class="highlight shell"><code>php composer.phar <span class="nb">install</span>
-</code></pre>
+<p>After cloning the repository, open the workspace file in NimiqClient/NimiqClient.xcworkspace instead of the project file.</p>
 
 <p>All done, happy coding!</p>
 <h3 id='testing' class='heading'>Testing</h3>
 
-<p>Tests are stored in the <code>/tests</code> folder and can be run using phpunit:</p>
-<pre class="highlight shell"><code>php composer.phar run-script <span class="nb">test</span>
-</code></pre>
-
-<p>To run the tests and generate HTML coverage report:</p>
-<pre class="highlight shell"><code>php composer.phar run-script coverage
-</code></pre>
-
-<p>This will generate the report in <code>/coverage</code> folder. <a href="https://xdebug.org/docs/install">Xdebug</a> is required to generate the coverage report.</p>
+<p>Tests are stored in the <code>/Tests</code> folder and can be run from Xcode.</p>
 <h3 id='documentation' class='heading'>Documentation</h3>
 
-<p>The documentation in the <code>/docs</code> folder can generated from the source code:</p>
-<pre class="highlight shell"><code>php composer.phar run-script docs
+<p>The documentation is generated automatically running Jazzy from the repository root directory. To install Jazzy run:</p>
+<pre class="highlight plaintext"><code>$ gem install jazzy
 </code></pre>
 
-<p>It will generate a <code>README.md</code> in Github Markdown format.</p>
+<p>To generate the documentation run:</p>
+<pre class="highlight plaintext"><code>$ jazzy
+</code></pre>
 <h2 id='license' class='heading'>License</h2>
 
-<p><a href="LICENSE.md">Apache 2.0</a></p>
+<p><a href="LICENSE.md">MIT</a></p>
 
           </div>
         </section>
