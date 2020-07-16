@@ -122,6 +122,16 @@ public struct OutgoingTransaction {
     var value: Int
     var fee: Int
     var data: String? = nil
+
+    public init(from: Address, fromType: AccountType? = .basic, to: Address, toType: AccountType? = .basic, value: Int, fee: Int, data: String? = nil) {
+        self.from = from
+        self.fromType = fromType
+        self.to = to
+        self.toType = toType
+        self.value = value
+        self.fee = fee
+        self.data = data
+    }
 }
 
 /// Hexadecimal string containing a hash value.
@@ -407,6 +417,14 @@ public struct Config {
     var port: Int
     var user: String
     var password: String
+
+    public init(scheme: String, host: String, port: Int, user: String, password: String) {
+        self.scheme = scheme
+        self.host = host
+        self.port = port
+        self.user = user
+        self.password = password
+    }
 }
 
 /// Thrown when somthing when wrong with the JSONRPC request.
