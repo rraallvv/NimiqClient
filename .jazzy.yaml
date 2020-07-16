@@ -1,0 +1,14 @@
+author: Nimiq Community
+copyright: Copyright (c) 2020 Nimiq Community
+
+module: NimiqClientMacOS
+
+theme: fullwidth
+clean: true
+
+readme: README.md
+
+skip_undocumented: false
+hide_documentation_coverage: false
+
+xcodebuild_arguments: [-workspace, NimiqClient/NimiqClient.xcworkspace, -scheme, NimiqClientMacOS]

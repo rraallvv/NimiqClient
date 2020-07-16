@@ -18,48 +18,78 @@ struct Root<T:Decodable>: Decodable {
 
 /// Type of a Nimiq account.
 public enum AccountType: Int, Decodable {
+    /// Normal Nimiq account.
     case basic = 0
+    /// Vesting contract.
     case vesting = 1
+    /// Hashed Timelock Contract.
     case htlc = 2
 }
 
 /// Normal Nimiq account object returned by the server.
 public struct Account: Decodable {
-    var id: String
-    var address: String
-    var balance: Int
-    var type: AccountType
+    /// Hex-encoded 20 byte address.
+    public var id: String
+    /// User friendly address (NQ-address).
+    public var address: String
+    /// Balance of the account (in smallest unit).
+    public var balance: Int
+    /// The account type associated with the account.
+    public var type: AccountType
 }
 
 /// Vesting contract object returned by the server.
 public struct VestingContract : Decodable {
-    var id: String
-    var address: String
-    var balance: Int
-    var type: AccountType
-    var owner: String
-    var ownerAddress: String
-    var vestingStart: Int
-    var vestingStepBlocks: Int
-    var vestingStepAmount: Int
-    var vestingTotalAmount: Int
+    /// Hex-encoded 20 byte address.
+    public var id: String
+    /// User friendly address (NQ-address).
+    public var address: String
+    /// Balance of the account (in smallest unit).
+    public var balance: Int
+    /// The account type associated with the account.
+    public var type: AccountType
+    /// Hex-encoded 20 byte address of the owner of the vesting contract.
+    public var owner: String
+    /// User friendly address (NQ-address) of the owner of the vesting contract.
+    public var ownerAddress: String
+    /// The block that the vesting contracted commenced.
+    public var vestingStart: Int
+    /// The number of blocks after which some part of the vested funds is released.
+    public var vestingStepBlocks: Int
+    /// The amount (in smallest unit) released every vestingStepBlocks blocks.
+    public var vestingStepAmount: Int
+    /// The total amount (in smallest unit) that was provided at the contract creation.
+    public var vestingTotalAmount: Int
 }
 
 /// Hashed Timelock Contract object returned by the server.
 public struct HTLC : Decodable {
-    var id: String
-    var address: String
-    var balance: Int
-    var type: AccountType
-    var sender: String
-    var senderAddress: String
-    var recipient: String
-    var recipientAddress: String
-    var hashRoot: String
-    var hashAlgorithm: Int
-    var hashCount: Int
-    var timeout: Int
-    var totalAmount: Int
+    /// Hex-encoded 20 byte address.
+    public var id: String
+    /// User friendly address (NQ-address).
+    public var address: String
+    /// Balance of the account (in smallest unit).
+    public var balance: Int
+    /// The account type associated with the account.
+    public var type: AccountType
+    /// Hex-encoded 20 byte address of the sender of the HTLC.
+    public var sender: String
+    /// User friendly address (NQ-address) of the sender of the HTLC.
+    public var senderAddress: String
+    /// Hex-encoded 20 byte address of the recipient of the HTLC.
+    public var recipient: String
+    /// User friendly address (NQ-address) of the recipient of the HTLC.
+    public var recipientAddress: String
+    /// Hex-encoded 32 byte hash root.
+    public var hashRoot: String
+    /// Hash algorithm.
+    public var hashAlgorithm: Int
+    /// Number of hashes this HTLC is split into.
+    public var hashCount: Int
+    /// Block after which the contract can only be used by the original sender to recover funds.
+    public var timeout: Int
+    /// The total amount (in smallest unit) that was provided at the contract creation.
+    public var totalAmount: Int
 }
 
 /// Nimiq account returned by the server. The especific type is in the associated value.
@@ -99,15 +129,24 @@ enum RawAccount : Decodable {
 
 /// Consensus state returned by the server.
 public enum ConsensusState: String, Decodable {
+    /// Connecting.
     case connecting
+    /// Syncing blocks.
     case syncing
+    /// Consensus established.
     case established
 }
 
 /// Nimiq wallet returned by the server.
 public struct Wallet: Decodable {
-    var id, address, publicKey: String
-    var privateKey: String?
+    /// Hex-encoded 20 byte address.
+    public var id: String
+    /// User friendly address (NQ-address).
+    public var address: String
+    /// Hex-encoded 32 byte Ed25519 public key.
+    public var publicKey: String
+    /// Hex-encoded 32 byte Ed25519 private key.
+    public var privateKey: String?
 }
 
 /// Can be both a hexadecimal representation or a human readable address.
@@ -115,14 +154,29 @@ public typealias Address = String
 
 /// Used to pass the data to send transaccions.
 public struct OutgoingTransaction {
-    var from: Address
-    var fromType: AccountType? = .basic
-    var to: Address
-    var toType: AccountType? = .basic
-    var value: Int
-    var fee: Int
-    var data: String? = nil
+    /// The address the transaction is send from.
+    public var from: Address
+    /// The account type at the given address.
+    public var fromType: AccountType? = .basic
+    /// The address the transaction is directed to.
+    public var to: Address
+    /// The account type at the given address.
+    public var toType: AccountType? = .basic
+    /// Integer of the value (in smallest unit) sent with this transaction.
+    public var value: Int
+    /// Integer of the fee (in smallest unit) for this transaction.
+    public var fee: Int
+    /// Hex-encoded contract parameters or a message.
+    public var data: String? = nil
 
+    /// OutgoingTransaction initialization.
+    /// - Parameter from: The address the transaction is send from.
+    /// - Parameter fromType: The account type at the given address.
+    /// - Parameter to: The address the transaction is directed to.
+    /// - Parameter toType: The account type at the given address.
+    /// - Parameter value: Integer of the value (in smallest unit) sent with this transaction.
+    /// - Parameter fee: Integer of the fee (in smallest unit) for this transaction.
+    /// - Parameter data: Hex-encoded contract parameters or a message.
     public init(from: Address, fromType: AccountType? = .basic, to: Address, toType: AccountType? = .basic, value: Int, fee: Int, data: String? = nil) {
         self.from = from
         self.fromType = fromType
@@ -139,39 +193,68 @@ public typealias Hash = String
 
 /// Transaction returned by the server.
 public struct Transaction : Decodable {
-    var hash: Hash
-    var blockHash: Hash?
-    var blockNumber: Int?
-    var timestamp: Int?
-    var confirmations: Int? = 0
-    var transactionIndex: Int?
-    var from: String
-    var fromAddress: Address
-    var to: String
-    var toAddress: Address
-    var value: Int
-    var fee: Int
-    var data: String? = nil
-    var flags: Int
+    /// Hex-encoded hash of the transaction.
+    public var hash: Hash
+    /// Hex-encoded hash of the block containing the transaction.
+    public var blockHash: Hash?
+    /// Height of the block containing the transaction.
+    public var blockNumber: Int?
+    /// UNIX timestamp of the block containing the transaction.
+    public var timestamp: Int?
+    /// Number of confirmations of the block containing the transaction.
+    public var confirmations: Int? = 0
+    /// Index of the transaction in the block.
+    public var transactionIndex: Int?
+    /// Hex-encoded address of the sending account.
+    public var from: String
+    /// Nimiq user friendly address (NQ-address) of the sending account.
+    public var fromAddress: Address
+    /// Hex-encoded address of the recipient account.
+    public var to: String
+    /// Nimiq user friendly address (NQ-address) of the recipient account.
+    public var toAddress: Address
+    /// Integer of the value (in smallest unit) sent with this transaction.
+    public var value: Int
+    /// Integer of the fee (in smallest unit) for this transaction.
+    public var fee: Int
+    /// Hex-encoded contract parameters or a message.
+    public var data: String? = nil
+    /// Bit-encoded transaction flags.
+    public var flags: Int
 }
 
 /// Block returned by the server.
 public struct Block : Decodable {
-    var number: Int
-    var hash: Hash
-    var pow: Hash
-    var parentHash: Hash
-    var nonce: Int
-    var bodyHash: Hash
-    var accountsHash: Hash
-    var difficulty: String
-    var timestamp: Int
-    var confirmations: Int
-    var miner: String
-    var minerAddress: Address
-    var extraData: String
-    var size: Int
-    var transactions: [Any]
+    /// Height of the block.
+    public var number: Int
+    /// Hex-encoded 32-byte hash of the block.
+    public var hash: Hash
+    /// Hex-encoded 32-byte Proof-of-Work hash of the block.
+    public var pow: Hash
+    /// Hex-encoded 32-byte hash of the predecessor block.
+    public var parentHash: Hash
+    /// The nonce of the block used to fulfill the Proof-of-Work.
+    public var nonce: Int
+    /// Hex-encoded 32-byte hash of the block body Merkle root.
+    public var bodyHash: Hash
+    /// Hex-encoded 32-byte hash of the accounts tree root.
+    public var accountsHash: Hash
+    /// Block difficulty, encoded as decimal number in string.
+    public var difficulty: String
+    /// UNIX timestamp of the block
+    public var timestamp: Int
+    /// Number of confirmations for this transaction (number of blocks on top of the block where this transaction was in).
+    public var confirmations: Int
+    /// Hex-encoded 20 byte address of the miner of the block.
+    public var miner: String
+    /// User friendly address (NQ-address) of the miner of the block.
+    public var minerAddress: Address
+    /// Hex-encoded value of the extra data field, maximum of 255 bytes.
+    public var extraData: String
+    /// Block size in byte.
+    public var size: Int
+    /// Array of transactions. Either represented by the transaction hash or a Transaction object.
+    public var transactions: [Any]
 
     private enum CodingKeys: String, CodingKey {
         case number, hash, pow, parentHash, nonce, bodyHash, accountsHash, difficulty, timestamp, confirmations, miner, minerAddress, extraData, size, transactions
@@ -203,66 +286,105 @@ public struct Block : Decodable {
 
 /// Block template header returned by the server.
 public struct BlockTemplateHeader : Decodable {
-    var version: Int
-    var prevHash: Hash
-    var interlinkHash: Hash
-    var accountsHash: Hash
-    var nBits: Int
-    var height: Int
+    /// Version in block header.
+    public var version: Int
+    /// 32-byte hex-encoded hash of the previous block.
+    public var prevHash: Hash
+    /// 32-byte hex-encoded hash of the interlink.
+    public var interlinkHash: Hash
+    /// 32-byte hex-encoded hash of the accounts tree.
+    public var accountsHash: Hash
+    /// Compact form of the hash target for this block.
+    public var nBits: Int
+    /// Height of the block in the block chain (also known as block number).
+    public var height: Int
 }
 
 /// Block template body returned by the server.
 public struct BlockTemplateBody : Decodable {
-    var hash: Hash
-    var minerAddr: String
-    var extraData: String
-    var transactions: [String]
-    var prunedAccounts: [String]
-    var merkleHashes: [Hash]
+    /// 32-byte hex-encoded hash of the block body.
+    public var hash: Hash
+    /// 20-byte hex-encoded miner address.
+    public var minerAddr: String
+    /// Hex-encoded value of the extra data field.
+    public var extraData: String
+    /// Array of hex-encoded transactions for this block.
+    public var transactions: [String]
+    /// Array of hex-encoded pruned accounts for this block.
+    public var prunedAccounts: [String]
+    /// Array of hex-encoded hashes that verify the path of the miner address in the merkle tree.
+    /// This can be used to change the miner address easily.
+    public var merkleHashes: [Hash]
 }
 
 /// Block template returned by the server.
 public struct BlockTemplate : Decodable {
-    var header: BlockTemplateHeader
-    var interlink: String
-    var body: BlockTemplateBody
-    var target: Int
+    /// Block template header returned by the server.
+    public var header: BlockTemplateHeader
+    /// Hex-encoded interlink
+    public var interlink: String
+    /// Block template body returned by the server.
+    public var body: BlockTemplateBody
+    /// Compact form of the hash target to submit a block to this client.
+    public var target: Int
 }
 
 /// Transaction receipt returned by the server.
 public struct TransactionReceipt : Decodable {
-    var transactionHash: Hash
-    var transactionIndex: Int
-    var blockHash: Hash
-    var blockNumber: Int
-    var confirmations: Int
-    var timestamp: Int
+    /// Hex-encoded hash of the transaction.
+    public var transactionHash: Hash
+    /// Integer of the transactions index position in the block.
+    public var transactionIndex: Int
+    /// Hex-encoded hash of the block where this transaction was in.
+    public var blockHash: Hash
+    /// Block number where this transaction was in.
+    public var blockNumber: Int
+    /// Number of confirmations for this transaction (number of blocks on top of the block where this transaction was in).
+    public var confirmations: Int
+    /// Timestamp of the block where this transaction was in.
+    public var timestamp: Int
 }
 
 /// Work instructions receipt returned by the server.
 public struct WorkInstructions : Decodable {
-    var data: String
-    var suffix: String
-    var target: Int
-    var algorithm: String
+    /// Hex-encoded block header. This is what should be passed through the hash function.
+    /// The last 4 bytes describe the nonce, the 4 bytes before are the current timestamp.
+    /// Most implementations allow the miner to arbitrarily choose the nonce and to update the timestamp without requesting new work instructions.
+    public var data: String
+    /// Hex-encoded block without the header. When passing a mining result to submitBlock, append the suffix to the data string with selected nonce.
+    public var suffix: String
+    /// Compact form of the hash target to submit a block to this client.
+    public var target: Int
+    /// Field to describe the algorithm used to mine the block. Always nimiq-argon2 for now.
+    public var algorithm: String
 }
 
 /// Used to set the log level in the JSONRPC server.
 public enum LogLevel : String {
+    /// Trace level log
     case trace
+    /// Verbose level log
     case verbose
+    /// Debugging level log
     case debug
+    /// Info level log
     case info
+    /// Warning level log
     case warn
+    /// Error level log
     case error
+    /// Assertions level log
     case assert
 }
 
 /// Mempool information returned by the server.
 public struct MempoolInfo : Decodable {
-    var total: Int
-    var buckets: [Int]
-    var transactionsPerBucket: [Int:Int]
+    /// Total number of pending transactions in mempool.
+    public var total: Int
+    /// Array containing a subset of fee per byte buckets from [10000, 5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1, 0] that currently have more than one transaction.
+    public var buckets: [Int]
+    /// Number of transaction in the bucket. A transaction is assigned to the highest bucket of a value lower than its fee per byte value.
+    public var transactionsPerBucket: [Int:Int]
 
     private enum CodingKeys: String, CodingKey {
         case total, buckets
@@ -326,57 +448,88 @@ enum HashOrTransaction : Decodable {
 
 /// Peer address state returned by the server.
 public enum PeerAddressState : Int, Decodable {
+    /// New peer.
     case new = 1
+    /// Established peer.
     case established = 2
+    /// Already tried peer.
     case tried = 3
+    /// Peer failed.
     case failed = 4
+    /// Balled peer.
     case banned = 5
 }
 
 /// Peer connection state returned by the server.
 public enum PeerConnectionState : Int, Decodable {
+    /// New connection.
     case new = 1
+    /// Connecting.
     case connecting = 2
+    /// Connected.
     case connected = 3
+    /// Negotiating connection.
     case negotiating = 4
+    /// Connection established.
     case established = 5
+    /// Connection closed.
     case closed = 6
 }
 
 /// Peer information returned by the server.
 public struct Peer : Decodable {
-    var id: String
-    var address: String
-    var addressState: PeerAddressState
-    var connectionState: PeerConnectionState?
-    var version: Int?
-    var timeOffset: Int?
-    var headHash: Hash?
-    var latency: Int?
-    var rx: Int?
-    var tx: Int?
+    /// Peer id.
+    public var id: String
+    /// Peer address.
+    public var address: String
+    /// Peer address state.
+    public var addressState: PeerAddressState
+    /// Peer connection state.
+    public var connectionState: PeerConnectionState?
+    /// Node version the peer is running.
+    public var version: Int?
+    /// Time offset with the peer (in miliseconds).
+    public var timeOffset: Int?
+    /// Hash of the head block of the peer.
+    public var headHash: Hash?
+    /// Latency to the peer.
+    public var latency: Int?
+    /// Received bytes.
+    public var rx: Int?
+    /// Sent bytes.
+    public var tx: Int?
 }
 
 /// Commands to change the state of a peer.
 public enum PeerStateCommand : String {
+    /// Connect.
     case connect
+    /// Disconnect.
     case disconnect
+    /// Ban.
     case ban
+    /// Unban.
     case unban
 }
 
 /// Pool connection state information returned by the server.
 public enum PoolConnectionState : Int, Decodable {
+    /// Connected.
     case connected = 0
+    /// Connecting.
     case connecting = 1
+    /// Closed.
     case closed = 2
 }
 
 /// Syncing status returned by the server.
 public struct SyncStatus : Decodable {
-    var startingBlock: Int
-    var currentBlock: Int
-    var highestBlock: Int
+    /// The block at which the import started (will only be reset, after the sync reached his head).
+    public var startingBlock: Int
+    /// The current block, same as blockNumber.
+    public var currentBlock: Int
+    /// The estimated highest block.
+    public var highestBlock: Int
 }
 
 /// Syncing status returned by the server. The especific type is in the associated value.
@@ -412,12 +565,23 @@ enum SyncStatusOrBool : Decodable {
 
 /// Used in convenience initializer in the NimiqClient class.
 public struct Config {
-    var scheme: String
-    var host: String
-    var port: Int
-    var user: String
-    var password: String
+    /// Protocol squeme, `"http"` or `"https"`.
+    public var scheme: String
+    /// Host IP address.
+    public var host: String
+    /// Host port.
+    public var port: Int
+    /// Authorized user.
+    public var user: String
+    /// Password for the authorized user.
+    public var password: String
 
+    /// Config initialization.
+    /// - Parameter scheme: Protocol squeme, `"http"` or `"https"`.
+    /// - Parameter host: Host IP address.
+    /// - Parameter port: Host port.
+    /// - Parameter user: Authorized user.
+    /// - Parameter password: Password for the authorized user.
     public init(scheme: String, host: String, port: Int, user: String, password: String) {
         self.scheme = scheme
         self.host = host
@@ -427,7 +591,7 @@ public struct Config {
     }
 }
 
-/// Thrown when somthing when wrong with the JSONRPC request.
+/// Thrown when something when wrong with the JSONRPC request.
 public enum Error: Swift.Error, Equatable {
     /// Couldn't parse the JSONRPC request to be sent.
     case wrongFormat(_ message: String)
