@@ -1,14 +1,5 @@
 import Foundation
 
-/// Used in convenience initializer in the NimiqClient class.
-public struct Config {
-    var scheme: String
-    var host: String
-    var port: Int
-    var user: String
-    var password: String
-}
-
 // MARK: JSONRPC Models
 
 /// Error returned in the response for the JSONRPC the server.
@@ -406,8 +397,27 @@ enum SyncStatusOrBool : Decodable {
     }
 }
 
+// MARK: -
 // MARK: JSONRPC Client
 
+/// Used in convenience initializer in the NimiqClient class.
+public struct Config {
+    var scheme: String
+    var host: String
+    var port: Int
+    var user: String
+    var password: String
+}
+
+/// Thrown when somthing when wrong with the JSONRPC request.
+public enum Error: Swift.Error, Equatable {
+    /// Couldn't parse the JSONRPC request to be sent.
+    case wrongFormat(_ message: String)
+    /// The server didn't recognize the method.
+    case badMethodCall(_ message: String)
+}
+
+/// Nimiq JSONRPC Client
 public class NimiqClient {
 
     /// Number in the sequence for the of the next request.
@@ -419,14 +429,6 @@ public class NimiqClient {
 
     /// URLSession used for HTTP requests send to the JSONRPC server.
     private let session: URLSession
-
-    /// Thrown when somthing when wrong with the JSONRPC request.
-    public enum Error: Swift.Error, Equatable {
-        /// Couldn't parse the JSONRPC request to be sent.
-        case wrongFormat(_ message: String)
-        /// The server didn't recognize the method.
-        case badMethodCall(_ message: String)
-    }
 
     /// Client initialization from a Config structure using shared URLSession.
     /// - Parameter config: Options used for the configuration.
@@ -456,7 +458,7 @@ public class NimiqClient {
     /// - Returns: If succesfull, returns the model reperestation of the result, `nil` otherwise.
     private func fetch<T:Decodable>(method: String, params: [Any]) throws -> T? {
         var responseObject: Root<T>? = nil
-        var clientError: NimiqClient.Error? = nil
+        var clientError: Error? = nil
 
         // make JSON object to send to the server
         let callObject:[String:Any] = [
@@ -485,7 +487,7 @@ public class NimiqClient {
                 responseObject = try JSONDecoder().decode(Root<T>.self, from: data! )
 
             } catch {
-                clientError = NimiqClient.Error.wrongFormat(error.localizedDescription)
+                clientError = Error.wrongFormat(error.localizedDescription)
             }
 
             // signal that the request was completed
@@ -502,7 +504,7 @@ public class NimiqClient {
         }
 
         if let error = responseObject?.error {
-            throw NimiqClient.Error.badMethodCall("\(error.message) (Code: \(error.code)")
+            throw Error.badMethodCall("\(error.message) (Code: \(error.code)")
         }
 
         // increase the JSONRPC client request id for the next request
