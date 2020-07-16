@@ -538,11 +538,11 @@ public class NimiqClient {
 
     /// Returns or overrides a constant value.
     /// When no parameter is given, it returns the value of the constant. When giving a value as parameter,
-    /// it sets the constant to the given value. To reset the constant use `resetConstant(constant:)` instead.
+    /// it sets the constant to the given value. To reset the constant use `resetConstant()` instead.
     /// - Parameter string: The class and name of the constant (format should be `Class.CONSTANT`).
     /// - Parameter value: The new value of the constant.
     /// - Returns: The value of the constant.
-    public func constant(constant: String, value: Int? = nil) throws -> Int? {
+    public func constant(_ constant: String, value: Int? = nil) throws -> Int? {
         var params:[Any] = [constant]
         if value != nil {
             params.append(value!)
@@ -556,10 +556,10 @@ public class NimiqClient {
         return try fetch(method: "createAccount", params: [])
     }
 
-    /// Creates and signs a transaction without sending it. The transaction can then be send via `sendRawTransaction(transaction:)` without accidentally replaying it.
+    /// Creates and signs a transaction without sending it. The transaction can then be send via `sendRawTransaction()` without accidentally replaying it.
     /// - Parameter transaction: The transaction object.
     /// - Returns: Hex-encoded transaction.
-    public func createRawTransaction(transaction: OutgoingTransaction) throws -> String? {
+    public func createRawTransaction(_ transaction: OutgoingTransaction) throws -> String? {
         let params:[String:Any?] = [
             "from": transaction.from,
             "fromType": transaction.fromType?.rawValue,
@@ -591,7 +591,7 @@ public class NimiqClient {
     /// - Parameter hash: Hash of the block to gather information on.
     /// - Parameter fullTransactions: If `true` it returns the full transaction objects, if `false` only the hashes of the transactions.
     /// - Returns: A block object or `nil` when no block was found.
-    public func getBlockByHash(hash: Hash, fullTransactions: Bool = false) throws -> Block? {
+    public func getBlockByHash(_ hash: Hash, fullTransactions: Bool = false) throws -> Block? {
         return try fetch(method: "getBlockByHash", params: [hash, fullTransactions])
     }
 
@@ -621,7 +621,7 @@ public class NimiqClient {
     /// Returns the number of transactions in a block from a block matching the given block hash.
     /// - Parameter hash: Hash of the block.
     /// - Returns: Number of transactions in the block found, or `nil`, when no block was found.
-    public func getBlockTransactionCountByHash(hash: Hash) throws -> Int? {
+    public func getBlockTransactionCountByHash(_ hash: Hash) throws -> Int? {
         return try fetch(method: "getBlockTransactionCountByHash", params: [hash])
     }
 
@@ -651,7 +651,7 @@ public class NimiqClient {
     /// Returns the information about a transaction requested by transaction hash.
     /// - Parameter hash: Hash of a transaction
     /// - Returns: A transaction object or `nil` when no transaction was found.
-    public func getTransactionByHash(hash: Hash) throws -> Transaction? {
+    public func getTransactionByHash(_ hash: Hash) throws -> Transaction? {
         return try fetch(method: "getTransactionByHash", params: [hash])
     }
 
@@ -667,7 +667,7 @@ public class NimiqClient {
     /// - Parameter address: Address of which transactions should be gathered.
     /// - Parameter numberOfTransactions: Number of transactions that shall be returned.
     /// - Returns: Array of transactions linked to the requested address.
-    public func getTransactionsByAddress(address: Address, numberOfTransactions: Int = 1000) throws -> [Transaction]? {
+    public func getTransactionsByAddress(_ address: Address, numberOfTransactions: Int = 1000) throws -> [Transaction]? {
         return try fetch(method: "getTransactionsByAddress", params: [address, numberOfTransactions])
     }
 
@@ -727,7 +727,7 @@ public class NimiqClient {
     /// When a value is given as parameter, it sets the number of miner threads to that value.
     /// - Parameter threads: The number of threads to allocate for mining.
     /// - Returns: The number of threads allocated for mining.
-    public func minerThreads(threads: Int? = nil) throws -> Int? {
+    public func minerThreads(_ threads: Int? = nil) throws -> Int? {
         var params: [Int] = [Int]()
         if threads != nil {
             params.append(threads!)
@@ -818,14 +818,14 @@ public class NimiqClient {
     /// Sends a signed message call transaction or a contract creation, if the data field contains code.
     /// - Parameter transaction: The hex encoded signed transaction
     /// - Returns: The Hex-encoded transaction hash.
-    public func sendRawTransaction(transaction: String) throws -> Hash? {
+    public func sendRawTransaction(_ transaction: String) throws -> Hash? {
         return try fetch(method: "sendRawTransaction", params: [transaction])
     }
 
     /// Creates new message call transaction or a contract creation, if the data field contains code.
     /// - Parameter transaction: The hex encoded signed transaction
     /// - Returns: The Hex-encoded transaction hash.
-    public func sendTransaction(transaction: OutgoingTransaction) throws -> Hash? {
+    public func sendTransaction(_ transaction: OutgoingTransaction) throws -> Hash? {
         let params:[String:Any?] = [
             "from": transaction.from,
             "fromType": transaction.fromType?.rawValue,
@@ -862,7 +862,7 @@ public class NimiqClient {
     /// Resets the constant to default value.
     /// - Parameter constant: Name of the constant.
     /// - Returns: The new value of the constant.
-    public func resetConstant(constant: String) throws -> Int? {
+    public func resetConstant(_ constant: String) throws -> Int? {
         return try fetch(method: "constant", params: [constant, "reset"])
     }
 }
