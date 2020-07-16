@@ -43,10 +43,10 @@ class URLProtocolStub: URLProtocol {
                 latestRequestMethod = latestRequest!["method"] as? String
                 latestRequestParams = latestRequest!["params"] as? [Any]
             } catch {
-                
+
             }
         }
-        
+
         return request
     }
 

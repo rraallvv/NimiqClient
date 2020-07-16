@@ -45,7 +45,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func blockNumber() -> Data {
         return """
             {
@@ -55,7 +55,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func blockTransactionCountFound() -> Data {
         return """
             {
@@ -65,7 +65,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func blockTransactionCountNotFound() -> Data {
         return """
             {
@@ -75,7 +75,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func consensusSyncing() -> Data {
         return """
             {
@@ -85,7 +85,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func constant() -> Data {
         return """
             {
@@ -95,7 +95,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func createAccount() -> Data {
         return """
             {
@@ -109,7 +109,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func createRawTransactionBasic() -> Data {
         return """
             {
@@ -119,7 +119,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func getAccountBasic() -> Data {
         return """
             {
@@ -134,7 +134,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func getAccountVesting() -> Data {
         return """
             {
@@ -155,7 +155,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func getAccountVestingHtlc() -> Data {
         return """
             {
@@ -179,7 +179,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func getBalance() -> Data {
         return """
             {
@@ -189,7 +189,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func getBlockFound() -> Data {
         return """
             {
@@ -218,7 +218,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func getBlockNotFound() -> Data {
         return """
             {
@@ -228,7 +228,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func getBlockWithTransactions() -> Data {
         return """
             {
@@ -287,7 +287,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func getRawTransactionInfoBasic() -> Data {
         return """
             {
@@ -310,7 +310,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func getTransactionContractCreation() -> Data {
         return """
             {
@@ -334,7 +334,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func getTransactionFull() -> Data {
         return """
             {
@@ -359,7 +359,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func getTransactionNotFound() -> Data {
         return """
             {
@@ -369,7 +369,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func getTransactionReceiptNotFound() -> Data {
         return """
             {
@@ -379,7 +379,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-        
+
     static func getTransactionReceiptFound() -> Data {
         return """
             {
@@ -396,7 +396,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func getTransactionsNotFound() -> Data {
         return """
             {
@@ -406,7 +406,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func getTransactionsFound() -> Data {
         return """
             {
@@ -462,7 +462,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func getWorkBlockTemplate() -> Data {
         return """
             {
@@ -495,7 +495,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func getWork() -> Data {
         return """
             {
@@ -510,7 +510,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func hashrate() -> Data {
         return """
             {
@@ -520,7 +520,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func log() -> Data {
         return """
             {
@@ -530,7 +530,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func mempoolEmpty() -> Data {
         return """
             {
@@ -543,7 +543,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func mempool() -> Data {
         return """
             {
@@ -557,7 +557,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func mempoolContentFullTransactions() -> Data {
         return """
             {
@@ -601,7 +601,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func mempoolContentHashesOnly() -> Data {
         return """
             {
@@ -615,7 +615,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func minFeePerByte() -> Data {
         return """
             {
@@ -625,7 +625,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func minerAddress() -> Data {
         return """
             {
@@ -635,7 +635,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func minerThreads() -> Data {
         return """
             {
@@ -645,7 +645,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func miningState() -> Data {
         return """
             {
@@ -655,7 +655,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func peerCount() -> Data {
         return """
             {
@@ -665,7 +665,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func peerListEmpty() -> Data {
         return """
             {
@@ -675,7 +675,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func peerList() -> Data {
         return """
             {
@@ -703,7 +703,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func peerStateError() -> Data {
         return """
             {
@@ -716,7 +716,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func peerStateFailed() -> Data {
         return """
             {
@@ -730,7 +730,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func peerStateNormal() -> Data {
         return """
             {
@@ -751,7 +751,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func poolConfirmedBalance() -> Data {
         return """
             {
@@ -761,7 +761,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func poolConnectionState() -> Data {
         return """
             {
@@ -771,7 +771,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func poolNoPool() -> Data {
         return """
             {
@@ -781,7 +781,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func poolSushipool() -> Data {
         return """
             {
@@ -791,7 +791,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func sendTransaction() -> Data {
         return """
             {
@@ -801,7 +801,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func submitBlock() -> Data {
         return """
             {
@@ -810,7 +810,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func syncingNotSyncing() -> Data {
         return """
             {
@@ -820,7 +820,7 @@ class Fixtures {
             }
             """.data(using: .utf8)!
     }
-    
+
     static func syncing() -> Data {
         return """
             {
