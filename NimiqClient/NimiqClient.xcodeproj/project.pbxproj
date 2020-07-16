@@ -99,6 +99,8 @@
 		E4BD968424BD4A4B005E6957 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 		E4BFF42524BBAE7F00A915D4 /* NimiqClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimiqClient.swift; sourceTree = "<group>"; };
 		E4BFF42A24BBAFA700A915D4 /* NimiqClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimiqClientTests.swift; sourceTree = "<group>"; };
+		E4E9549324C01DFD00981A37 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E4E9549424C01E1500981A37 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E8677B9220DB81514ACC78A9 /* Pods-NimiqClientMacOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimiqClientMacOSTests.debug.xcconfig"; path = "Target Support Files/Pods-NimiqClientMacOSTests/Pods-NimiqClientMacOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1C881B2F8B1558F9077E817 /* Pods_NimiqClientiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimiqClientiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7388A29568B2A1CBD6DEEEC /* Pods-NimiqClientTvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimiqClientTvOS.release.xcconfig"; path = "Target Support Files/Pods-NimiqClientTvOS/Pods-NimiqClientTvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +198,8 @@
 		E4B63EB424BBA4E6009AAC80 = {
 			isa = PBXGroup;
 			children = (
+				E4E9549324C01DFD00981A37 /* README.md */,
+				E4E9549424C01E1500981A37 /* LICENSE */,
 				E4BFF42424BBAE3B00A915D4 /* Sources */,
 				E4BFF42924BBAF5900A915D4 /* Tests */,
 				E4B63EDE24BBA877009AAC80 /* NimiqClientiOS */,

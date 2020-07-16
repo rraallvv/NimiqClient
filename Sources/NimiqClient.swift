@@ -449,9 +449,14 @@ public class NimiqClient {
     private let session: URLSession
 
     /// Client initialization from a Config structure using shared URLSession.
+    /// When no parameter is given, it uses de default configuration in the server (`http://:@127.0.0.1:8648`).
     /// - Parameter config: Options used for the configuration.
-    public convenience init(config: Config) {
-        self.init(scheme: config.scheme, user: config.user, password: config.password, host: config.host, port: config.port)
+    public convenience init(config: Config? = nil) {
+        if config != nil {
+            self.init(scheme: config!.scheme, user: config!.user, password: config!.password, host: config!.host, port: config!.port)
+        } else {
+            self.init(scheme: "http", user: "", password: "", host: "127.0.0.1", port: 8648)
+        }
     }
 
     /// Client initialization.
