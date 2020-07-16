@@ -8,7 +8,6 @@ clean: true
 
 readme: README.md
 
-skip_undocumented: false
-hide_documentation_coverage: false
+hide_documentation_coverage: true
 
 xcodebuild_arguments: [-workspace, NimiqClient/NimiqClient.xcworkspace, -scheme, NimiqClientMacOS]
