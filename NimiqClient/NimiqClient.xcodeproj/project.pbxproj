@@ -21,9 +21,9 @@
 		E4B63F1E24BBA965009AAC80 /* NimiqClientTvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4B63F1524BBA963009AAC80 /* NimiqClientTvOS.framework */; };
 		E4B63F2324BBA965009AAC80 /* NimiqClientTvOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B63F2224BBA965009AAC80 /* NimiqClientTvOSTests.swift */; };
 		E4B63F2524BBA965009AAC80 /* NimiqClientTvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E4B63F1724BBA963009AAC80 /* NimiqClientTvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4BD968124BD3905005E6957 /* NimiqClientTests+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968024BD3905005E6957 /* NimiqClientTests+Fixtures.swift */; };
-		E4BD968224BD3905005E6957 /* NimiqClientTests+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968024BD3905005E6957 /* NimiqClientTests+Fixtures.swift */; };
-		E4BD968324BD3905005E6957 /* NimiqClientTests+Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968024BD3905005E6957 /* NimiqClientTests+Fixtures.swift */; };
+		E4BD968124BD3905005E6957 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968024BD3905005E6957 /* Fixtures.swift */; };
+		E4BD968224BD3905005E6957 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968024BD3905005E6957 /* Fixtures.swift */; };
+		E4BD968324BD3905005E6957 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968024BD3905005E6957 /* Fixtures.swift */; };
 		E4BD968524BD4A4B005E6957 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968424BD4A4B005E6957 /* URLProtocolStub.swift */; };
 		E4BD968624BD4A4B005E6957 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968424BD4A4B005E6957 /* URLProtocolStub.swift */; };
 		E4BD968724BD4A4B005E6957 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BD968424BD4A4B005E6957 /* URLProtocolStub.swift */; };
@@ -95,7 +95,7 @@
 		E4B63F1D24BBA964009AAC80 /* NimiqClientTvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NimiqClientTvOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B63F2224BBA965009AAC80 /* NimiqClientTvOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimiqClientTvOSTests.swift; sourceTree = "<group>"; };
 		E4B63F2424BBA965009AAC80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E4BD968024BD3905005E6957 /* NimiqClientTests+Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NimiqClientTests+Fixtures.swift"; sourceTree = "<group>"; };
+		E4BD968024BD3905005E6957 /* Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
 		E4BD968424BD4A4B005E6957 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 		E4BFF42524BBAE7F00A915D4 /* NimiqClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimiqClient.swift; sourceTree = "<group>"; };
 		E4BFF42A24BBAFA700A915D4 /* NimiqClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimiqClientTests.swift; sourceTree = "<group>"; };
@@ -294,7 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				E4BFF42A24BBAFA700A915D4 /* NimiqClientTests.swift */,
-				E4BD968024BD3905005E6957 /* NimiqClientTests+Fixtures.swift */,
+				E4BD968024BD3905005E6957 /* Fixtures.swift */,
 				E4BD968424BD4A4B005E6957 /* URLProtocolStub.swift */,
 			);
 			name = Tests;
@@ -713,7 +713,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4BFF42B24BBAFA700A915D4 /* NimiqClientTests.swift in Sources */,
-				E4BD968124BD3905005E6957 /* NimiqClientTests+Fixtures.swift in Sources */,
+				E4BD968124BD3905005E6957 /* Fixtures.swift in Sources */,
 				E4B63EEB24BBA878009AAC80 /* NimiqClientiOSTests.swift in Sources */,
 				E4BFF42E24BBB01800A915D4 /* NimiqClient.swift in Sources */,
 				E4BD968524BD4A4B005E6957 /* URLProtocolStub.swift in Sources */,
@@ -733,7 +733,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4BFF42C24BBAFA700A915D4 /* NimiqClientTests.swift in Sources */,
-				E4BD968224BD3905005E6957 /* NimiqClientTests+Fixtures.swift in Sources */,
+				E4BD968224BD3905005E6957 /* Fixtures.swift in Sources */,
 				E4B63F0724BBA930009AAC80 /* NimiqClientMacOSTests.swift in Sources */,
 				E4BFF42F24BBB01900A915D4 /* NimiqClient.swift in Sources */,
 				E4BD968624BD4A4B005E6957 /* URLProtocolStub.swift in Sources */,
@@ -753,7 +753,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4BFF42D24BBAFA700A915D4 /* NimiqClientTests.swift in Sources */,
-				E4BD968324BD3905005E6957 /* NimiqClientTests+Fixtures.swift in Sources */,
+				E4BD968324BD3905005E6957 /* Fixtures.swift in Sources */,
 				E4B63F2324BBA965009AAC80 /* NimiqClientTvOSTests.swift in Sources */,
 				E4BFF43024BBB01A00A915D4 /* NimiqClient.swift in Sources */,
 				E4BD968724BD4A4B005E6957 /* URLProtocolStub.swift in Sources */,

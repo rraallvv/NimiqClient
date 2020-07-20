@@ -321,7 +321,7 @@ public struct BlockTemplateBody : Decodable {
 public struct BlockTemplate : Decodable {
     /// Block template header returned by the server.
     public var header: BlockTemplateHeader
-    /// Hex-encoded interlink
+    /// Hex-encoded interlink.
     public var interlink: String
     /// Block template body returned by the server.
     public var body: BlockTemplateBody
@@ -361,19 +361,19 @@ public struct WorkInstructions : Decodable {
 
 /// Used to set the log level in the JSONRPC server.
 public enum LogLevel : String {
-    /// Trace level log
+    /// Trace level log.
     case trace
-    /// Verbose level log
+    /// Verbose level log.
     case verbose
-    /// Debugging level log
+    /// Debugging level log.
     case debug
-    /// Info level log
+    /// Info level log.
     case info
-    /// Warning level log
+    /// Warning level log.
     case warn
-    /// Error level log
+    /// Error level log.
     case error
-    /// Assertions level log
+    /// Assertions level log.
     case assert
 }
 
@@ -567,22 +567,22 @@ enum SyncStatusOrBool : Decodable {
 public struct Config {
     /// Protocol squeme, `"http"` or `"https"`.
     public var scheme: String
-    /// Host IP address.
-    public var host: String
-    /// Host port.
-    public var port: Int
     /// Authorized user.
     public var user: String
     /// Password for the authorized user.
     public var password: String
+    /// Host IP address.
+    public var host: String
+    /// Host port.
+    public var port: Int
 
     /// Config initialization.
     /// - Parameter scheme: Protocol squeme, `"http"` or `"https"`.
-    /// - Parameter host: Host IP address.
-    /// - Parameter port: Host port.
     /// - Parameter user: Authorized user.
     /// - Parameter password: Password for the authorized user.
-    public init(scheme: String, host: String, port: Int, user: String, password: String) {
+    /// - Parameter host: Host IP address.
+    /// - Parameter port: Host port.
+    public init(scheme: String = "http", user: String = "", password: String = "", host: String = "127.0.0.1", port: Int = 8648) {
         self.scheme = scheme
         self.host = host
         self.port = port
@@ -593,7 +593,7 @@ public struct Config {
 
 /// Thrown when something when wrong with the JSONRPC request.
 public enum Error: Swift.Error, Equatable {
-    /// Couldn't parse the JSONRPC request to be sent.
+    /// The client couldn't parse the JSON object.
     case wrongFormat(_ message: String)
     /// The server didn't recognize the method.
     case badMethodCall(_ message: String)
@@ -606,8 +606,10 @@ public class NimiqClient {
     public var id: Int = 0
 
     /// URL of the JSONRPC server.
-    /// - Format: scheme://user:password@host:port
     private let url: String
+    
+    /// Base64 string containing authentication parameters
+    private let auth: String
 
     /// URLSession used for HTTP requests send to the JSONRPC server.
     private let session: URLSession
@@ -630,8 +632,9 @@ public class NimiqClient {
     /// - Parameter host: Host IP address.
     /// - Parameter port: Host port.
     /// - Parameter session: Used to make all requests. If ommited the shared URLSession is used.
-    public init(scheme: String, user: String, password: String, host: String, port: Int, session: URLSession? = nil){
-        self.url = "\(scheme)://\(user):\(password)@\(host):\(port)"
+    public init(scheme: String = "http", user: String = "", password: String = "", host: String = "127.0.0.1", port: Int = 8648, session: URLSession? = nil){
+        self.url = "\(scheme)://\(host):\(port)"
+        self.auth = "\(user):\(password)".data(using: String.Encoding.utf8)!.base64EncodedString()
         if session != nil {
             self.session = session!
         } else {
@@ -662,6 +665,7 @@ public class NimiqClient {
         request.httpBody = data
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue("Basic \(auth)", forHTTPHeaderField: "Authorization")
         // TODO: find a better way to fix the error when the server terminates the connection prematurely
         request.addValue("close", forHTTPHeaderField: "Connection")
 
@@ -687,7 +691,7 @@ public class NimiqClient {
 
         // throw if there are any errors
         if clientError != nil {
-            throw clientError!
+            throw Error.wrongFormat(clientError!.localizedDescription)
         }
 
         if let error = responseObject?.error {
@@ -836,7 +840,7 @@ public class NimiqClient {
     }
 
     /// Returns the information about a transaction requested by transaction hash.
-    /// - Parameter hash: Hash of a transaction
+    /// - Parameter hash: Hash of a transaction.
     /// - Returns: A transaction object or `nil` when no transaction was found.
     public func getTransactionByHash(_ hash: Hash) throws -> Transaction? {
         return try fetch(method: "getTransactionByHash", params: [hash])
@@ -844,7 +848,7 @@ public class NimiqClient {
 
     /// Returns the receipt of a transaction by transaction hash.
     /// - Parameter hash: Hash of a transaction.
-    /// - Returns: A transaction receipt object, or `nil` when no receipt was found:
+    /// - Returns: A transaction receipt object, or `nil` when no receipt was found.
     public func getTransactionReceipt(hash: Hash) throws -> TransactionReceipt? {
         return try fetch(method: "getTransactionReceipt", params: [hash])
     }
@@ -1041,7 +1045,7 @@ public class NimiqClient {
 
     /// Deserializes hex-encoded transaction and returns a transaction object.
     /// - Parameter transaction: The hex encoded signed transaction.
-    /// - Returns: The transaction object
+    /// - Returns: The transaction object.
     public func getRawTransactionInfo(transaction: String) throws -> Transaction? {
         return try fetch(method: "getRawTransactionInfo", params: [transaction])
     }
