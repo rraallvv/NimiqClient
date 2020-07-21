@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		20D9AFAAF69ADAE8C1B180C6 /* Pods_NimiqClientMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110E22B83286D6E210DC9B1B /* Pods_NimiqClientMacOS.framework */; };
 		69E319FE22A1FEE1B4259E08 /* Pods_NimiqClientTvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34092F72E4C4E0A1584033E4 /* Pods_NimiqClientTvOS.framework */; };
+		A7752ECA990D877E4D30A36A /* Pods_NimiqClientWatchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E361ECA6157A0B63504DE721 /* Pods_NimiqClientWatchOS.framework */; };
 		C90251294A16B12880BDF223 /* Pods_NimiqClientMacOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D15609BEEC1DD27E260773FA /* Pods_NimiqClientMacOSTests.framework */; };
 		CDFEC7BDF6E3CA78AEAE0D0C /* Pods_NimiqClientiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EF0887FFACE8F580D6EE024 /* Pods_NimiqClientiOS.framework */; };
 		E26F61BF371E1513E1A0B676 /* Pods_NimiqClientTvOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97451A18542A8E756C112F3 /* Pods_NimiqClientTvOSTests.framework */; };
@@ -36,6 +37,8 @@
 		E4BFF42E24BBB01800A915D4 /* NimiqClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BFF42524BBAE7F00A915D4 /* NimiqClient.swift */; };
 		E4BFF42F24BBB01900A915D4 /* NimiqClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BFF42524BBAE7F00A915D4 /* NimiqClient.swift */; };
 		E4BFF43024BBB01A00A915D4 /* NimiqClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BFF42524BBAE7F00A915D4 /* NimiqClient.swift */; };
+		E4FF155A24C652F8005DFE23 /* NimiqClientWatchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E4FF155824C652F7005DFE23 /* NimiqClientWatchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4FF155E24C6545F005DFE23 /* NimiqClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BFF42524BBAE7F00A915D4 /* NimiqClient.swift */; };
 		F330B7BCAFDD449B3C920FE2 /* Pods_NimiqClientiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1C881B2F8B1558F9077E817 /* Pods_NimiqClientiOSTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +69,7 @@
 /* Begin PBXFileReference section */
 		0258F7E0F4AB1390AC534DF5 /* Pods-NimiqClientTvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimiqClientTvOS.debug.xcconfig"; path = "Target Support Files/Pods-NimiqClientTvOS/Pods-NimiqClientTvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		110E22B83286D6E210DC9B1B /* Pods_NimiqClientMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimiqClientMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1387036D2A90CAC45CD2D075 /* Pods-NimiqClientWatchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimiqClientWatchOS.release.xcconfig"; path = "Target Support Files/Pods-NimiqClientWatchOS/Pods-NimiqClientWatchOS.release.xcconfig"; sourceTree = "<group>"; };
 		2D62F991B55C756D5AB4113E /* Pods-NimiqClientTvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimiqClientTvOSTests.release.xcconfig"; path = "Target Support Files/Pods-NimiqClientTvOSTests/Pods-NimiqClientTvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		30D47451DC38E036B8ACC0F3 /* Pods-NimiqClientiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimiqClientiOS.release.xcconfig"; path = "Target Support Files/Pods-NimiqClientiOS/Pods-NimiqClientiOS.release.xcconfig"; sourceTree = "<group>"; };
 		34092F72E4C4E0A1584033E4 /* Pods_NimiqClientTvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimiqClientTvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +80,9 @@
 		B1E44F2B1C59927382FEB627 /* Pods-NimiqClientiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimiqClientiOSTests.debug.xcconfig"; path = "Target Support Files/Pods-NimiqClientiOSTests/Pods-NimiqClientiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5A02AC3BEA201D0C3457982 /* Pods-NimiqClientiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimiqClientiOS.debug.xcconfig"; path = "Target Support Files/Pods-NimiqClientiOS/Pods-NimiqClientiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		CFA7DB40FAA73B978A0C4CDE /* Pods-NimiqClientMacOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimiqClientMacOSTests.release.xcconfig"; path = "Target Support Files/Pods-NimiqClientMacOSTests/Pods-NimiqClientMacOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		D04824D73F0BBAE7B0DE3024 /* Pods-NimiqClientWatchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimiqClientWatchOS.debug.xcconfig"; path = "Target Support Files/Pods-NimiqClientWatchOS/Pods-NimiqClientWatchOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D15609BEEC1DD27E260773FA /* Pods_NimiqClientMacOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimiqClientMacOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E361ECA6157A0B63504DE721 /* Pods_NimiqClientWatchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimiqClientWatchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B63EDD24BBA877009AAC80 /* NimiqClientiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NimiqClientiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B63EDF24BBA877009AAC80 /* NimiqClientiOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NimiqClientiOS.h; sourceTree = "<group>"; };
 		E4B63EE024BBA877009AAC80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,6 +107,9 @@
 		E4BFF42A24BBAFA700A915D4 /* NimiqClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NimiqClientTests.swift; sourceTree = "<group>"; };
 		E4E9549324C01DFD00981A37 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E4E9549424C01E1500981A37 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E4FF155624C652F7005DFE23 /* NimiqClientWatchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NimiqClientWatchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4FF155824C652F7005DFE23 /* NimiqClientWatchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NimiqClientWatchOS.h; sourceTree = "<group>"; };
+		E4FF155924C652F7005DFE23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8677B9220DB81514ACC78A9 /* Pods-NimiqClientMacOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimiqClientMacOSTests.debug.xcconfig"; path = "Target Support Files/Pods-NimiqClientMacOSTests/Pods-NimiqClientMacOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F1C881B2F8B1558F9077E817 /* Pods_NimiqClientiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimiqClientiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7388A29568B2A1CBD6DEEEC /* Pods-NimiqClientTvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NimiqClientTvOS.release.xcconfig"; path = "Target Support Files/Pods-NimiqClientTvOS/Pods-NimiqClientTvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +169,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E4FF155324C652F7005DFE23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7752ECA990D877E4D30A36A /* Pods_NimiqClientWatchOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -172,6 +189,7 @@
 				D15609BEEC1DD27E260773FA /* Pods_NimiqClientMacOSTests.framework */,
 				34092F72E4C4E0A1584033E4 /* Pods_NimiqClientTvOS.framework */,
 				A97451A18542A8E756C112F3 /* Pods_NimiqClientTvOSTests.framework */,
+				E361ECA6157A0B63504DE721 /* Pods_NimiqClientWatchOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -191,6 +209,8 @@
 				F7388A29568B2A1CBD6DEEEC /* Pods-NimiqClientTvOS.release.xcconfig */,
 				FF933E87EE4A70159B012EB2 /* Pods-NimiqClientTvOSTests.debug.xcconfig */,
 				2D62F991B55C756D5AB4113E /* Pods-NimiqClientTvOSTests.release.xcconfig */,
+				D04824D73F0BBAE7B0DE3024 /* Pods-NimiqClientWatchOS.debug.xcconfig */,
+				1387036D2A90CAC45CD2D075 /* Pods-NimiqClientWatchOS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -208,6 +228,7 @@
 				E4B63F0524BBA930009AAC80 /* NimiqClientMacOSTests */,
 				E4B63F1624BBA963009AAC80 /* NimiqClientTvOS */,
 				E4B63F2124BBA965009AAC80 /* NimiqClientTvOSTests */,
+				E4FF155724C652F7005DFE23 /* NimiqClientWatchOS */,
 				E4B63EBF24BBA4E6009AAC80 /* Products */,
 				C581D63883067F3C8755FD0A /* Pods */,
 				80515F7BFC12AE88246363E0 /* Frameworks */,
@@ -223,6 +244,7 @@
 				E4B63F0124BBA930009AAC80 /* NimiqClientMacOSTests.xctest */,
 				E4B63F1524BBA963009AAC80 /* NimiqClientTvOS.framework */,
 				E4B63F1D24BBA964009AAC80 /* NimiqClientTvOSTests.xctest */,
+				E4FF155624C652F7005DFE23 /* NimiqClientWatchOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -301,6 +323,15 @@
 			path = ../Tests;
 			sourceTree = "<group>";
 		};
+		E4FF155724C652F7005DFE23 /* NimiqClientWatchOS */ = {
+			isa = PBXGroup;
+			children = (
+				E4FF155824C652F7005DFE23 /* NimiqClientWatchOS.h */,
+				E4FF155924C652F7005DFE23 /* Info.plist */,
+			);
+			path = NimiqClientWatchOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -325,6 +356,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B63F2524BBA965009AAC80 /* NimiqClientTvOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4FF155124C652F7005DFE23 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4FF155A24C652F8005DFE23 /* NimiqClientWatchOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +485,25 @@
 			productReference = E4B63F1D24BBA964009AAC80 /* NimiqClientTvOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E4FF155524C652F7005DFE23 /* NimiqClientWatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4FF155D24C652F8005DFE23 /* Build configuration list for PBXNativeTarget "NimiqClientWatchOS" */;
+			buildPhases = (
+				772E75A2C08020C7565D9C9A /* [CP] Check Pods Manifest.lock */,
+				E4FF155124C652F7005DFE23 /* Headers */,
+				E4FF155224C652F7005DFE23 /* Sources */,
+				E4FF155324C652F7005DFE23 /* Frameworks */,
+				E4FF155424C652F7005DFE23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NimiqClientWatchOS;
+			productName = NimiqClientWatchOS;
+			productReference = E4FF155624C652F7005DFE23 /* NimiqClientWatchOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -477,6 +535,9 @@
 					E4B63F1C24BBA964009AAC80 = {
 						CreatedOnToolsVersion = 11.5;
 					};
+					E4FF155524C652F7005DFE23 = {
+						CreatedOnToolsVersion = 11.5;
+					};
 				};
 			};
 			buildConfigurationList = E4B63EB824BBA4E6009AAC80 /* Build configuration list for PBXProject "NimiqClient" */;
@@ -498,6 +559,7 @@
 				E4B63F0024BBA930009AAC80 /* NimiqClientMacOSTests */,
 				E4B63F1424BBA963009AAC80 /* NimiqClientTvOS */,
 				E4B63F1C24BBA964009AAC80 /* NimiqClientTvOSTests */,
+				E4FF155524C652F7005DFE23 /* NimiqClientWatchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -539,6 +601,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E4B63F1B24BBA964009AAC80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4FF155424C652F7005DFE23 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -608,6 +677,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-NimiqClientTvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		772E75A2C08020C7565D9C9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NimiqClientWatchOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -757,6 +848,14 @@
 				E4B63F2324BBA965009AAC80 /* NimiqClientTvOSTests.swift in Sources */,
 				E4BFF43024BBB01A00A915D4 /* NimiqClient.swift in Sources */,
 				E4BD968724BD4A4B005E6957 /* URLProtocolStub.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4FF155224C652F7005DFE23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4FF155E24C6545F005DFE23 /* NimiqClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1196,6 +1295,60 @@
 			};
 			name = Release;
 		};
+		E4FF155B24C652F8005DFE23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D04824D73F0BBAE7B0DE3024 /* Pods-NimiqClientWatchOS.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NimiqClientWatchOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = community.nimiq.NimiqClientWatchOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Debug;
+		};
+		E4FF155C24C652F8005DFE23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1387036D2A90CAC45CD2D075 /* Pods-NimiqClientWatchOS.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = NimiqClientWatchOS/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = community.nimiq.NimiqClientWatchOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1258,6 +1411,15 @@
 			buildConfigurations = (
 				E4B63F2A24BBA965009AAC80 /* Debug */,
 				E4B63F2B24BBA965009AAC80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4FF155D24C652F8005DFE23 /* Build configuration list for PBXNativeTarget "NimiqClientWatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4FF155B24C652F8005DFE23 /* Debug */,
+				E4FF155C24C652F8005DFE23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

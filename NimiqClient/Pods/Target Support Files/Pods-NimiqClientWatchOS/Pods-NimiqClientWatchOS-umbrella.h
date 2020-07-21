@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_NimiqClientMacOSVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_NimiqClientMacOSVersionString[];
+FOUNDATION_EXPORT double Pods_NimiqClientWatchOSVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_NimiqClientWatchOSVersionString[];
 

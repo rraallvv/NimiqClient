@@ -1,4 +1,4 @@
-# Nimiq Swift Client (macOS, iOS, tvOS)
+# Nimiq Swift Client (macOS, iOS, tvOS and watchOS)
 
 > Swift implementation of the Nimiq RPC client specs.
 
@@ -81,7 +81,7 @@ This implementation was originally contributed by [rraallvv](https://github.com/
 
 Please send your contributions as pull requests.
 
-Refer to the [issue tracker](https://github.com/nimiq-community/swift-client/issues) for ideas.
+Refer to the [issue tracker](https://github.com/rraallvv/NimiqClientSwift/issues) for ideas.
 
 ### Develop
 

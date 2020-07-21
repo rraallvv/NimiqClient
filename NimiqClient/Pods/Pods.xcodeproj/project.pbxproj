@@ -7,403 +7,393 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		069330A546CAC716FE5643A2B9FF8863 /* Pods-NimiqClientTvOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E0CEC2856AE5F0B52001572A4FF667 /* Pods-NimiqClientTvOSTests-dummy.m */; };
-		5DF84E2504D418DCCF3807C4A2D06974 /* Pods-NimiqClientTvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B743CFC9C13032D4A79308CE155034CE /* Pods-NimiqClientTvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		729B829B24DF23F96CFBE8E42BBE2B55 /* Pods-NimiqClientiOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9FFB786865280993342B18245654BF02 /* Pods-NimiqClientiOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		770A5695D0C909A2E368C6EE08DEAE13 /* Pods-NimiqClientiOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 29FC7C1A8170407EFEC298C413FB14B4 /* Pods-NimiqClientiOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E5004BB2604FC582B709870D746437F /* Pods-NimiqClientMacOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BE4DDFE3BFAC7CB3E56C8CDBD6A9231 /* Pods-NimiqClientMacOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E9EC829CC25905D209E7DC5C581C9E5 /* Pods-NimiqClientMacOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 024BE5EDF61EE58A892D34A04CFCA0C4 /* Pods-NimiqClientMacOSTests-dummy.m */; };
-		99A4B5E1ED5ACE03252A62831D6819A4 /* Pods-NimiqClientMacOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 48E503EE23E0C74EC2046C36F0B95105 /* Pods-NimiqClientMacOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C7FB9C0166AD9B29611099064C32120 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFD8459C74C0E556511469DC5AE5003 /* Foundation.framework */; };
-		B7B31F553D03654483075DE01A8AF0B2 /* Pods-NimiqClientTvOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0161E997692C6DB099F557633DA75D02 /* Pods-NimiqClientTvOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B83BA8B27014CDD52045230FB959AAE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063980515B5040A2583EA67B46A30902 /* Foundation.framework */; };
-		B87EB59F729512DA1DA49277DB072798 /* Pods-NimiqClientiOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E162BF84615083502271DC62092C15E0 /* Pods-NimiqClientiOS-dummy.m */; };
-		BCB14438C230EBF5EE6758C3779BA865 /* Pods-NimiqClientiOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B8BC985E2D56F3FC12AB53CE82DE8829 /* Pods-NimiqClientiOSTests-dummy.m */; };
-		C144F55ACACBAE9A9561948FF419C995 /* Pods-NimiqClientTvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 880B8C0F4F5B81C83EEBF32F7DC79A7A /* Pods-NimiqClientTvOS-dummy.m */; };
-		CDBF510FD5AD4DAEC19010F3CF539E06 /* Pods-NimiqClientMacOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B42D8F20961A0FA8F341C2F1466DCFBA /* Pods-NimiqClientMacOS-dummy.m */; };
-		DE0F7AF55CAF263A2159B1853223313D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E640EC0D5599CDF9EE53D0A5A4EEA063 /* Cocoa.framework */; };
-		F8CFD5877624593405D27A375D86211A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E640EC0D5599CDF9EE53D0A5A4EEA063 /* Cocoa.framework */; };
-		F9132005CC35AAAA244DDFF9D1734466 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFFD8459C74C0E556511469DC5AE5003 /* Foundation.framework */; };
-		F95CD557746799BF8B9B51BEBED0C924 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 063980515B5040A2583EA67B46A30902 /* Foundation.framework */; };
+		188AE106F8E12FA0C427A112E410A122 /* Pods-NimiqClientTvOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D409819FF2B2A5463D3DE988A711F247 /* Pods-NimiqClientTvOSTests-dummy.m */; };
+		3683C13449FC2C842A0F8F0F9478FFE9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		587949470BB4850F1EF2F0CEADDB3F30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		61DD0FAAA2051C9B8AEFE260A1A8C435 /* Pods-NimiqClientMacOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 12464FF627ABDDC0549D765D8B34FB6D /* Pods-NimiqClientMacOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70858FB0E82555DF770D738964C3297A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		7952D71739B3D2D85C2C4A8A477E09E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		813EE3CDC621421FD425BE26CD47AF80 /* Pods-NimiqClientiOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E2D23FD8AC7C081FBC604EF7AFF0764 /* Pods-NimiqClientiOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8961A9DC2A7A05BB46D7CF06F5E7284E /* Pods-NimiqClientTvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 524F6B3BB33DF47B3E3E7A91B1718AE0 /* Pods-NimiqClientTvOS-dummy.m */; };
+		8AC3ACFCDF76A03202D4539741175678 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		8BC5A671581B9279F4AB898856559AA0 /* Pods-NimiqClientiOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 63A73B21C06087280DDEBC166532E60B /* Pods-NimiqClientiOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D24E5EE2FD222148D9E934A45D966C5 /* Pods-NimiqClientMacOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2348AC80429624E1B45233D44C99717D /* Pods-NimiqClientMacOSTests-dummy.m */; };
+		9E0EAF965507145FEF6DAB19BE24A5AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		A91C5F86DDF78E77E73DFCFC25CB3807 /* Pods-NimiqClientTvOSTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D482718EAC1FA08B922EE8E287A7F0D /* Pods-NimiqClientTvOSTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C68DC35F77CBC9FE522B3D9DBC3135C5 /* Pods-NimiqClientWatchOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6213729DB8B4869C706FE3A5E1E0475 /* Pods-NimiqClientWatchOS-dummy.m */; };
+		D4D38C31DC5335F26B66FD06B7C056D5 /* Pods-NimiqClientiOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3535572FDCFF36B87C90A00412C7E8 /* Pods-NimiqClientiOS-dummy.m */; };
+		DA29344942FE6E8B0C46E7AE91AE3F70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		DA837C36CCD9873295573560E9D57142 /* Pods-NimiqClientMacOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B36A60D877A8C504C0AB5AB7A9AC0212 /* Pods-NimiqClientMacOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDBE095CD25781B8C7E8961BFE91F17C /* Pods-NimiqClientiOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEDF40C394BF04B17C67BE5917C239AC /* Pods-NimiqClientiOSTests-dummy.m */; };
+		E07A33D9E556032003228D088965CB68 /* Pods-NimiqClientMacOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3A71E6D7BABD9F8AC4779FCAB6CC8B /* Pods-NimiqClientMacOS-dummy.m */; };
+		F111B14E09057D93B13FDAA96093F3B9 /* Pods-NimiqClientTvOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1FAC4865D3273C5610B68CB7C05F4DFE /* Pods-NimiqClientTvOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F36E8606138ECA2373B23655AC951659 /* Pods-NimiqClientWatchOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CEC63A97B9FC5AB61A51FB4F4E5F8B43 /* Pods-NimiqClientWatchOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0161E997692C6DB099F557633DA75D02 /* Pods-NimiqClientTvOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NimiqClientTvOSTests-umbrella.h"; sourceTree = "<group>"; };
-		024BE5EDF61EE58A892D34A04CFCA0C4 /* Pods-NimiqClientMacOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NimiqClientMacOSTests-dummy.m"; sourceTree = "<group>"; };
-		063980515B5040A2583EA67B46A30902 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		06CCDE7438152A3F61E9343247BB26B1 /* Pods-NimiqClientTvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NimiqClientTvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0A0067C89AA4EB55F3207F99B06B3468 /* Pods-NimiqClientMacOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NimiqClientMacOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0A791D6E9ABAB43520090B308695F9A7 /* Pods-NimiqClientTvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientTvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		0BE4DDFE3BFAC7CB3E56C8CDBD6A9231 /* Pods-NimiqClientMacOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NimiqClientMacOS-umbrella.h"; sourceTree = "<group>"; };
-		1AE7F0B7B6CB5A9EA4B28DB8859133E6 /* Pods-NimiqClientiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientiOS.release.xcconfig"; sourceTree = "<group>"; };
-		1BF1C92585600FC7DA66153194FB85E1 /* Pods-NimiqClientiOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientiOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		26824A83A2EF3F59AFD2240AB0DA85FE /* Pods_NimiqClientMacOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimiqClientMacOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29FC7C1A8170407EFEC298C413FB14B4 /* Pods-NimiqClientiOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NimiqClientiOSTests-umbrella.h"; sourceTree = "<group>"; };
-		2A7007A55C04986201775393FE9A8F06 /* Pods-NimiqClientiOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientiOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		2C935EBC5FA76066D281A87FC7344587 /* Pods-NimiqClientTvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NimiqClientTvOS.modulemap"; sourceTree = "<group>"; };
-		32F470C093B3188654417131A5631C79 /* Pods-NimiqClientMacOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientMacOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		4445F24D196796C7217241693C9E4467 /* Pods-NimiqClientMacOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientMacOS-Info.plist"; sourceTree = "<group>"; };
-		48E503EE23E0C74EC2046C36F0B95105 /* Pods-NimiqClientMacOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NimiqClientMacOSTests-umbrella.h"; sourceTree = "<group>"; };
-		4A34F8079BADDAEDC44ABE1B25E5BA12 /* Pods-NimiqClientTvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientTvOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		4D43AD10971F94BFADF45274EB044D2B /* Pods-NimiqClientTvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientTvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		520C88AB9167E5449200D8B6897006F6 /* Pods-NimiqClientTvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NimiqClientTvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5443D5DB435D85D83AB88E284A6340D5 /* Pods-NimiqClientiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		55CD8152BF3ED74DB8676D282A88130C /* Pods-NimiqClientiOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NimiqClientiOSTests.modulemap"; sourceTree = "<group>"; };
-		580EC55C53199F23C7B6A253D1626129 /* Pods-NimiqClientTvOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientTvOS-Info.plist"; sourceTree = "<group>"; };
-		5ACD99096EC2CEBD3F39D80FB114057A /* Pods-NimiqClientMacOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NimiqClientMacOS.modulemap"; sourceTree = "<group>"; };
-		5DC11FC18DD64E7F521ADC45722C3346 /* Pods-NimiqClientMacOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientMacOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		657186B54967F0713E2267C458FC13CD /* Pods-NimiqClientiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientiOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		6940B16DA386FF0896275CF92C2FE412 /* Pods-NimiqClientMacOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientMacOS-acknowledgements.plist"; sourceTree = "<group>"; };
-		7ADA425C45544E65DFDF847167B087C8 /* Pods-NimiqClientTvOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NimiqClientTvOSTests.modulemap"; sourceTree = "<group>"; };
-		81510A2198297A3E09F246DAB7AAA42C /* Pods-NimiqClientMacOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NimiqClientMacOSTests.modulemap"; sourceTree = "<group>"; };
-		880B8C0F4F5B81C83EEBF32F7DC79A7A /* Pods-NimiqClientTvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NimiqClientTvOS-dummy.m"; sourceTree = "<group>"; };
-		88AD2EBA749B5B22CF31D43DA37F9D28 /* Pods-NimiqClientTvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientTvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		93755341B83D06CF3A7531D7538AF62D /* Pods-NimiqClientiOSTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientiOSTests-Info.plist"; sourceTree = "<group>"; };
-		96341E1C8814F9D7D29551064D7CE7A1 /* Pods-NimiqClientTvOSTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientTvOSTests-Info.plist"; sourceTree = "<group>"; };
-		99C7346E2C1D65A98F0A777735F4202A /* Pods-NimiqClientTvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientTvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9ABDAB6238B71317882251ACE7B9AFDD /* Pods-NimiqClientMacOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NimiqClientMacOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FFB786865280993342B18245654BF02 /* Pods-NimiqClientiOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NimiqClientiOS-umbrella.h"; sourceTree = "<group>"; };
-		A92DEA12AF600EF058545B4E9175A32C /* Pods_NimiqClientTvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimiqClientTvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		ABC732B005D8C5C49CFE038490606645 /* Pods-NimiqClientiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientiOS.debug.xcconfig"; sourceTree = "<group>"; };
-		AE73D80DBD3A7C18A2F74F84BB3B8E98 /* Pods_NimiqClientiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimiqClientiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B184B79B98C43DB9FF2F9D6EB9E50E38 /* Pods-NimiqClientMacOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientMacOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B42D8F20961A0FA8F341C2F1466DCFBA /* Pods-NimiqClientMacOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NimiqClientMacOS-dummy.m"; sourceTree = "<group>"; };
-		B743CFC9C13032D4A79308CE155034CE /* Pods-NimiqClientTvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NimiqClientTvOS-umbrella.h"; sourceTree = "<group>"; };
-		B8BC985E2D56F3FC12AB53CE82DE8829 /* Pods-NimiqClientiOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NimiqClientiOSTests-dummy.m"; sourceTree = "<group>"; };
-		BFFD8459C74C0E556511469DC5AE5003 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		C0221EA7014A0698BEEE6D69B4CCD701 /* Pods-NimiqClientMacOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientMacOS.release.xcconfig"; sourceTree = "<group>"; };
-		C9E0CEC2856AE5F0B52001572A4FF667 /* Pods-NimiqClientTvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NimiqClientTvOSTests-dummy.m"; sourceTree = "<group>"; };
-		CCABD14A540E801198E13B318214E5E1 /* Pods_NimiqClientMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimiqClientMacOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCCEB2A0650945D0B947739F798E34D1 /* Pods-NimiqClientMacOSTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientMacOSTests-Info.plist"; sourceTree = "<group>"; };
-		CEE1234C14D7258349C9B102B56F1025 /* Pods-NimiqClientiOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NimiqClientiOS-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D1340DC8EA73ED8A1B5E44668E772356 /* Pods-NimiqClientiOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NimiqClientiOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		DFE14FE7B133548F0E81873E595A99AE /* Pods-NimiqClientMacOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientMacOS.debug.xcconfig"; sourceTree = "<group>"; };
-		E1448790FD0E264187D72A3010652BDF /* Pods_NimiqClientTvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimiqClientTvOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E162BF84615083502271DC62092C15E0 /* Pods-NimiqClientiOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NimiqClientiOS-dummy.m"; sourceTree = "<group>"; };
-		E458DE36A4D18E4AC1F88B8FE85C8062 /* Pods_NimiqClientiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NimiqClientiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E640EC0D5599CDF9EE53D0A5A4EEA063 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		EC8549F01E85F7711AAF8A09F5972082 /* Pods-NimiqClientiOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientiOS-Info.plist"; sourceTree = "<group>"; };
-		F3BC165AE299E9A0BAB871721D52184A /* Pods-NimiqClientTvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientTvOS.release.xcconfig"; sourceTree = "<group>"; };
-		F9A6C43C20423D66EF131803A809F446 /* Pods-NimiqClientiOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NimiqClientiOS.modulemap"; sourceTree = "<group>"; };
+		05AC95301F6F41A8B8D45F776E0EB011 /* Pods-NimiqClientiOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NimiqClientiOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0F3535572FDCFF36B87C90A00412C7E8 /* Pods-NimiqClientiOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NimiqClientiOS-dummy.m"; sourceTree = "<group>"; };
+		0FA42101F2D77B084A8BEC8E0594062B /* Pods-NimiqClientMacOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientMacOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		1064A4151FFB414A4348EEF4E1DAB181 /* Pods-NimiqClientMacOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientMacOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		12464FF627ABDDC0549D765D8B34FB6D /* Pods-NimiqClientMacOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NimiqClientMacOSTests-umbrella.h"; sourceTree = "<group>"; };
+		15898BF5463EDB8C5688AFED8BFC79CE /* Pods-NimiqClientMacOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientMacOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1A327EC6B24994FFF3DDF3670A8204C8 /* Pods-NimiqClientTvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NimiqClientTvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1CD8124F2C7909FF2DFC97432C0194BD /* Pods-NimiqClientiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientiOS.release.xcconfig"; sourceTree = "<group>"; };
+		1E2D23FD8AC7C081FBC604EF7AFF0764 /* Pods-NimiqClientiOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NimiqClientiOS-umbrella.h"; sourceTree = "<group>"; };
+		1FAC4865D3273C5610B68CB7C05F4DFE /* Pods-NimiqClientTvOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NimiqClientTvOS-umbrella.h"; sourceTree = "<group>"; };
+		20A703370F8BA9C18E5647B1B8654612 /* Pods-NimiqClientMacOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientMacOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		210851951AD282E7B43C00A1055568EB /* Pods-NimiqClientMacOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientMacOS.release.xcconfig"; sourceTree = "<group>"; };
+		22A97A7D77BD92ECE4BA75211A0C7C03 /* Pods-NimiqClientTvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientTvOS.release.xcconfig"; sourceTree = "<group>"; };
+		23089000B4D9AA116891CDE3F52E9EF2 /* Pods-NimiqClientTvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientTvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2348AC80429624E1B45233D44C99717D /* Pods-NimiqClientMacOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NimiqClientMacOSTests-dummy.m"; sourceTree = "<group>"; };
+		29ADB5A5D70969FDBE46063814B252DD /* Pods-NimiqClientWatchOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientWatchOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		2A742E622FA8E6995318C121892E4F87 /* Pods_NimiqClientiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NimiqClientiOS.framework; path = "Pods-NimiqClientiOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31A30B9DEAE5248263E40991ED1F1590 /* Pods-NimiqClientTvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientTvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3D482718EAC1FA08B922EE8E287A7F0D /* Pods-NimiqClientTvOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NimiqClientTvOSTests-umbrella.h"; sourceTree = "<group>"; };
+		3E52A31F972ADB30A5D4E6C7057F1936 /* Pods-NimiqClientiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3F30A2E29C4DFA6E6466F5E32DA60B09 /* Pods-NimiqClientMacOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NimiqClientMacOS.modulemap"; sourceTree = "<group>"; };
+		41499E22224C53F8F068E896C293A0B9 /* Pods-NimiqClientWatchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientWatchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		4294F28814139B71790D375E9071BB69 /* Pods-NimiqClientiOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NimiqClientiOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		524F6B3BB33DF47B3E3E7A91B1718AE0 /* Pods-NimiqClientTvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NimiqClientTvOS-dummy.m"; sourceTree = "<group>"; };
+		592BDAE8CDCF5A02EDA2826A662C91D0 /* Pods-NimiqClientMacOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NimiqClientMacOSTests.modulemap"; sourceTree = "<group>"; };
+		5A4C3B3264FBBF2D0601F17531D89F67 /* Pods-NimiqClientMacOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientMacOS-Info.plist"; sourceTree = "<group>"; };
+		63A73B21C06087280DDEBC166532E60B /* Pods-NimiqClientiOSTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NimiqClientiOSTests-umbrella.h"; sourceTree = "<group>"; };
+		65FABF8B4C8E2CA6325571100B95F830 /* Pods-NimiqClientTvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientTvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		678E9A84652B343133B2E658A55025E6 /* Pods-NimiqClientTvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientTvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		7497400FD05ABA426A4D314A2FFB475F /* Pods_NimiqClientTvOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NimiqClientTvOSTests.framework; path = "Pods-NimiqClientTvOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74A23F1900DA0926DF7967B01DA682FA /* Pods-NimiqClientMacOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NimiqClientMacOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7628D6008291B39F9B53A5339E99BD58 /* Pods-NimiqClientWatchOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientWatchOS-Info.plist"; sourceTree = "<group>"; };
+		7CE3215E689891CDEDA470128822A9AD /* Pods_NimiqClientTvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NimiqClientTvOS.framework; path = "Pods-NimiqClientTvOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A102E9AD37FA14D2D132AC562D3BF3 /* Pods-NimiqClientMacOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NimiqClientMacOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8A0EDA6DBCCE0881258AD28D9E20BA15 /* Pods_NimiqClientMacOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NimiqClientMacOSTests.framework; path = "Pods-NimiqClientMacOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A33A7D51FB4FCC1CA8AEDE352D94911 /* Pods-NimiqClientMacOSTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientMacOSTests-Info.plist"; sourceTree = "<group>"; };
+		9AC58B2B11F8304690E9C9709A336A4D /* Pods-NimiqClientTvOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NimiqClientTvOSTests.modulemap"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A58F6C1F3A6624ACEA803A7B95FD5552 /* Pods-NimiqClientWatchOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NimiqClientWatchOS.modulemap"; sourceTree = "<group>"; };
+		AC678EB2ED5A45AD2A2C9679168F0359 /* Pods-NimiqClientiOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientiOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B1CAA6E4DE55881B72A08CA83C96A567 /* Pods-NimiqClientiOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NimiqClientiOS.modulemap"; sourceTree = "<group>"; };
+		B36A60D877A8C504C0AB5AB7A9AC0212 /* Pods-NimiqClientMacOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NimiqClientMacOS-umbrella.h"; sourceTree = "<group>"; };
+		B4496A65730561992A45C3FEF6CADC09 /* Pods-NimiqClientMacOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientMacOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B93B6CC7D628B1C96A4E881F99A37A9E /* Pods-NimiqClientiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B9FF26E36EC07064A2EAD799156ABD74 /* Pods_NimiqClientMacOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NimiqClientMacOS.framework; path = "Pods-NimiqClientMacOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC4E05BB5CA8FCD91A08BED7730AFB3B /* Pods-NimiqClientTvOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NimiqClientTvOS.modulemap"; sourceTree = "<group>"; };
+		C0031AFA72EEC0C0A19DD06A1637E730 /* Pods-NimiqClientTvOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientTvOS-Info.plist"; sourceTree = "<group>"; };
+		C131BE17601F62C52F6F55B47D8ADF27 /* Pods-NimiqClientiOSTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientiOSTests-Info.plist"; sourceTree = "<group>"; };
+		C6213729DB8B4869C706FE3A5E1E0475 /* Pods-NimiqClientWatchOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NimiqClientWatchOS-dummy.m"; sourceTree = "<group>"; };
+		CEC63A97B9FC5AB61A51FB4F4E5F8B43 /* Pods-NimiqClientWatchOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NimiqClientWatchOS-umbrella.h"; sourceTree = "<group>"; };
+		CECC445E1CE94C2EB82757BA3A77ECF1 /* Pods-NimiqClientTvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NimiqClientTvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CF8FD603661608C4EC2592A47BC0107A /* Pods-NimiqClientWatchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientWatchOS.release.xcconfig"; sourceTree = "<group>"; };
+		CF9908B723939FA921D96EEFD7B346AB /* Pods-NimiqClientiOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientiOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		D22EDEE9141864102CA3089ECCF653D6 /* Pods_NimiqClientWatchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NimiqClientWatchOS.framework; path = "Pods-NimiqClientWatchOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D409819FF2B2A5463D3DE988A711F247 /* Pods-NimiqClientTvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NimiqClientTvOSTests-dummy.m"; sourceTree = "<group>"; };
+		DBAE9BA72DA1BC4CF47D2670108C64FA /* Pods-NimiqClientTvOSTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientTvOSTests-Info.plist"; sourceTree = "<group>"; };
+		E0E7ACE46FB2D762A586A434E12260C9 /* Pods-NimiqClientiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientiOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		E7643525109EB0ECCC0D6F63BD7DD98B /* Pods-NimiqClientiOS-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NimiqClientiOS-Info.plist"; sourceTree = "<group>"; };
+		E963B7D91F81D84DDA4CE9D06CF606FA /* Pods-NimiqClientTvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NimiqClientTvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		EC756CF2F22655BEF974E273D478C6E1 /* Pods-NimiqClientWatchOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NimiqClientWatchOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EEDF40C394BF04B17C67BE5917C239AC /* Pods-NimiqClientiOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NimiqClientiOSTests-dummy.m"; sourceTree = "<group>"; };
+		F306A532312F103775937EC8A57E36CA /* Pods-NimiqClientiOSTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NimiqClientiOSTests.modulemap"; sourceTree = "<group>"; };
+		F76880FC65212665273847E97DE69E0E /* Pods_NimiqClientiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NimiqClientiOSTests.framework; path = "Pods-NimiqClientiOSTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3A71E6D7BABD9F8AC4779FCAB6CC8B /* Pods-NimiqClientMacOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NimiqClientMacOS-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		03777A82680F025D0408F2978C066579 /* Frameworks */ = {
+		3659F38D1F791EFC5A243333D91C13CC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C7FB9C0166AD9B29611099064C32120 /* Foundation.framework in Frameworks */,
+				587949470BB4850F1EF2F0CEADDB3F30 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0562AB019428ADEE476B4192A44AC827 /* Frameworks */ = {
+		3692DB857C72872700E3CFAC6693E42B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE0F7AF55CAF263A2159B1853223313D /* Cocoa.framework in Frameworks */,
+				70858FB0E82555DF770D738964C3297A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0EFBDB51F99B5990940DF1E57FC6AA80 /* Frameworks */ = {
+		A51795CC11029185A16D4E843F8CC342 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B83BA8B27014CDD52045230FB959AAE5 /* Foundation.framework in Frameworks */,
+				8AC3ACFCDF76A03202D4539741175678 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2BCE4A2E05B73086D01A2061A85C8BF6 /* Frameworks */ = {
+		C56884B81E38F5BF7E1003EFC8078187 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F95CD557746799BF8B9B51BEBED0C924 /* Foundation.framework in Frameworks */,
+				3683C13449FC2C842A0F8F0F9478FFE9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		61A27F9820D6CB7BF3B420CE7CA9FBE8 /* Frameworks */ = {
+		CAA7117D1F617F9E78221EE0C9F5CA13 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9132005CC35AAAA244DDFF9D1734466 /* Foundation.framework in Frameworks */,
+				9E0EAF965507145FEF6DAB19BE24A5AC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B468710CCF223E42A474C3E1D9FA8210 /* Frameworks */ = {
+		D4A688A3401A4C62B87791FDCDAA4E40 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8CFD5877624593405D27A375D86211A /* Cocoa.framework in Frameworks */,
+				7952D71739B3D2D85C2C4A8A477E09E0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7A56CF62CA31E01D129563261664E45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA29344942FE6E8B0C46E7AE91AE3F70 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		099F3806E14CC312CF5EB4F5EA1EC300 /* Pods-NimiqClientiOSTests */ = {
+		38C3328ED37804FF96DF6EFB41D995F3 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				55CD8152BF3ED74DB8676D282A88130C /* Pods-NimiqClientiOSTests.modulemap */,
-				D1340DC8EA73ED8A1B5E44668E772356 /* Pods-NimiqClientiOSTests-acknowledgements.markdown */,
-				2A7007A55C04986201775393FE9A8F06 /* Pods-NimiqClientiOSTests-acknowledgements.plist */,
-				B8BC985E2D56F3FC12AB53CE82DE8829 /* Pods-NimiqClientiOSTests-dummy.m */,
-				93755341B83D06CF3A7531D7538AF62D /* Pods-NimiqClientiOSTests-Info.plist */,
-				29FC7C1A8170407EFEC298C413FB14B4 /* Pods-NimiqClientiOSTests-umbrella.h */,
-				5443D5DB435D85D83AB88E284A6340D5 /* Pods-NimiqClientiOSTests.debug.xcconfig */,
-				657186B54967F0713E2267C458FC13CD /* Pods-NimiqClientiOSTests.release.xcconfig */,
+				60C6CEED19B4B08004EB69E88A1571A5 /* Pods-NimiqClientiOS */,
+				B00E78372A0975050C40A89B6334888C /* Pods-NimiqClientiOSTests */,
+				D7396A21B53F02D84FF243915D031121 /* Pods-NimiqClientMacOS */,
+				B70FE03E46E76C3761E737B61014451F /* Pods-NimiqClientMacOSTests */,
+				790800F380C7FA2170D373E086C677F9 /* Pods-NimiqClientTvOS */,
+				602C99B48B936E27017BAD440105CAF6 /* Pods-NimiqClientTvOSTests */,
+				F03933D413615C522C31A47B86A37E77 /* Pods-NimiqClientWatchOS */,
 			);
-			name = "Pods-NimiqClientiOSTests";
-			path = "Target Support Files/Pods-NimiqClientiOSTests";
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2ED035D798D9FDB12F7DA810B370C90F /* Pods-NimiqClientMacOS */ = {
+		602C99B48B936E27017BAD440105CAF6 /* Pods-NimiqClientTvOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				5ACD99096EC2CEBD3F39D80FB114057A /* Pods-NimiqClientMacOS.modulemap */,
-				0A0067C89AA4EB55F3207F99B06B3468 /* Pods-NimiqClientMacOS-acknowledgements.markdown */,
-				6940B16DA386FF0896275CF92C2FE412 /* Pods-NimiqClientMacOS-acknowledgements.plist */,
-				B42D8F20961A0FA8F341C2F1466DCFBA /* Pods-NimiqClientMacOS-dummy.m */,
-				4445F24D196796C7217241693C9E4467 /* Pods-NimiqClientMacOS-Info.plist */,
-				0BE4DDFE3BFAC7CB3E56C8CDBD6A9231 /* Pods-NimiqClientMacOS-umbrella.h */,
-				DFE14FE7B133548F0E81873E595A99AE /* Pods-NimiqClientMacOS.debug.xcconfig */,
-				C0221EA7014A0698BEEE6D69B4CCD701 /* Pods-NimiqClientMacOS.release.xcconfig */,
-			);
-			name = "Pods-NimiqClientMacOS";
-			path = "Target Support Files/Pods-NimiqClientMacOS";
-			sourceTree = "<group>";
-		};
-		4EC20B79BD926D820547982BD7835948 /* tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				063980515B5040A2583EA67B46A30902 /* Foundation.framework */,
-			);
-			name = tvOS;
-			sourceTree = "<group>";
-		};
-		4F5BA111CED037F4189A94DDCC5DDC9E /* Pods-NimiqClientTvOS */ = {
-			isa = PBXGroup;
-			children = (
-				2C935EBC5FA76066D281A87FC7344587 /* Pods-NimiqClientTvOS.modulemap */,
-				06CCDE7438152A3F61E9343247BB26B1 /* Pods-NimiqClientTvOS-acknowledgements.markdown */,
-				4A34F8079BADDAEDC44ABE1B25E5BA12 /* Pods-NimiqClientTvOS-acknowledgements.plist */,
-				880B8C0F4F5B81C83EEBF32F7DC79A7A /* Pods-NimiqClientTvOS-dummy.m */,
-				580EC55C53199F23C7B6A253D1626129 /* Pods-NimiqClientTvOS-Info.plist */,
-				B743CFC9C13032D4A79308CE155034CE /* Pods-NimiqClientTvOS-umbrella.h */,
-				0A791D6E9ABAB43520090B308695F9A7 /* Pods-NimiqClientTvOS.debug.xcconfig */,
-				F3BC165AE299E9A0BAB871721D52184A /* Pods-NimiqClientTvOS.release.xcconfig */,
-			);
-			name = "Pods-NimiqClientTvOS";
-			path = "Target Support Files/Pods-NimiqClientTvOS";
-			sourceTree = "<group>";
-		};
-		82C7656E557CCF9BACAF94BE5C5F98CB /* OS X */ = {
-			isa = PBXGroup;
-			children = (
-				E640EC0D5599CDF9EE53D0A5A4EEA063 /* Cocoa.framework */,
-			);
-			name = "OS X";
-			sourceTree = "<group>";
-		};
-		84671C95F6A77068C6FEB99E3BACD2AB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AE73D80DBD3A7C18A2F74F84BB3B8E98 /* Pods_NimiqClientiOS.framework */,
-				E458DE36A4D18E4AC1F88B8FE85C8062 /* Pods_NimiqClientiOSTests.framework */,
-				CCABD14A540E801198E13B318214E5E1 /* Pods_NimiqClientMacOS.framework */,
-				26824A83A2EF3F59AFD2240AB0DA85FE /* Pods_NimiqClientMacOSTests.framework */,
-				A92DEA12AF600EF058545B4E9175A32C /* Pods_NimiqClientTvOS.framework */,
-				E1448790FD0E264187D72A3010652BDF /* Pods_NimiqClientTvOSTests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		868ABB1C15D7E4DAC2143CC44511C2C9 /* Pods-NimiqClientTvOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				7ADA425C45544E65DFDF847167B087C8 /* Pods-NimiqClientTvOSTests.modulemap */,
-				520C88AB9167E5449200D8B6897006F6 /* Pods-NimiqClientTvOSTests-acknowledgements.markdown */,
-				4D43AD10971F94BFADF45274EB044D2B /* Pods-NimiqClientTvOSTests-acknowledgements.plist */,
-				C9E0CEC2856AE5F0B52001572A4FF667 /* Pods-NimiqClientTvOSTests-dummy.m */,
-				96341E1C8814F9D7D29551064D7CE7A1 /* Pods-NimiqClientTvOSTests-Info.plist */,
-				0161E997692C6DB099F557633DA75D02 /* Pods-NimiqClientTvOSTests-umbrella.h */,
-				99C7346E2C1D65A98F0A777735F4202A /* Pods-NimiqClientTvOSTests.debug.xcconfig */,
-				88AD2EBA749B5B22CF31D43DA37F9D28 /* Pods-NimiqClientTvOSTests.release.xcconfig */,
+				9AC58B2B11F8304690E9C9709A336A4D /* Pods-NimiqClientTvOSTests.modulemap */,
+				1A327EC6B24994FFF3DDF3670A8204C8 /* Pods-NimiqClientTvOSTests-acknowledgements.markdown */,
+				23089000B4D9AA116891CDE3F52E9EF2 /* Pods-NimiqClientTvOSTests-acknowledgements.plist */,
+				D409819FF2B2A5463D3DE988A711F247 /* Pods-NimiqClientTvOSTests-dummy.m */,
+				DBAE9BA72DA1BC4CF47D2670108C64FA /* Pods-NimiqClientTvOSTests-Info.plist */,
+				3D482718EAC1FA08B922EE8E287A7F0D /* Pods-NimiqClientTvOSTests-umbrella.h */,
+				65FABF8B4C8E2CA6325571100B95F830 /* Pods-NimiqClientTvOSTests.debug.xcconfig */,
+				678E9A84652B343133B2E658A55025E6 /* Pods-NimiqClientTvOSTests.release.xcconfig */,
 			);
 			name = "Pods-NimiqClientTvOSTests";
 			path = "Target Support Files/Pods-NimiqClientTvOSTests";
 			sourceTree = "<group>";
 		};
-		8C30045517FAA72E27C3C9AED694B37E /* Pods-NimiqClientiOS */ = {
+		60C6CEED19B4B08004EB69E88A1571A5 /* Pods-NimiqClientiOS */ = {
 			isa = PBXGroup;
 			children = (
-				F9A6C43C20423D66EF131803A809F446 /* Pods-NimiqClientiOS.modulemap */,
-				CEE1234C14D7258349C9B102B56F1025 /* Pods-NimiqClientiOS-acknowledgements.markdown */,
-				1BF1C92585600FC7DA66153194FB85E1 /* Pods-NimiqClientiOS-acknowledgements.plist */,
-				E162BF84615083502271DC62092C15E0 /* Pods-NimiqClientiOS-dummy.m */,
-				EC8549F01E85F7711AAF8A09F5972082 /* Pods-NimiqClientiOS-Info.plist */,
-				9FFB786865280993342B18245654BF02 /* Pods-NimiqClientiOS-umbrella.h */,
-				ABC732B005D8C5C49CFE038490606645 /* Pods-NimiqClientiOS.debug.xcconfig */,
-				1AE7F0B7B6CB5A9EA4B28DB8859133E6 /* Pods-NimiqClientiOS.release.xcconfig */,
+				B1CAA6E4DE55881B72A08CA83C96A567 /* Pods-NimiqClientiOS.modulemap */,
+				05AC95301F6F41A8B8D45F776E0EB011 /* Pods-NimiqClientiOS-acknowledgements.markdown */,
+				CF9908B723939FA921D96EEFD7B346AB /* Pods-NimiqClientiOS-acknowledgements.plist */,
+				0F3535572FDCFF36B87C90A00412C7E8 /* Pods-NimiqClientiOS-dummy.m */,
+				E7643525109EB0ECCC0D6F63BD7DD98B /* Pods-NimiqClientiOS-Info.plist */,
+				1E2D23FD8AC7C081FBC604EF7AFF0764 /* Pods-NimiqClientiOS-umbrella.h */,
+				B93B6CC7D628B1C96A4E881F99A37A9E /* Pods-NimiqClientiOS.debug.xcconfig */,
+				1CD8124F2C7909FF2DFC97432C0194BD /* Pods-NimiqClientiOS.release.xcconfig */,
 			);
 			name = "Pods-NimiqClientiOS";
 			path = "Target Support Files/Pods-NimiqClientiOS";
 			sourceTree = "<group>";
 		};
-		B078F2EAF07184734A215CAEFB0F8DA9 /* Frameworks */ = {
+		790800F380C7FA2170D373E086C677F9 /* Pods-NimiqClientTvOS */ = {
 			isa = PBXGroup;
 			children = (
-				D8CE39782B3B4BE5C5EC4C4CC385A167 /* iOS */,
-				82C7656E557CCF9BACAF94BE5C5F98CB /* OS X */,
-				4EC20B79BD926D820547982BD7835948 /* tvOS */,
+				BC4E05BB5CA8FCD91A08BED7730AFB3B /* Pods-NimiqClientTvOS.modulemap */,
+				CECC445E1CE94C2EB82757BA3A77ECF1 /* Pods-NimiqClientTvOS-acknowledgements.markdown */,
+				31A30B9DEAE5248263E40991ED1F1590 /* Pods-NimiqClientTvOS-acknowledgements.plist */,
+				524F6B3BB33DF47B3E3E7A91B1718AE0 /* Pods-NimiqClientTvOS-dummy.m */,
+				C0031AFA72EEC0C0A19DD06A1637E730 /* Pods-NimiqClientTvOS-Info.plist */,
+				1FAC4865D3273C5610B68CB7C05F4DFE /* Pods-NimiqClientTvOS-umbrella.h */,
+				E963B7D91F81D84DDA4CE9D06CF606FA /* Pods-NimiqClientTvOS.debug.xcconfig */,
+				22A97A7D77BD92ECE4BA75211A0C7C03 /* Pods-NimiqClientTvOS.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Pods-NimiqClientTvOS";
+			path = "Target Support Files/Pods-NimiqClientTvOS";
 			sourceTree = "<group>";
 		};
-		BCD64E5ED3846DC9F802D84C484E662B /* Pods-NimiqClientMacOSTests */ = {
+		B00E78372A0975050C40A89B6334888C /* Pods-NimiqClientiOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				81510A2198297A3E09F246DAB7AAA42C /* Pods-NimiqClientMacOSTests.modulemap */,
-				9ABDAB6238B71317882251ACE7B9AFDD /* Pods-NimiqClientMacOSTests-acknowledgements.markdown */,
-				B184B79B98C43DB9FF2F9D6EB9E50E38 /* Pods-NimiqClientMacOSTests-acknowledgements.plist */,
-				024BE5EDF61EE58A892D34A04CFCA0C4 /* Pods-NimiqClientMacOSTests-dummy.m */,
-				CCCEB2A0650945D0B947739F798E34D1 /* Pods-NimiqClientMacOSTests-Info.plist */,
-				48E503EE23E0C74EC2046C36F0B95105 /* Pods-NimiqClientMacOSTests-umbrella.h */,
-				5DC11FC18DD64E7F521ADC45722C3346 /* Pods-NimiqClientMacOSTests.debug.xcconfig */,
-				32F470C093B3188654417131A5631C79 /* Pods-NimiqClientMacOSTests.release.xcconfig */,
+				F306A532312F103775937EC8A57E36CA /* Pods-NimiqClientiOSTests.modulemap */,
+				4294F28814139B71790D375E9071BB69 /* Pods-NimiqClientiOSTests-acknowledgements.markdown */,
+				AC678EB2ED5A45AD2A2C9679168F0359 /* Pods-NimiqClientiOSTests-acknowledgements.plist */,
+				EEDF40C394BF04B17C67BE5917C239AC /* Pods-NimiqClientiOSTests-dummy.m */,
+				C131BE17601F62C52F6F55B47D8ADF27 /* Pods-NimiqClientiOSTests-Info.plist */,
+				63A73B21C06087280DDEBC166532E60B /* Pods-NimiqClientiOSTests-umbrella.h */,
+				3E52A31F972ADB30A5D4E6C7057F1936 /* Pods-NimiqClientiOSTests.debug.xcconfig */,
+				E0E7ACE46FB2D762A586A434E12260C9 /* Pods-NimiqClientiOSTests.release.xcconfig */,
+			);
+			name = "Pods-NimiqClientiOSTests";
+			path = "Target Support Files/Pods-NimiqClientiOSTests";
+			sourceTree = "<group>";
+		};
+		B70FE03E46E76C3761E737B61014451F /* Pods-NimiqClientMacOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				592BDAE8CDCF5A02EDA2826A662C91D0 /* Pods-NimiqClientMacOSTests.modulemap */,
+				84A102E9AD37FA14D2D132AC562D3BF3 /* Pods-NimiqClientMacOSTests-acknowledgements.markdown */,
+				1064A4151FFB414A4348EEF4E1DAB181 /* Pods-NimiqClientMacOSTests-acknowledgements.plist */,
+				2348AC80429624E1B45233D44C99717D /* Pods-NimiqClientMacOSTests-dummy.m */,
+				9A33A7D51FB4FCC1CA8AEDE352D94911 /* Pods-NimiqClientMacOSTests-Info.plist */,
+				12464FF627ABDDC0549D765D8B34FB6D /* Pods-NimiqClientMacOSTests-umbrella.h */,
+				15898BF5463EDB8C5688AFED8BFC79CE /* Pods-NimiqClientMacOSTests.debug.xcconfig */,
+				20A703370F8BA9C18E5647B1B8654612 /* Pods-NimiqClientMacOSTests.release.xcconfig */,
 			);
 			name = "Pods-NimiqClientMacOSTests";
 			path = "Target Support Files/Pods-NimiqClientMacOSTests";
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				B078F2EAF07184734A215CAEFB0F8DA9 /* Frameworks */,
-				84671C95F6A77068C6FEB99E3BACD2AB /* Products */,
-				D16DC07CBD127BBC989CFF55A4D551E0 /* Targets Support Files */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				F1B4B3D61695612403F735E2D4A6BE1D /* Products */,
+				38C3328ED37804FF96DF6EFB41D995F3 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D16DC07CBD127BBC989CFF55A4D551E0 /* Targets Support Files */ = {
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8C30045517FAA72E27C3C9AED694B37E /* Pods-NimiqClientiOS */,
-				099F3806E14CC312CF5EB4F5EA1EC300 /* Pods-NimiqClientiOSTests */,
-				2ED035D798D9FDB12F7DA810B370C90F /* Pods-NimiqClientMacOS */,
-				BCD64E5ED3846DC9F802D84C484E662B /* Pods-NimiqClientMacOSTests */,
-				4F5BA111CED037F4189A94DDCC5DDC9E /* Pods-NimiqClientTvOS */,
-				868ABB1C15D7E4DAC2143CC44511C2C9 /* Pods-NimiqClientTvOSTests */,
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
-			name = "Targets Support Files";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D8CE39782B3B4BE5C5EC4C4CC385A167 /* iOS */ = {
+		D7396A21B53F02D84FF243915D031121 /* Pods-NimiqClientMacOS */ = {
 			isa = PBXGroup;
 			children = (
-				BFFD8459C74C0E556511469DC5AE5003 /* Foundation.framework */,
+				3F30A2E29C4DFA6E6466F5E32DA60B09 /* Pods-NimiqClientMacOS.modulemap */,
+				74A23F1900DA0926DF7967B01DA682FA /* Pods-NimiqClientMacOS-acknowledgements.markdown */,
+				0FA42101F2D77B084A8BEC8E0594062B /* Pods-NimiqClientMacOS-acknowledgements.plist */,
+				FA3A71E6D7BABD9F8AC4779FCAB6CC8B /* Pods-NimiqClientMacOS-dummy.m */,
+				5A4C3B3264FBBF2D0601F17531D89F67 /* Pods-NimiqClientMacOS-Info.plist */,
+				B36A60D877A8C504C0AB5AB7A9AC0212 /* Pods-NimiqClientMacOS-umbrella.h */,
+				B4496A65730561992A45C3FEF6CADC09 /* Pods-NimiqClientMacOS.debug.xcconfig */,
+				210851951AD282E7B43C00A1055568EB /* Pods-NimiqClientMacOS.release.xcconfig */,
 			);
-			name = iOS;
+			name = "Pods-NimiqClientMacOS";
+			path = "Target Support Files/Pods-NimiqClientMacOS";
+			sourceTree = "<group>";
+		};
+		F03933D413615C522C31A47B86A37E77 /* Pods-NimiqClientWatchOS */ = {
+			isa = PBXGroup;
+			children = (
+				A58F6C1F3A6624ACEA803A7B95FD5552 /* Pods-NimiqClientWatchOS.modulemap */,
+				EC756CF2F22655BEF974E273D478C6E1 /* Pods-NimiqClientWatchOS-acknowledgements.markdown */,
+				29ADB5A5D70969FDBE46063814B252DD /* Pods-NimiqClientWatchOS-acknowledgements.plist */,
+				C6213729DB8B4869C706FE3A5E1E0475 /* Pods-NimiqClientWatchOS-dummy.m */,
+				7628D6008291B39F9B53A5339E99BD58 /* Pods-NimiqClientWatchOS-Info.plist */,
+				CEC63A97B9FC5AB61A51FB4F4E5F8B43 /* Pods-NimiqClientWatchOS-umbrella.h */,
+				41499E22224C53F8F068E896C293A0B9 /* Pods-NimiqClientWatchOS.debug.xcconfig */,
+				CF8FD603661608C4EC2592A47BC0107A /* Pods-NimiqClientWatchOS.release.xcconfig */,
+			);
+			name = "Pods-NimiqClientWatchOS";
+			path = "Target Support Files/Pods-NimiqClientWatchOS";
+			sourceTree = "<group>";
+		};
+		F1B4B3D61695612403F735E2D4A6BE1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A742E622FA8E6995318C121892E4F87 /* Pods_NimiqClientiOS.framework */,
+				F76880FC65212665273847E97DE69E0E /* Pods_NimiqClientiOSTests.framework */,
+				B9FF26E36EC07064A2EAD799156ABD74 /* Pods_NimiqClientMacOS.framework */,
+				8A0EDA6DBCCE0881258AD28D9E20BA15 /* Pods_NimiqClientMacOSTests.framework */,
+				7CE3215E689891CDEDA470128822A9AD /* Pods_NimiqClientTvOS.framework */,
+				7497400FD05ABA426A4D314A2FFB475F /* Pods_NimiqClientTvOSTests.framework */,
+				D22EDEE9141864102CA3089ECCF653D6 /* Pods_NimiqClientWatchOS.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1210E6BFA9C12FCAD6417260C2AE97DC /* Headers */ = {
+		727808D3F05C15E3575D6C79B9AFFE82 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				729B829B24DF23F96CFBE8E42BBE2B55 /* Pods-NimiqClientiOS-umbrella.h in Headers */,
+				F111B14E09057D93B13FDAA96093F3B9 /* Pods-NimiqClientTvOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3C7C6127A9439AD7FAD775AB5FCBF53D /* Headers */ = {
+		7EE1AB3041C531995B7ED583A1C494E6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99A4B5E1ED5ACE03252A62831D6819A4 /* Pods-NimiqClientMacOSTests-umbrella.h in Headers */,
+				8BC5A671581B9279F4AB898856559AA0 /* Pods-NimiqClientiOSTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7EF526454BC6238B3B84BC5BB796ECE9 /* Headers */ = {
+		AB80ADCE948513C46A3F51A4B6729DA9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7B31F553D03654483075DE01A8AF0B2 /* Pods-NimiqClientTvOSTests-umbrella.h in Headers */,
+				F36E8606138ECA2373B23655AC951659 /* Pods-NimiqClientWatchOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B2AD71EEB1F82422BF3119E124D7817C /* Headers */ = {
+		ACAA30BB3330F2E7238861CD6889EEEC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DF84E2504D418DCCF3807C4A2D06974 /* Pods-NimiqClientTvOS-umbrella.h in Headers */,
+				61DD0FAAA2051C9B8AEFE260A1A8C435 /* Pods-NimiqClientMacOSTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D4481F99F25E1F465D37797AB94D9046 /* Headers */ = {
+		C9CD478D9B0FA38D498092E2EBAFD005 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E5004BB2604FC582B709870D746437F /* Pods-NimiqClientMacOS-umbrella.h in Headers */,
+				DA837C36CCD9873295573560E9D57142 /* Pods-NimiqClientMacOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1ADEE56A257408D371E05F1FBCFA48C /* Headers */ = {
+		CF8B993CA61501E80917BF2787441CE0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				770A5695D0C909A2E368C6EE08DEAE13 /* Pods-NimiqClientiOSTests-umbrella.h in Headers */,
+				A91C5F86DDF78E77E73DFCFC25CB3807 /* Pods-NimiqClientTvOSTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDC275850D9BB2EAD0EC2E3D5A2760FE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				813EE3CDC621421FD425BE26CD47AF80 /* Pods-NimiqClientiOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		021EC033E1627902E00C4228A1EE78C3 /* Pods-NimiqClientiOSTests */ = {
+		14521067F71B491175FDFCFE74F2E9E8 /* Pods-NimiqClientMacOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 12E3A982B04C6296122037CEE749046F /* Build configuration list for PBXNativeTarget "Pods-NimiqClientiOSTests" */;
+			buildConfigurationList = A6E9CEC1100B4517DAD6D754955C374B /* Build configuration list for PBXNativeTarget "Pods-NimiqClientMacOSTests" */;
 			buildPhases = (
-				E1ADEE56A257408D371E05F1FBCFA48C /* Headers */,
-				F58C52E5C8A55D6BEC86F446771D8E9F /* Sources */,
-				61A27F9820D6CB7BF3B420CE7CA9FBE8 /* Frameworks */,
-				47C2D6FC2AA0B2F2A84DB97E5DD5F0AE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-NimiqClientiOSTests";
-			productName = "Pods-NimiqClientiOSTests";
-			productReference = E458DE36A4D18E4AC1F88B8FE85C8062 /* Pods_NimiqClientiOSTests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		128720927EF4B55B4BEAE456D765B2FC /* Pods-NimiqClientMacOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1F8EC5024DC1395A4790B8D37B4912CE /* Build configuration list for PBXNativeTarget "Pods-NimiqClientMacOS" */;
-			buildPhases = (
-				D4481F99F25E1F465D37797AB94D9046 /* Headers */,
-				A49EB012737F4EA09CFB74C3204F8452 /* Sources */,
-				B468710CCF223E42A474C3E1D9FA8210 /* Frameworks */,
-				D244E91DB7233F6F20CC6508E5FC1E8F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Pods-NimiqClientMacOS";
-			productName = "Pods-NimiqClientMacOS";
-			productReference = CCABD14A540E801198E13B318214E5E1 /* Pods_NimiqClientMacOS.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		30CF8EFE387864CC546F0EA7B4FA53DC /* Pods-NimiqClientMacOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3C9127CE3F607566C461B9CBC7D3CDB2 /* Build configuration list for PBXNativeTarget "Pods-NimiqClientMacOSTests" */;
-			buildPhases = (
-				3C7C6127A9439AD7FAD775AB5FCBF53D /* Headers */,
-				8B52EA8BFDFD12F41AC3F913DE20AB63 /* Sources */,
-				0562AB019428ADEE476B4192A44AC827 /* Frameworks */,
-				04B68CAFC31B6E1D871A31E605DDA731 /* Resources */,
+				ACAA30BB3330F2E7238861CD6889EEEC /* Headers */,
+				D293D442BC35844A4B0EDB468409FD22 /* Sources */,
+				D7A56CF62CA31E01D129563261664E45 /* Frameworks */,
+				A139ACA8D693DADE5A86AD49659F9019 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -411,17 +401,35 @@
 			);
 			name = "Pods-NimiqClientMacOSTests";
 			productName = "Pods-NimiqClientMacOSTests";
-			productReference = 26824A83A2EF3F59AFD2240AB0DA85FE /* Pods_NimiqClientMacOSTests.framework */;
+			productReference = 8A0EDA6DBCCE0881258AD28D9E20BA15 /* Pods_NimiqClientMacOSTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		412818BFC423D5D49B72464ED4607E16 /* Pods-NimiqClientTvOSTests */ = {
+		2160EAB2B14F1E7C039493188A3ECA14 /* Pods-NimiqClientWatchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD1FF61A5F73733610553964A88BFD92 /* Build configuration list for PBXNativeTarget "Pods-NimiqClientTvOSTests" */;
+			buildConfigurationList = DAEBF819AB226FC2941DA36DEC36035F /* Build configuration list for PBXNativeTarget "Pods-NimiqClientWatchOS" */;
 			buildPhases = (
-				7EF526454BC6238B3B84BC5BB796ECE9 /* Headers */,
-				DF9DBC702F28EB5F02A6D123A28AD0A4 /* Sources */,
-				2BCE4A2E05B73086D01A2061A85C8BF6 /* Frameworks */,
-				14C77BF6A541ED44A837EFA15DCC1244 /* Resources */,
+				AB80ADCE948513C46A3F51A4B6729DA9 /* Headers */,
+				64DD1F8D778ECD7AB23505C58AA5A50A /* Sources */,
+				CAA7117D1F617F9E78221EE0C9F5CA13 /* Frameworks */,
+				0CBAAD9DC387CF67679B97A66DBA1E26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NimiqClientWatchOS";
+			productName = "Pods-NimiqClientWatchOS";
+			productReference = D22EDEE9141864102CA3089ECCF653D6 /* Pods_NimiqClientWatchOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		52D3B7A2FC857061AC6310C8CD7FD855 /* Pods-NimiqClientTvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82AFA04A7963197C3965655D804D0B55 /* Build configuration list for PBXNativeTarget "Pods-NimiqClientTvOSTests" */;
+			buildPhases = (
+				CF8B993CA61501E80917BF2787441CE0 /* Headers */,
+				E8F9D37399610F801284AFD13051B363 /* Sources */,
+				D4A688A3401A4C62B87791FDCDAA4E40 /* Frameworks */,
+				85335A063C3B95B5C64BE7E69E5C1043 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -429,17 +437,35 @@
 			);
 			name = "Pods-NimiqClientTvOSTests";
 			productName = "Pods-NimiqClientTvOSTests";
-			productReference = E1448790FD0E264187D72A3010652BDF /* Pods_NimiqClientTvOSTests.framework */;
+			productReference = 7497400FD05ABA426A4D314A2FFB475F /* Pods_NimiqClientTvOSTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		5BFA0CE5D3A4480D1E8E25E6C0B56507 /* Pods-NimiqClientiOS */ = {
+		68DC48DD65A2B5ADA83568BCBC12F132 /* Pods-NimiqClientMacOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94A8861CF9EEB1DAA7DA1021D1B2CA06 /* Build configuration list for PBXNativeTarget "Pods-NimiqClientiOS" */;
+			buildConfigurationList = D8A9CDFA73D01C3ECEE6C01002B0E83F /* Build configuration list for PBXNativeTarget "Pods-NimiqClientMacOS" */;
 			buildPhases = (
-				1210E6BFA9C12FCAD6417260C2AE97DC /* Headers */,
-				CD48BE718DDAA434380476D23A678951 /* Sources */,
-				03777A82680F025D0408F2978C066579 /* Frameworks */,
-				84FC87E85534FA54E17933CA8B86D6A8 /* Resources */,
+				C9CD478D9B0FA38D498092E2EBAFD005 /* Headers */,
+				0A03F93F7FEEDB14679C123AF67CDDB2 /* Sources */,
+				3692DB857C72872700E3CFAC6693E42B /* Frameworks */,
+				F7684C0D0000013EB5402F19E0135189 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NimiqClientMacOS";
+			productName = "Pods-NimiqClientMacOS";
+			productReference = B9FF26E36EC07064A2EAD799156ABD74 /* Pods_NimiqClientMacOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A43A59E2DB7E0A364A3836FC3B52E20C /* Pods-NimiqClientiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2C045C231BBC97A76B295BFFCFF7AF1 /* Build configuration list for PBXNativeTarget "Pods-NimiqClientiOS" */;
+			buildPhases = (
+				FDC275850D9BB2EAD0EC2E3D5A2760FE /* Headers */,
+				50DDAD995415F3BD3A35124865420A44 /* Sources */,
+				3659F38D1F791EFC5A243333D91C13CC /* Frameworks */,
+				80528E8004B1B1F6AD80543DA705BD7B /* Resources */,
 			);
 			buildRules = (
 			);
@@ -447,17 +473,35 @@
 			);
 			name = "Pods-NimiqClientiOS";
 			productName = "Pods-NimiqClientiOS";
-			productReference = AE73D80DBD3A7C18A2F74F84BB3B8E98 /* Pods_NimiqClientiOS.framework */;
+			productReference = 2A742E622FA8E6995318C121892E4F87 /* Pods_NimiqClientiOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		EF92671847D7BBD0FC1682B855E6AB54 /* Pods-NimiqClientTvOS */ = {
+		B794E7530A0B26D7B29AF022E4C15533 /* Pods-NimiqClientiOSTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D97EA6A152341C65CEC3CF8C10E73FA /* Build configuration list for PBXNativeTarget "Pods-NimiqClientTvOS" */;
+			buildConfigurationList = 16099DC2F2493D85CF58AFE7C52B028D /* Build configuration list for PBXNativeTarget "Pods-NimiqClientiOSTests" */;
 			buildPhases = (
-				B2AD71EEB1F82422BF3119E124D7817C /* Headers */,
-				050C44CA82303ABA8F16BEF11B12CB33 /* Sources */,
-				0EFBDB51F99B5990940DF1E57FC6AA80 /* Frameworks */,
-				1CC442E5373346F233CF0489A30C1706 /* Resources */,
+				7EE1AB3041C531995B7ED583A1C494E6 /* Headers */,
+				939824AAE85FA8E13824C5DB51D7F8E8 /* Sources */,
+				A51795CC11029185A16D4E843F8CC342 /* Frameworks */,
+				BC9BF278CB3E526F1917E2DF5C3F009F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NimiqClientiOSTests";
+			productName = "Pods-NimiqClientiOSTests";
+			productReference = F76880FC65212665273847E97DE69E0E /* Pods_NimiqClientiOSTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F8378874175FCBA1670CBF24F82C1DA6 /* Pods-NimiqClientTvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E6F047BFE8DE9F1B1D6341D7CAEF405 /* Build configuration list for PBXNativeTarget "Pods-NimiqClientTvOS" */;
+			buildPhases = (
+				727808D3F05C15E3575D6C79B9AFFE82 /* Headers */,
+				E04CFB169FFB006E8D34DE649EFE3D9F /* Sources */,
+				C56884B81E38F5BF7E1003EFC8078187 /* Frameworks */,
+				44BA1614FA810C96CE06733EB970ACC6 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -465,7 +509,7 @@
 			);
 			name = "Pods-NimiqClientTvOS";
 			productName = "Pods-NimiqClientTvOS";
-			productReference = A92DEA12AF600EF058545B4E9175A32C /* Pods_NimiqClientTvOS.framework */;
+			productReference = 7CE3215E689891CDEDA470128822A9AD /* Pods_NimiqClientTvOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -475,7 +519,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1150;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -486,57 +530,65 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 84671C95F6A77068C6FEB99E3BACD2AB /* Products */;
+			productRefGroup = F1B4B3D61695612403F735E2D4A6BE1D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5BFA0CE5D3A4480D1E8E25E6C0B56507 /* Pods-NimiqClientiOS */,
-				021EC033E1627902E00C4228A1EE78C3 /* Pods-NimiqClientiOSTests */,
-				128720927EF4B55B4BEAE456D765B2FC /* Pods-NimiqClientMacOS */,
-				30CF8EFE387864CC546F0EA7B4FA53DC /* Pods-NimiqClientMacOSTests */,
-				EF92671847D7BBD0FC1682B855E6AB54 /* Pods-NimiqClientTvOS */,
-				412818BFC423D5D49B72464ED4607E16 /* Pods-NimiqClientTvOSTests */,
+				A43A59E2DB7E0A364A3836FC3B52E20C /* Pods-NimiqClientiOS */,
+				B794E7530A0B26D7B29AF022E4C15533 /* Pods-NimiqClientiOSTests */,
+				68DC48DD65A2B5ADA83568BCBC12F132 /* Pods-NimiqClientMacOS */,
+				14521067F71B491175FDFCFE74F2E9E8 /* Pods-NimiqClientMacOSTests */,
+				F8378874175FCBA1670CBF24F82C1DA6 /* Pods-NimiqClientTvOS */,
+				52D3B7A2FC857061AC6310C8CD7FD855 /* Pods-NimiqClientTvOSTests */,
+				2160EAB2B14F1E7C039493188A3ECA14 /* Pods-NimiqClientWatchOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		04B68CAFC31B6E1D871A31E605DDA731 /* Resources */ = {
+		0CBAAD9DC387CF67679B97A66DBA1E26 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		14C77BF6A541ED44A837EFA15DCC1244 /* Resources */ = {
+		44BA1614FA810C96CE06733EB970ACC6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1CC442E5373346F233CF0489A30C1706 /* Resources */ = {
+		80528E8004B1B1F6AD80543DA705BD7B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		47C2D6FC2AA0B2F2A84DB97E5DD5F0AE /* Resources */ = {
+		85335A063C3B95B5C64BE7E69E5C1043 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		84FC87E85534FA54E17933CA8B86D6A8 /* Resources */ = {
+		A139ACA8D693DADE5A86AD49659F9019 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D244E91DB7233F6F20CC6508E5FC1E8F /* Resources */ = {
+		BC9BF278CB3E526F1917E2DF5C3F009F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7684C0D0000013EB5402F19E0135189 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -546,58 +598,66 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		050C44CA82303ABA8F16BEF11B12CB33 /* Sources */ = {
+		0A03F93F7FEEDB14679C123AF67CDDB2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C144F55ACACBAE9A9561948FF419C995 /* Pods-NimiqClientTvOS-dummy.m in Sources */,
+				E07A33D9E556032003228D088965CB68 /* Pods-NimiqClientMacOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B52EA8BFDFD12F41AC3F913DE20AB63 /* Sources */ = {
+		50DDAD995415F3BD3A35124865420A44 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E9EC829CC25905D209E7DC5C581C9E5 /* Pods-NimiqClientMacOSTests-dummy.m in Sources */,
+				D4D38C31DC5335F26B66FD06B7C056D5 /* Pods-NimiqClientiOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A49EB012737F4EA09CFB74C3204F8452 /* Sources */ = {
+		64DD1F8D778ECD7AB23505C58AA5A50A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDBF510FD5AD4DAEC19010F3CF539E06 /* Pods-NimiqClientMacOS-dummy.m in Sources */,
+				C68DC35F77CBC9FE522B3D9DBC3135C5 /* Pods-NimiqClientWatchOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CD48BE718DDAA434380476D23A678951 /* Sources */ = {
+		939824AAE85FA8E13824C5DB51D7F8E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B87EB59F729512DA1DA49277DB072798 /* Pods-NimiqClientiOS-dummy.m in Sources */,
+				DDBE095CD25781B8C7E8961BFE91F17C /* Pods-NimiqClientiOSTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DF9DBC702F28EB5F02A6D123A28AD0A4 /* Sources */ = {
+		D293D442BC35844A4B0EDB468409FD22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				069330A546CAC716FE5643A2B9FF8863 /* Pods-NimiqClientTvOSTests-dummy.m in Sources */,
+				8D24E5EE2FD222148D9E934A45D966C5 /* Pods-NimiqClientMacOSTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F58C52E5C8A55D6BEC86F446771D8E9F /* Sources */ = {
+		E04CFB169FFB006E8D34DE649EFE3D9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCB14438C230EBF5EE6758C3779BA865 /* Pods-NimiqClientiOSTests-dummy.m in Sources */,
+				8961A9DC2A7A05BB46D7CF06F5E7284E /* Pods-NimiqClientTvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8F9D37399610F801284AFD13051B363 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				188AE106F8E12FA0C427A112E410A122 /* Pods-NimiqClientTvOSTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		020778DFCE2F3CA14E3A699AECA11910 /* Release */ = {
+		009ECD29CBC22AAFB5B9BAD8AC48384F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -645,8 +705,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				IPHONEOS_DEPLOYMENT_TARGET = 2.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -655,13 +714,12 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
-				TVOS_DEPLOYMENT_TARGET = 13.4;
 			};
 			name = Release;
 		};
-		26E78A960B745371611DAC5C96863B7E /* Debug */ = {
+		1525DB44768149223C6AA2CC4DD096A6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99C7346E2C1D65A98F0A777735F4202A /* Pods-NimiqClientTvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 678E9A84652B343133B2E658A55025E6 /* Pods-NimiqClientTvOSTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -675,6 +733,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientTvOSTests/Pods-NimiqClientTvOSTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -687,18 +746,55 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = appletvos;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 13.4;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		241970038A3198315E2C1F3C9C3F9D8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65FABF8B4C8E2CA6325571100B95F830 /* Pods-NimiqClientTvOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientTvOSTests/Pods-NimiqClientTvOSTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NimiqClientTvOSTests/Pods-NimiqClientTvOSTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		31807C0A214F28B89515D41B1A7CE760 /* Release */ = {
+		379E072CFD9F27DE86F699B17460AFFB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 657186B54967F0713E2267C458FC13CD /* Pods-NimiqClientiOSTests.release.xcconfig */;
+			baseConfigurationReference = CF8FD603661608C4EC2592A47BC0107A /* Pods-NimiqClientWatchOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -711,9 +807,162 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientWatchOS/Pods-NimiqClientWatchOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 2.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NimiqClientWatchOS/Pods-NimiqClientWatchOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3DAACFC69FA0EB0AC48B87EC0EE8CDAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41499E22224C53F8F068E896C293A0B9 /* Pods-NimiqClientWatchOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientWatchOS/Pods-NimiqClientWatchOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 2.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NimiqClientWatchOS/Pods-NimiqClientWatchOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		46F15A936D29D43F15F5634B38869F44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4496A65730561992A45C3FEF6CADC09 /* Pods-NimiqClientMacOS.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientMacOS/Pods-NimiqClientMacOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NimiqClientMacOS/Pods-NimiqClientMacOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6852116AC46C83EEE8C3139AF3825140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20A703370F8BA9C18E5647B1B8654612 /* Pods-NimiqClientMacOSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientMacOSTests/Pods-NimiqClientMacOSTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NimiqClientMacOSTests/Pods-NimiqClientMacOSTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7A05210A3B266BE345C9D0EA28673760 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E52A31F972ADB30A5D4E6C7057F1936 /* Pods-NimiqClientiOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientiOSTests/Pods-NimiqClientiOSTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -729,18 +978,16 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		39D7F6862D1A2B5BFB3A8E1C740BCF32 /* Release */ = {
+		7DB9656934B3BEF54A358CE14FEDE792 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AE7F0B7B6CB5A9EA4B28DB8859133E6 /* Pods-NimiqClientiOS.release.xcconfig */;
+			baseConfigurationReference = 1CD8124F2C7909FF2DFC97432C0194BD /* Pods-NimiqClientiOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -752,7 +999,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientiOS/Pods-NimiqClientiOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -774,9 +1021,9 @@
 			};
 			name = Release;
 		};
-		40C3610397F869D843A728092E845AAE /* Debug */ = {
+		9191C1D36783612F6F77C8736CC2E3DD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A791D6E9ABAB43520090B308695F9A7 /* Pods-NimiqClientTvOS.debug.xcconfig */;
+			baseConfigurationReference = E963B7D91F81D84DDA4CE9D06CF606FA /* Pods-NimiqClientTvOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -790,6 +1037,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientTvOS/Pods-NimiqClientTvOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -797,161 +1045,6 @@
 				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-NimiqClientTvOS/Pods-NimiqClientTvOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 13.4;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		46E19B23834052C0E8AEA126883CF8FE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFE14FE7B133548F0E81873E595A99AE /* Pods-NimiqClientMacOS.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientMacOS/Pods-NimiqClientMacOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MODULEMAP_FILE = "Target Support Files/Pods-NimiqClientMacOS/Pods-NimiqClientMacOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		483C140364E15B75457FECF0BB306CE4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88AD2EBA749B5B22CF31D43DA37F9D28 /* Pods-NimiqClientTvOSTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientTvOSTests/Pods-NimiqClientTvOSTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NimiqClientTvOSTests/Pods-NimiqClientTvOSTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 13.4;
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4F28C99316CBE270362E2E6433CBB086 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0221EA7014A0698BEEE6D69B4CCD701 /* Pods-NimiqClientMacOS.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientMacOS/Pods-NimiqClientMacOS-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MODULEMAP_FILE = "Target Support Files/Pods-NimiqClientMacOS/Pods-NimiqClientMacOS.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		577B51D2BE6ACC3CA07CC1A1ED1E7246 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5443D5DB435D85D83AB88E284A6340D5 /* Pods-NimiqClientiOSTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientiOSTests/Pods-NimiqClientiOSTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-NimiqClientiOSTests/Pods-NimiqClientiOSTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -965,51 +1058,11 @@
 			};
 			name = Debug;
 		};
-		59140FF64056051EA1405F065BF53677 /* Debug */ = {
+		9E54D025DDF6CE34CF50240AB08CD622 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DC11FC18DD64E7F521ADC45722C3346 /* Pods-NimiqClientMacOSTests.debug.xcconfig */;
+			baseConfigurationReference = B93B6CC7D628B1C96A4E881F99A37A9E /* Pods-NimiqClientiOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientMacOSTests/Pods-NimiqClientMacOSTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MODULEMAP_FILE = "Target Support Files/Pods-NimiqClientMacOSTests/Pods-NimiqClientMacOSTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		61E74D71736FB83047B7C7B7269676E2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABC732B005D8C5C49CFE038490606645 /* Pods-NimiqClientiOS.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1021,7 +1074,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientiOS/Pods-NimiqClientiOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1042,7 +1095,122 @@
 			};
 			name = Debug;
 		};
-		9889BF2D2D874917504458F8AED47CBD /* Debug */ = {
+		A105B953993E63A386A0F14A6F3313F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 210851951AD282E7B43C00A1055568EB /* Pods-NimiqClientMacOS.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientMacOS/Pods-NimiqClientMacOS-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NimiqClientMacOS/Pods-NimiqClientMacOS.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AE02AF6635F33A8893F59587BC7A2AF7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15898BF5463EDB8C5688AFED8BFC79CE /* Pods-NimiqClientMacOSTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientMacOSTests/Pods-NimiqClientMacOSTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NimiqClientMacOSTests/Pods-NimiqClientMacOSTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C38C0A43F55FA57C71E5165A02749F63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0E7ACE46FB2D762A586A434E12260C9 /* Pods-NimiqClientiOSTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientiOSTests/Pods-NimiqClientiOSTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NimiqClientiOSTests/Pods-NimiqClientiOSTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C61D4D2D9C02C8BBFEC54A97D0CCED46 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1093,8 +1261,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				IPHONEOS_DEPLOYMENT_TARGET = 2.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1104,52 +1271,12 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
-				TVOS_DEPLOYMENT_TARGET = 13.4;
 			};
 			name = Debug;
 		};
-		9A58974A8DDE7B2D068AEDD85F2E1EDE /* Release */ = {
+		E8E4AF0D96D410E9E18B47C520F23F50 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32F470C093B3188654417131A5631C79 /* Pods-NimiqClientMacOSTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientMacOSTests/Pods-NimiqClientMacOSTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				MODULEMAP_FILE = "Target Support Files/Pods-NimiqClientMacOSTests/Pods-NimiqClientMacOSTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9C9A7A4435A19A91D72A04B7D126812D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F3BC165AE299E9A0BAB871721D52184A /* Pods-NimiqClientTvOS.release.xcconfig */;
+			baseConfigurationReference = 22A97A7D77BD92ECE4BA75211A0C7C03 /* Pods-NimiqClientTvOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1163,6 +1290,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-NimiqClientTvOS/Pods-NimiqClientTvOS-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1175,10 +1303,9 @@
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = appletvos;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 13.4;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1188,29 +1315,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		12E3A982B04C6296122037CEE749046F /* Build configuration list for PBXNativeTarget "Pods-NimiqClientiOSTests" */ = {
+		16099DC2F2493D85CF58AFE7C52B028D /* Build configuration list for PBXNativeTarget "Pods-NimiqClientiOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				577B51D2BE6ACC3CA07CC1A1ED1E7246 /* Debug */,
-				31807C0A214F28B89515D41B1A7CE760 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1F8EC5024DC1395A4790B8D37B4912CE /* Build configuration list for PBXNativeTarget "Pods-NimiqClientMacOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				46E19B23834052C0E8AEA126883CF8FE /* Debug */,
-				4F28C99316CBE270362E2E6433CBB086 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3C9127CE3F607566C461B9CBC7D3CDB2 /* Build configuration list for PBXNativeTarget "Pods-NimiqClientMacOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				59140FF64056051EA1405F065BF53677 /* Debug */,
-				9A58974A8DDE7B2D068AEDD85F2E1EDE /* Release */,
+				7A05210A3B266BE345C9D0EA28673760 /* Debug */,
+				C38C0A43F55FA57C71E5165A02749F63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1218,35 +1327,62 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9889BF2D2D874917504458F8AED47CBD /* Debug */,
-				020778DFCE2F3CA14E3A699AECA11910 /* Release */,
+				C61D4D2D9C02C8BBFEC54A97D0CCED46 /* Debug */,
+				009ECD29CBC22AAFB5B9BAD8AC48384F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D97EA6A152341C65CEC3CF8C10E73FA /* Build configuration list for PBXNativeTarget "Pods-NimiqClientTvOS" */ = {
+		4E6F047BFE8DE9F1B1D6341D7CAEF405 /* Build configuration list for PBXNativeTarget "Pods-NimiqClientTvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				40C3610397F869D843A728092E845AAE /* Debug */,
-				9C9A7A4435A19A91D72A04B7D126812D /* Release */,
+				9191C1D36783612F6F77C8736CC2E3DD /* Debug */,
+				E8E4AF0D96D410E9E18B47C520F23F50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		94A8861CF9EEB1DAA7DA1021D1B2CA06 /* Build configuration list for PBXNativeTarget "Pods-NimiqClientiOS" */ = {
+		82AFA04A7963197C3965655D804D0B55 /* Build configuration list for PBXNativeTarget "Pods-NimiqClientTvOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				61E74D71736FB83047B7C7B7269676E2 /* Debug */,
-				39D7F6862D1A2B5BFB3A8E1C740BCF32 /* Release */,
+				241970038A3198315E2C1F3C9C3F9D8C /* Debug */,
+				1525DB44768149223C6AA2CC4DD096A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD1FF61A5F73733610553964A88BFD92 /* Build configuration list for PBXNativeTarget "Pods-NimiqClientTvOSTests" */ = {
+		A6E9CEC1100B4517DAD6D754955C374B /* Build configuration list for PBXNativeTarget "Pods-NimiqClientMacOSTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				26E78A960B745371611DAC5C96863B7E /* Debug */,
-				483C140364E15B75457FECF0BB306CE4 /* Release */,
+				AE02AF6635F33A8893F59587BC7A2AF7 /* Debug */,
+				6852116AC46C83EEE8C3139AF3825140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8A9CDFA73D01C3ECEE6C01002B0E83F /* Build configuration list for PBXNativeTarget "Pods-NimiqClientMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46F15A936D29D43F15F5634B38869F44 /* Debug */,
+				A105B953993E63A386A0F14A6F3313F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAEBF819AB226FC2941DA36DEC36035F /* Build configuration list for PBXNativeTarget "Pods-NimiqClientWatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DAACFC69FA0EB0AC48B87EC0EE8CDAE /* Debug */,
+				379E072CFD9F27DE86F699B17460AFFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2C045C231BBC97A76B295BFFCFF7AF1 /* Build configuration list for PBXNativeTarget "Pods-NimiqClientiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E54D025DDF6CE34CF50240AB08CD622 /* Debug */,
+				7DB9656934B3BEF54A358CE14FEDE792 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

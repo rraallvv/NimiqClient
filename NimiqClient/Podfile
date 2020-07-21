@@ -5,25 +5,36 @@ def pods()
 end
 
 target 'NimiqClientiOS' do
+    platform :ios, '8.0'
     pods()
 end
 
 target 'NimiqClientiOSTests' do
+    platform :ios, '8.0'
     pods()
 end
 
 target 'NimiqClientMacOS' do
+    platform :ios, '10.6'
     pods()
 end
 
 target 'NimiqClientMacOSTests' do
+    platform :ios, '10.6'
     pods()
 end
 
 target 'NimiqClientTvOS' do
+    platform :ios, '9.0'
     pods()
 end
 
 target 'NimiqClientTvOSTests' do
+    platform :ios, '9.0'
+    pods()
+end
+
+target 'NimiqClientWatchOS' do
+    platform :ios, '2.0'
     pods()
 end
