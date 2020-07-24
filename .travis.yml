@@ -7,19 +7,19 @@ matrix:
     xcode_sdk: macosx10.14
     env: DESTINATION="platform=macOS,arch=x86_64"
   - xcode_scheme: NimiqClientiOS
-    xcode_sdk: iphonesimulator12.0
+    xcode_sdk: iphonesimulator12.2
     env: DESTINATION="platform=iOS Simulator,OS=12.0,name=iPhone XS"
   - xcode_scheme: NimiqClientiOS
-    xcode_sdk: iphonesimulator12.0
+    xcode_sdk: iphonesimulator12.2
     env: DESTINATION="platform=iOS Simulator,OS=11.4,name=iPhone 8"
   - xcode_scheme: NimiqClientiOS
-    xcode_sdk: iphonesimulator12.0
+    xcode_sdk: iphonesimulator12.2
     env: DESTINATION="platform=iOS Simulator,OS=10.3.1,name=iPhone 7"
   - xcode_scheme: NimiqClientiOS
-    xcode_sdk: iphonesimulator12.0
+    xcode_sdk: iphonesimulator12.2
     env: DESTINATION="platform=iOS Simulator,OS=9.3,name=iPhone 6s"
   - xcode_scheme: NimiqClientTvOS
-    xcode_sdk: appletvsimulator12.0
+    xcode_sdk: appletvsimulator12.2
     env: DESTINATION="platform=tvOS Simulator,OS=12.0,name=Apple TV"
 script:
   - set -o pipefail
