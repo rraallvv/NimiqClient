@@ -6,16 +6,16 @@ env:
   - LANG=en_US.UTF-8
   - WORKSPACE=NimiqClient/NimiqClient.xcworkspace
   - IOS_SCHEME="NimiqClientiOS"
-  - IOS_SDK=iphonesimulator9.2
+  - IOS_SDK=iphonesimulator11.4
   - OSX_SCHEME="NimiqClientMacOS"
-  - OSX_SDK=macosx10.11
+  - OSX_SDK=macosx10.13
   - TVOS_SCHEME="NimiqClientTvOS"
-  - TVOS_SDK=appletvsimulator9.1
+  - TVOS_SDK=appletvsimulator11.4
   matrix:
-    - DESTINATION="OS=9.2,name=iPad Pro (9.7-inch)" SCHEME="$IOS_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="NO"
-    - DESTINATION="OS=9.2,name=iPhone 11"           SCHEME="$IOS_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="NO"
+    - DESTINATION="OS=11.4,name=iPad Pro (9.7-inch)" SCHEME="$IOS_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="NO"
+    - DESTINATION="OS=11.4,name=iPhone 11"           SCHEME="$IOS_SCHEME"     SDK="$IOS_SDK"     RUN_TESTS="YES" POD_LINT="NO"
     - DESTINATION="arch=x86_64"                     SCHEME="$OSX_SCHEME"     SDK="$OSX_SDK"     RUN_TESTS="YES" POD_LINT="NO"
-    - DESTINATION="OS=9.1,name=Apple TV"            SCHEME="$TVOS_SCHEME"    SDK="$TVOS_SDK"    RUN_TESTS="YES" POD_LINT="NO"
+    - DESTINATION="OS=11.4,name=Apple TV"            SCHEME="$TVOS_SCHEME"    SDK="$TVOS_SDK"    RUN_TESTS="YES" POD_LINT="NO"
 
 script:
   - set -o pipefail
