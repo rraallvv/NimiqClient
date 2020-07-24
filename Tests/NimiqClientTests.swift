@@ -421,7 +421,7 @@ class NimiqClientTests: XCTestCase {
         XCTAssertEqual(0, result?.count)
     }
 
-    func test__mempoolContentHashesOnly() {
+    func test_mempoolContentHashesOnly() {
         URLProtocolStub.testData = Fixtures.mempoolContentHashesOnly()
 
         let result = try? client.mempoolContent()
@@ -585,7 +585,7 @@ class NimiqClientTests: XCTestCase {
         XCTAssertEqual("us.sushipool.com:443", result)
     }
 
-    func testGetPoolWhenNoPool() {
+    func test_getPoolWhenNoPool() {
         URLProtocolStub.testData = Fixtures.poolNoPool()
 
         let result = try? client.pool()
@@ -628,7 +628,7 @@ class NimiqClientTests: XCTestCase {
         XCTAssertEqual("nimiq-argon2", result?.algorithm)
     }
 
-    func testGetWorkWithOverride() {
+    func test_getWorkWithOverride() {
         URLProtocolStub.testData = Fixtures.getWork()
 
         let result = try? client.getWork(address: "NQ46 NTNU QX94 MVD0 BBT0 GXAR QUHK VGNF 39ET", extraData: "")
@@ -856,7 +856,7 @@ class NimiqClientTests: XCTestCase {
         XCTAssertEqual(2, result)
     }
 
-    func testGetBlockTransactionCountByNumberWhenNotFound() {
+    func test_getBlockTransactionCountByNumberWhenNotFound() {
         URLProtocolStub.testData = Fixtures.blockTransactionCountNotFound()
 
         let result = try? client.getBlockTransactionCountByNumber(height: 11608)
