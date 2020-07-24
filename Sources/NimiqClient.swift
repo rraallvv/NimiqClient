@@ -602,16 +602,16 @@ public enum Error: Swift.Error, Equatable {
 /// Nimiq JSONRPC Client
 public class NimiqClient {
 
-    /// Number in the sequence for the of the next request.
+    /// Number in the sequence for the next request.
     public var id: Int = 0
 
     /// URL of the JSONRPC server.
     private let url: String
     
-    /// Base64 string containing authentication parameters
+    /// Base64 string containing authentication parameters.
     private let auth: String
 
-    /// URLSession used for HTTP requests send to the JSONRPC server.
+    /// URLSession used for HTTP requests sent to the JSONRPC server.
     private let session: URLSession
 
     /// Client initialization from a Config structure using shared URLSession.

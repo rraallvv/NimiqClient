@@ -15,12 +15,12 @@ target 'NimiqClientiOSTests' do
 end
 
 target 'NimiqClientMacOS' do
-    platform :ios, '10.6'
+    platform :ios, '10.9'
     pods()
 end
 
 target 'NimiqClientMacOSTests' do
-    platform :ios, '10.6'
+    platform :ios, '10.9'
     pods()
 end
 
