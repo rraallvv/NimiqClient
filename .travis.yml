@@ -4,7 +4,7 @@ xcode_workspace: NimiqClient/NimiqClient.xcworkspace
 matrix:
   include:
   - xcode_scheme: NimiqClientMacOS
-    xcode_sdk: xcode11.4
+    xcode_sdk: macosx10.15
     env: DESTINATION="platform=macOS,arch=x86_64"
   - xcode_scheme: NimiqClientiOS
     xcode_sdk: iphonesimulator13.4
