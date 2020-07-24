@@ -4,23 +4,14 @@ xcode_workspace: NimiqClient/NimiqClient.xcworkspace
 matrix:
   include:
   - xcode_scheme: NimiqClientMacOS
-    xcode_sdk: macosx10.14
+    xcode_sdk: xcode11.4
     env: DESTINATION="platform=macOS,arch=x86_64"
   - xcode_scheme: NimiqClientiOS
-    xcode_sdk: iphonesimulator12.2
-    env: DESTINATION="platform=iOS Simulator,OS=12.0,name=iPhone XS"
-  - xcode_scheme: NimiqClientiOS
-    xcode_sdk: iphonesimulator12.2
-    env: DESTINATION="platform=iOS Simulator,OS=11.4,name=iPhone 8"
-  - xcode_scheme: NimiqClientiOS
-    xcode_sdk: iphonesimulator12.2
-    env: DESTINATION="platform=iOS Simulator,OS=10.3.1,name=iPhone 7"
-  - xcode_scheme: NimiqClientiOS
-    xcode_sdk: iphonesimulator12.2
-    env: DESTINATION="platform=iOS Simulator,OS=9.3,name=iPhone 6s"
+    xcode_sdk: iphonesimulator13.4
+    env: DESTINATION="platform=iOS Simulator,OS=10.3,name=iPhone 7"
   - xcode_scheme: NimiqClientTvOS
-    xcode_sdk: appletvsimulator12.2
-    env: DESTINATION="platform=tvOS Simulator,OS=12.0,name=Apple TV"
+    xcode_sdk: appletvsimulator13.4
+    env: DESTINATION="platform=tvOS Simulator,OS=10.2,name=Apple TV"
 script:
   - set -o pipefail
   - xcodebuild clean build build-for-testing -workspace "${TRAVIS_XCODE_WORKSPACE}" -scheme "${TRAVIS_XCODE_SCHEME}" -sdk "${TRAVIS_XCODE_SDK}" -destination "${DESTINATION}" | xcpretty
