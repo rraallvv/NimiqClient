@@ -65,7 +65,6 @@ fastlane/screenshots
 # macOS
 .DS_Store
 
-
 # Swift
 /.previous-build
 *~
@@ -79,3 +78,6 @@ Utilities/Docker/*.tar.gz
 Package.resolved
 /build
 *.pyc
+
+# Jazzy
+undocumented.json
