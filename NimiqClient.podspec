@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://github.com/rraallvv/NimiqClientSwift"
   s.license      = "MIT"
   s.author       = { "Nimiq Comunity" => "info@nimiq.com" }
-  s.swift_version = "5.2"
+  s.swift_version = "5.0"
   s.module_name  = "NimiqClient"
 
   s.ios.deployment_target = "8.0"
