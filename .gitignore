@@ -72,7 +72,6 @@ fastlane/screenshots
 .\#*
 .*.sw[nop]
 /default.profraw
-*.xcodeproj
 Utilities/Docker/*.tar.gz
 .swiftpm
 Package.resolved
