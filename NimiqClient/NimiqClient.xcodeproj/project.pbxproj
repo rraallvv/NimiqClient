@@ -215,6 +215,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E49CC9FF24CBCCB5000EB1A1 /* NimiqClient */ = {
+			isa = PBXGroup;
+			children = (
+				E4BFF42524BBAE7F00A915D4 /* NimiqClient.swift */,
+			);
+			path = NimiqClient;
+			sourceTree = "<group>";
+		};
 		E4B63EB424BBA4E6009AAC80 = {
 			isa = PBXGroup;
 			children = (
@@ -306,7 +314,7 @@
 		E4BFF42424BBAE3B00A915D4 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				E4BFF42524BBAE7F00A915D4 /* NimiqClient.swift */,
+				E49CC9FF24CBCCB5000EB1A1 /* NimiqClient */,
 			);
 			name = Sources;
 			path = ../Sources;
