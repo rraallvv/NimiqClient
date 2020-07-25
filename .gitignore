@@ -64,3 +64,18 @@ fastlane/screenshots
 
 # macOS
 .DS_Store
+
+
+# Swift
+/.previous-build
+*~
+\#*
+.\#*
+.*.sw[nop]
+/default.profraw
+*.xcodeproj
+Utilities/Docker/*.tar.gz
+.swiftpm
+Package.resolved
+/build
+*.pyc

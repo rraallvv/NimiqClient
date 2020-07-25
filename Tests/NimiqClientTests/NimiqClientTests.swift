@@ -1,6 +1,7 @@
 import XCTest
+@testable import NimiqClient
 
-class NimiqClientTests: XCTestCase {
+final class NimiqClientTests: XCTestCase {
 
     var client: NimiqClient!
 
