@@ -39,8 +39,18 @@ Check out the [Nimiq RPC specs](https://github.com/nimiq/core-js/wiki/JSON-RPC-A
 
 ## Installation
 
-The recommended way to install Nimiq Swift Client is with CocoaPods. CocoaPods is a dependency management tool for Xcode projects that
-allows you to declare the dependencies your project needs and installs them into your project.
+### Swift Package Manager
+
+The recommended way to install Nimiq Swift Client is via Swift Package Manager (SPM). SPM is a dependency management tool built-in in Xcode that
+allows you to add Swift packages as dependencies directly from the IDE.
+
+From your project or workspace on Xcode Go to **File > Swift Packages > Add Package Dependency**. If it's a workspace select the project to include de package dependency in. Then enter this package's repository URL (like this https://github.com/rraallvv/NimiqClientSwift). Select a version number from thos available for the pacakge and click next. Then select the product target to include the dependency in.
+
+### CocoaPods
+
+Alternatively, you can install Nimiq Swift Client using CocoaPods. CocoaPods is a command line interface dependency management tool for Xcode projects.
+
+Install CocoaPods if you haven't done so:
 
 ```sh
 # Install CocoaPods
@@ -53,7 +63,7 @@ To enable CocoaPods in your project, close Xcode and in your project directory r
 $ pod init
 ```
 
-Then you can add Nimiq Swift Client as a dependency modifying the created `Podfile`. To open the file for editing run `open -a Xcode Podfile`:
+Then you can add Nimiq Swift Client as a dependency modifying the created `Podfile`. To open the file for editing run `open -a Xcode Podfile` from the command line and the edit the file like so:
 
 ```sh
 target "MyApp" do
@@ -61,19 +71,13 @@ target "MyApp" do
 end
 ```
 
-Finally install all the dependencies using CocoaPods: 
+Finally install all the dependencies using CocoaPods from the command line: 
 
 ```sh
 pod install
 ```
 
-Alternatively, you can archive the framework target from Xcode > Product > Archive and add it to your application target.
-
-Make sure the framework is added with the option Embed & Sign:
-
-![Embed & Sign](Images/1.png)
-
-You can find out more on how to install CocoaPods and how to configure your Xcode proyecto to use it and install dependencies at [CocoaPods.org](https://cocoapods.org).
+You can find out more on how to install CocoaPods and how to configure your Xcode project for installing dependencies at [CocoaPods.org](https://cocoapods.org).
 
 ## Contributions
 
