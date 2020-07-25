@@ -223,6 +223,16 @@
 			path = NimiqClient;
 			sourceTree = "<group>";
 		};
+		E49CCA0024CBD19C000EB1A1 /* NimiqClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				E4BFF42A24BBAFA700A915D4 /* NimiqClientTests.swift */,
+				E4BD968024BD3905005E6957 /* Fixtures.swift */,
+				E4BD968424BD4A4B005E6957 /* URLProtocolStub.swift */,
+			);
+			path = NimiqClientTests;
+			sourceTree = "<group>";
+		};
 		E4B63EB424BBA4E6009AAC80 = {
 			isa = PBXGroup;
 			children = (
@@ -323,9 +333,7 @@
 		E4BFF42924BBAF5900A915D4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				E4BFF42A24BBAFA700A915D4 /* NimiqClientTests.swift */,
-				E4BD968024BD3905005E6957 /* Fixtures.swift */,
-				E4BD968424BD4A4B005E6957 /* URLProtocolStub.swift */,
+				E49CCA0024CBD19C000EB1A1 /* NimiqClientTests */,
 			);
 			name = Tests;
 			path = ../Tests;
