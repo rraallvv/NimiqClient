@@ -135,7 +135,7 @@ final class NimiqClientTests: XCTestCase {
         URLProtocolStub.testData = Fixtures.peerStateError()
 
         XCTAssertThrowsError(try client.peerState(address: "unknown")) { error in
-            guard case Error.badMethodCall( _) = error else {
+            guard case Error.remoteError( _) = error else {
                 return XCTFail()
             }
         }

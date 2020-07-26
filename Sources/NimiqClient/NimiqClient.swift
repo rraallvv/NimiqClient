@@ -593,10 +593,12 @@ public struct Config {
 
 /// Thrown when something when wrong with the JSONRPC request.
 public enum Error: Swift.Error, Equatable {
-    /// The client couldn't parse the JSON object.
-    case wrongFormat(_ message: String)
-    /// The server didn't recognize the method.
-    case badMethodCall(_ message: String)
+    /// Internal error during a JSON RPC request.
+    case internalError(_ message: String)
+    /// Exception on the remote server.
+    case remoteError(_ message: String)
+    /// Error with connection.
+    case connectionError(_ message: String)
 }
 
 /// Nimiq JSONRPC Client
@@ -646,7 +648,7 @@ public class NimiqClient {
     /// - Parameter method: JSONRPC method.
     /// - Parameter params: Parameters used by the request.
     /// - Returns: If succesfull, returns the model reperestation of the result, `nil` otherwise.
-    private func fetch<T:Decodable>(method: String, params: [Any]) throws -> T? {
+    private func call<T:Decodable>(method: String, params: [Any]) throws -> T? {
         var responseObject: Root<T>? = nil
         var clientError: Error? = nil
 
@@ -673,12 +675,16 @@ public class NimiqClient {
 
         // send the request
         let task = session.dataTask(with: request, completionHandler: { data, response, error in
-            // serialize the data into an object
-            do {
-                responseObject = try JSONDecoder().decode(Root<T>.self, from: data! )
+            if error == nil {
+                // serialize the data into an object
+                do {
+                    responseObject = try JSONDecoder().decode(Root<T>.self, from: data! )
 
-            } catch {
-                clientError = Error.wrongFormat(error.localizedDescription)
+                } catch {
+                    clientError = Error.internalError(error.localizedDescription)
+                }
+            } else {
+                clientError = Error.connectionError(error!.localizedDescription)
             }
 
             // signal that the request was completed
@@ -691,11 +697,11 @@ public class NimiqClient {
 
         // throw if there are any errors
         if clientError != nil {
-            throw Error.wrongFormat(clientError!.localizedDescription)
+            throw Error.internalError(clientError!.localizedDescription)
         }
 
         if let error = responseObject?.error {
-            throw Error.badMethodCall("\(error.message) (Code: \(error.code)")
+            throw Error.remoteError("\(error.message) (Code: \(error.code)")
         }
 
         // increase the JSONRPC client request id for the next request
@@ -707,7 +713,7 @@ public class NimiqClient {
     /// Returns a list of addresses owned by client.
     /// - Returns: Array of Accounts owned by the client.
     public func accounts() throws -> [Any]? {
-        let result: [RawAccount] = try fetch(method: "accounts", params: [])!
+        let result: [RawAccount] = try call(method: "accounts", params: [])!
         var converted: [Any] = [Any]()
         for rawAccount in result {
             converted.append(rawAccount.value)
@@ -718,13 +724,13 @@ public class NimiqClient {
     /// Returns the height of most recent block.
     /// - Returns: The current block height the client is on.
     public func blockNumber() throws -> Int? {
-        return try fetch(method: "blockNumber", params: [])
+        return try call(method: "blockNumber", params: [])
     }
 
     /// Returns information on the current consensus state.
     /// - Returns: Consensus state. `established` is the value for a good state, other values indicate bad.
     public func consensus() throws -> ConsensusState? {
-        return try fetch(method: "consensus", params: [])
+        return try call(method: "consensus", params: [])
     }
 
     /// Returns or overrides a constant value.
@@ -738,13 +744,13 @@ public class NimiqClient {
         if value != nil {
             params.append(value!)
         }
-        return try fetch(method: "constant", params: params)
+        return try call(method: "constant", params: params)
     }
 
     /// Creates a new account and stores its private key in the client store.
     /// - Returns: Information on the wallet that was created using the command.
     public func createAccount() throws -> Wallet? {
-        return try fetch(method: "createAccount", params: [])
+        return try call(method: "createAccount", params: [])
     }
 
     /// Creates and signs a transaction without sending it. The transaction can then be send via `sendRawTransaction()` without accidentally replaying it.
@@ -760,14 +766,14 @@ public class NimiqClient {
             "fee": transaction.fee,
             "data": transaction.data
         ]
-        return try fetch(method: "createRawTransaction", params: [params])
+        return try call(method: "createRawTransaction", params: [params])
     }
 
     /// Returns details for the account of given address.
     /// - Parameter address: Address to get account details.
     /// - Returns: Details about the account. Returns the default empty basic account for non-existing accounts.
     public func getAccount(address: Address) throws -> Any? {
-        let result: RawAccount = try fetch(method: "getAccount", params: [address])!
+        let result: RawAccount = try call(method: "getAccount", params: [address])!
         return result.value
     }
 
@@ -775,7 +781,7 @@ public class NimiqClient {
     /// - Parameter address: Address to check for balance.
     /// - Returns: The current balance at the specified address (in smalest unit).
     public func getBalance(address: Address) throws -> Int? {
-        return try fetch(method: "getBalance", params: [address])
+        return try call(method: "getBalance", params: [address])
     }
 
     /// Returns information about a block by hash.
@@ -783,7 +789,7 @@ public class NimiqClient {
     /// - Parameter fullTransactions: If `true` it returns the full transaction objects, if `false` only the hashes of the transactions.
     /// - Returns: A block object or `nil` when no block was found.
     public func getBlockByHash(_ hash: Hash, fullTransactions: Bool = false) throws -> Block? {
-        return try fetch(method: "getBlockByHash", params: [hash, fullTransactions])
+        return try call(method: "getBlockByHash", params: [hash, fullTransactions])
     }
 
     /// Returns information about a block by block number.
@@ -791,7 +797,7 @@ public class NimiqClient {
     /// - Parameter fullTransactions: If `true` it returns the full transaction objects, if `false` only the hashes of the transactions.
     /// - Returns: A block object or `nil` when no block was found.
     public func getBlockByNumber(height: Int, fullTransactions: Bool = false) throws -> Block? {
-        return try fetch(method: "getBlockByNumber", params: [height, fullTransactions])
+        return try call(method: "getBlockByNumber", params: [height, fullTransactions])
     }
 
     /// Returns a template to build the next block for mining. This will consider pool instructions when connected to a pool.
@@ -805,7 +811,7 @@ public class NimiqClient {
             params.append(address!)
             params.append(extraData)
         }
-        return try fetch(method: "getBlockTemplate", params: params)
+        return try call(method: "getBlockTemplate", params: params)
 
     }
 
@@ -813,14 +819,14 @@ public class NimiqClient {
     /// - Parameter hash: Hash of the block.
     /// - Returns: Number of transactions in the block found, or `nil`, when no block was found.
     public func getBlockTransactionCountByHash(_ hash: Hash) throws -> Int? {
-        return try fetch(method: "getBlockTransactionCountByHash", params: [hash])
+        return try call(method: "getBlockTransactionCountByHash", params: [hash])
     }
 
     /// Returns the number of transactions in a block matching the given block number.
     /// - Parameter height: Height of the block.
     /// - Returns: Number of transactions in the block found, or `nil`, when no block was found.
     public func getBlockTransactionCountByNumber(height: Int) throws -> Int? {
-        return try fetch(method: "getBlockTransactionCountByNumber", params: [height])
+        return try call(method: "getBlockTransactionCountByNumber", params: [height])
     }
 
     /// Returns information about a transaction by block hash and transaction index position.
@@ -828,7 +834,7 @@ public class NimiqClient {
     /// - Parameter index: Index of the transaction in the block.
     /// - Returns: A transaction object or `nil` when no transaction was found.
     public func getTransactionByBlockHashAndIndex(hash: Hash, index: Int) throws -> Transaction? {
-        return try fetch(method: "getTransactionByBlockHashAndIndex", params: [hash, index])
+        return try call(method: "getTransactionByBlockHashAndIndex", params: [hash, index])
     }
 
     /// Returns information about a transaction by block number and transaction index position.
@@ -836,21 +842,21 @@ public class NimiqClient {
     /// - Parameter index: Index of the transaction in the block.
     /// - Returns: A transaction object or `nil` when no transaction was found.
     public func getTransactionByBlockNumberAndIndex(height: Int, index: Int) throws -> Transaction? {
-        return try fetch(method: "getTransactionByBlockNumberAndIndex", params: [height, index])
+        return try call(method: "getTransactionByBlockNumberAndIndex", params: [height, index])
     }
 
     /// Returns the information about a transaction requested by transaction hash.
     /// - Parameter hash: Hash of a transaction.
     /// - Returns: A transaction object or `nil` when no transaction was found.
     public func getTransactionByHash(_ hash: Hash) throws -> Transaction? {
-        return try fetch(method: "getTransactionByHash", params: [hash])
+        return try call(method: "getTransactionByHash", params: [hash])
     }
 
     /// Returns the receipt of a transaction by transaction hash.
     /// - Parameter hash: Hash of a transaction.
     /// - Returns: A transaction receipt object, or `nil` when no receipt was found.
     public func getTransactionReceipt(hash: Hash) throws -> TransactionReceipt? {
-        return try fetch(method: "getTransactionReceipt", params: [hash])
+        return try call(method: "getTransactionReceipt", params: [hash])
     }
 
     /// Returns the latest transactions successfully performed by or for an address.
@@ -859,7 +865,7 @@ public class NimiqClient {
     /// - Parameter numberOfTransactions: Number of transactions that shall be returned.
     /// - Returns: Array of transactions linked to the requested address.
     public func getTransactionsByAddress(_ address: Address, numberOfTransactions: Int = 1000) throws -> [Transaction]? {
-        return try fetch(method: "getTransactionsByAddress", params: [address, numberOfTransactions])
+        return try call(method: "getTransactionsByAddress", params: [address, numberOfTransactions])
     }
 
     /// Returns instructions to mine the next block. This will consider pool instructions when connected to a pool.
@@ -872,13 +878,13 @@ public class NimiqClient {
             params.append(address!)
             params.append(extraData)
         }
-        return try fetch(method: "getWork", params: params)
+        return try call(method: "getWork", params: params)
     }
 
     /// Returns the number of hashes per second that the node is mining with.
     /// - Returns: Number of hashes per second.
     public func hashrate() throws -> Float? {
-        return try fetch(method: "hashrate", params: [])
+        return try call(method: "hashrate", params: [])
     }
 
     /// Sets the log level of the node.
@@ -886,20 +892,20 @@ public class NimiqClient {
     /// - Parameter level: Minimum log level to display.
     /// - Returns: `true` if the log level was changed, `false` otherwise.
     public func log(tag: String, level: LogLevel) throws -> Bool? {
-        return try fetch(method: "log", params: [tag, level.rawValue])
+        return try call(method: "log", params: [tag, level.rawValue])
     }
 
     /// Returns information on the current mempool situation. This will provide an overview of the number of transactions sorted into buckets based on their fee per byte (in smallest unit).
     /// - Returns: Mempool information.
     public func mempool() throws -> MempoolInfo? {
-        return try fetch(method: "mempool", params: [])
+        return try call(method: "mempool", params: [])
     }
 
     /// Returns transactions that are currently in the mempool.
     /// - Parameter fullTransactions: If `true` includes full transactions, if `false` includes only transaction hashes.
     /// - Returns: Array of transactions (either represented by the transaction hash or a transaction object).
     public func mempoolContent(fullTransactions: Bool = false) throws -> [Any]? {
-        let result: [HashOrTransaction] = try fetch(method: "mempoolContent", params: [fullTransactions])!
+        let result: [HashOrTransaction] = try call(method: "mempoolContent", params: [fullTransactions])!
         var converted: [Any] = [Any]()
         for transaction in result {
             converted.append(transaction.value)
@@ -910,7 +916,7 @@ public class NimiqClient {
     /// Returns the miner address.
     /// - Returns: The miner address configured on the node.
     public func minerAddress() throws -> String? {
-        return try fetch(method: "minerAddress", params: [])
+        return try call(method: "minerAddress", params: [])
     }
 
     /// Returns or sets the number of CPU threads for the miner.
@@ -923,7 +929,7 @@ public class NimiqClient {
         if threads != nil {
             params.append(threads!)
         }
-        return try fetch(method: "minerThreads", params: params)
+        return try call(method: "minerThreads", params: params)
     }
 
     /// Returns or sets the minimum fee per byte.
@@ -936,7 +942,7 @@ public class NimiqClient {
         if fee != nil {
             params.append(fee!)
         }
-        return try fetch(method: "minFeePerByte", params: params)
+        return try call(method: "minFeePerByte", params: params)
     }
 
     /// Returns true if client is actively mining new blocks.
@@ -949,19 +955,19 @@ public class NimiqClient {
         if state != nil {
             params.append(state!)
         }
-        return try fetch(method: "mining", params: params)
+        return try call(method: "mining", params: params)
     }
 
     /// Returns number of peers currently connected to the client.
     /// - Returns: Number of connected peers.
     public func peerCount() throws -> Int? {
-        return try fetch(method: "peerCount", params: [])
+        return try call(method: "peerCount", params: [])
     }
 
     /// Returns list of peers known to the client.
     /// - Returns: The list of peers.
     public func peerList() throws -> [Peer]? {
-        return try fetch(method: "peerList", params: [])
+        return try call(method: "peerList", params: [])
     }
 
     /// Returns the state of the peer.
@@ -976,7 +982,7 @@ public class NimiqClient {
         if let commandString = command?.rawValue  {
             params.append(commandString)
         }
-        return try fetch(method: "peerState", params: params)
+        return try call(method: "peerState", params: params)
     }
 
     /// Returns or sets the mining pool.
@@ -991,26 +997,26 @@ public class NimiqClient {
         } else if let addressBool = address as? Bool {
             params.append(addressBool)
         }
-        return try fetch(method: "pool", params: params)
+        return try call(method: "pool", params: params)
     }
 
     /// Returns the confirmed mining pool balance.
     /// - Returns: The confirmed mining pool balance (in smallest unit).
     public func poolConfirmedBalance() throws -> Int? {
-        return try fetch(method: "poolConfirmedBalance", params: [])
+        return try call(method: "poolConfirmedBalance", params: [])
     }
 
     /// Returns the connection state to mining pool.
     /// - Returns: The mining pool connection state.
     public func poolConnectionState() throws -> PoolConnectionState? {
-        return try fetch(method: "poolConnectionState", params: [])
+        return try call(method: "poolConnectionState", params: [])
     }
 
     /// Sends a signed message call transaction or a contract creation, if the data field contains code.
     /// - Parameter transaction: The hex encoded signed transaction
     /// - Returns: The Hex-encoded transaction hash.
     public func sendRawTransaction(_ transaction: String) throws -> Hash? {
-        return try fetch(method: "sendRawTransaction", params: [transaction])
+        return try call(method: "sendRawTransaction", params: [transaction])
     }
 
     /// Creates new message call transaction or a contract creation, if the data field contains code.
@@ -1026,20 +1032,20 @@ public class NimiqClient {
             "fee": transaction.fee,
             "data": transaction.data
         ]
-        return try fetch(method: "sendTransaction", params: [params])
+        return try call(method: "sendTransaction", params: [params])
     }
 
     /// Submits a block to the node. When the block is valid, the node will forward it to other nodes in the network.
     /// - Parameter block: Hex-encoded full block (including header, interlink and body). When submitting work from getWork, remember to include the suffix.
     /// - Returns: Always `nil`.
     @discardableResult public func submitBlock(_ block: String) throws -> String? {
-        return try fetch(method: "submitBlock", params: [block])
+        return try call(method: "submitBlock", params: [block])
     }
 
     /// Returns an object with data about the sync status or `false`.
     /// - Returns: An object with sync status data or `false`, when not syncing.
     public func syncing() throws -> Any? {
-        let result: SyncStatusOrBool = try fetch(method: "syncing", params: [])!
+        let result: SyncStatusOrBool = try call(method: "syncing", params: [])!
         return result.value
     }
 
@@ -1047,13 +1053,13 @@ public class NimiqClient {
     /// - Parameter transaction: The hex encoded signed transaction.
     /// - Returns: The transaction object.
     public func getRawTransactionInfo(transaction: String) throws -> Transaction? {
-        return try fetch(method: "getRawTransactionInfo", params: [transaction])
+        return try call(method: "getRawTransactionInfo", params: [transaction])
     }
 
     /// Resets the constant to default value.
     /// - Parameter constant: Name of the constant.
     /// - Returns: The new value of the constant.
     public func resetConstant(_ constant: String) throws -> Int? {
-        return try fetch(method: "constant", params: [constant, "reset"])
+        return try call(method: "constant", params: [constant, "reset"])
     }
 }
