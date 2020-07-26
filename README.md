@@ -1,5 +1,9 @@
-# Nimiq Swift Client (macOS, iOS, tvOS and watchOS)
-[![Build Status](https://travis-ci.org/rraallvv/NimiqClientSwift.svg?branch=master)](https://travis-ci.org/rraallvv/NimiqClientSwift) ![Swift PM](https://img.shields.io/badge/Dependency%20Manager-Swift%20PM-orange) [![Cocoapods version](https://img.shields.io/cocoapods/v/NimiqClient)](https://cocoapods.org/pods/NimiqClient)
+Nimiq Swift Client
+==================
+[![Build Status](https://travis-ci.org/rraallvv/NimiqClientSwift.svg?branch=master)](https://travis-ci.org/rraallvv/NimiqClientSwift)
+![Swift PM](https://img.shields.io/badge/Dependency%20Manager-Swift%20PM-orange)
+[![Cocoapods version](https://img.shields.io/cocoapods/v/NimiqClient)](https://cocoapods.org/pods/NimiqClient)
+[![Platforms](https://img.shields.io/cocoapods/p/NimiqClient)](http://cocoapods.org/pods/NimiqClient)
 
 > Swift implementation of the Nimiq RPC client specs.
 
