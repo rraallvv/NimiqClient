@@ -697,7 +697,7 @@ public class NimiqClient {
 
         // throw if there are any errors
         if clientError != nil {
-            throw clientError
+            throw clientError!
         }
 
         if let error = responseObject?.error {
