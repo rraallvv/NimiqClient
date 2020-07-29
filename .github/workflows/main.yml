@@ -1,0 +1,31 @@
+name: build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    strategy:
+      matrix:
+        destination: [
+          'platform=macOS,arch=x86_64',
+          'platform=iOS Simulator,OS=13.1,name=iPhone 8',
+          'platform=iOS Simulator,OS=13.2.2,name=iPad (7th generation)',
+          'platform=tvOS Simulator,OS=13.4,name=Apple TV'
+        ]
+
+    steps:
+      - uses: actions/checkout@main
+      - name: Build and test
+        env: 
+          destination: ${{ matrix.destination }}
+        run: |
+          set -o pipefail
+          xcodebuild clean build build-for-testing -project "NimiqClient.xcodeproj" -scheme "NimiqClient-Package" -destination "${destination}" | xcpretty
+          xcodebuild test-without-building -project "NimiqClient.xcodeproj" -scheme "NimiqClient-Package" -destination "${destination}" | xcpretty

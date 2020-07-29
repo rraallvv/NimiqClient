@@ -1,6 +1,7 @@
 Nimiq Swift Client
 ==================
-[![Build Status](https://travis-ci.org/rraallvv/NimiqClientSwift.svg?branch=master)](https://travis-ci.org/rraallvv/NimiqClientSwift)
+
+![build](https://github.com/rraallvv/NimiqClientSwift/workflows/build/badge.svg)
 ![Swift PM](https://img.shields.io/badge/Dependency%20Manager-Swift%20PM-orange)
 [![Cocoapods version](https://img.shields.io/cocoapods/v/NimiqClient)](https://cocoapods.org/pods/NimiqClient)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
