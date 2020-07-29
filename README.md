@@ -3,6 +3,7 @@ Nimiq Swift Client
 [![Build Status](https://travis-ci.org/rraallvv/NimiqClientSwift.svg?branch=master)](https://travis-ci.org/rraallvv/NimiqClientSwift)
 ![Swift PM](https://img.shields.io/badge/Dependency%20Manager-Swift%20PM-orange)
 [![Cocoapods version](https://img.shields.io/cocoapods/v/NimiqClient)](https://cocoapods.org/pods/NimiqClient)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![Platforms](https://img.shields.io/cocoapods/p/NimiqClient)](http://cocoapods.org/pods/NimiqClient)
 
 > Swift implementation of the Nimiq RPC client specs.
@@ -58,7 +59,6 @@ Alternatively, you can install Nimiq Swift Client using CocoaPods. CocoaPods is 
 Install CocoaPods if you haven't done so:
 
 ```sh
-# Install CocoaPods
 $ sudo gem install cocoapods
 ```
 
@@ -79,10 +79,39 @@ end
 Finally install all the dependencies using CocoaPods from the command line: 
 
 ```sh
-pod install
+$ pod install
 ```
 
 You can find out more on how to install CocoaPods and how to configure your Xcode project for installing dependencies at [CocoaPods.org](https://cocoapods.org).
+
+### Carthage
+
+Another option is to use Carthage. Carthage is another comandline interface dependency management tool for Xcode projects.
+
+Install Carthage via the .pkg installer [available on their repository](https://github.com/Carthage/Carthage/releases) or via Homebrew:
+
+```sh
+$ brew install carthage
+```
+
+Create the file `Cartfile` in the project root directory:
+
+```sh
+$ touch Cartfile
+```
+Add the NimiqClient dependency to `Cartfile`:
+
+```sh
+github "rraallvv/NimiqClientSwift"
+```
+
+Install the dependencies using `carthage` command line interface:
+
+```sh
+$ carthage update --platform <your target platform>
+```
+
+After a few minutes when the operation is competed, open your project on Xcode and add `NimiqClient.framework` from the directory `Carthage/Build/<your target platform>/` onto your project's **Frameworks and Libraries** list of dependencies.
 
 ## Contributions
 
