@@ -31,7 +31,7 @@ jobs:
           xcrun xccov view --report --json coverage/result.xcresult > coverage/lcov.json
           git clone --depth 1 --branch 0.0.5 https://github.com/trax-retail/xccov2lcov
           cd xccov2lcov
-          swift run xccov2lcov ../coverage/cov.json > ../coverage/cov.info
+          swift run xccov2lcov ../coverage/lcov.json > ../coverage/lcov.info
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
