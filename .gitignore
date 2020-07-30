@@ -80,3 +80,6 @@ Package.resolved
 
 # Jazzy
 undocumented.json
+
+# Coveralls
+coverage

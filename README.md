@@ -6,6 +6,8 @@ Nimiq Swift Client
 [![Cocoapods version](https://img.shields.io/cocoapods/v/NimiqClient)](https://cocoapods.org/pods/NimiqClient)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![Platforms](https://img.shields.io/cocoapods/p/NimiqClient)](http://cocoapods.org/pods/NimiqClient)
+[![Maintainability](https://api.codeclimate.com/v1/badges/743444e5b64f84099c04/maintainability)](https://codeclimate.com/github/rraallvv/NimiqClientSwift/maintainability)
+[![Coverage Status](https://coveralls.io/repos/github/rraallvv/NimiqClientSwift/badge.svg?branch=master)](https://coveralls.io/github/rraallvv/NimiqClientSwift?branch=master)
 
 > Swift implementation of the Nimiq RPC client specs.
 
