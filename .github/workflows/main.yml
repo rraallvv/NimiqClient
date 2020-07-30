@@ -27,7 +27,7 @@ jobs:
           destination: ${{ matrix.destination }}
         run: |
           set -o pipefail
-          xcodebuild clean build test -project "NimiqClient.xcodeproj" -scheme "NimiqClient-Package" -destination "${destination}" -enableCodeCoverage YES -resultBundlePath coverage/result.xcresult | xcpretty
+          xcodebuild clean build test -project "NimiqClient.xcodeproj" -scheme "NimiqClient-Package" -destination "${destination}" -resultBundlePath coverage/result.xcresult | xcpretty
           xcrun xccov view --report --json coverage/result.xcresult > coverage/lcov.json
           git clone --depth 1 --branch 0.0.5 https://github.com/trax-retail/xccov2lcov
           cd xccov2lcov
