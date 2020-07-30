@@ -27,10 +27,8 @@ jobs:
           destination: ${{ matrix.destination }}
         run: |
           set -o pipefail
-          # xcodebuild clean build build-for-testing -project "NimiqClient.xcodeproj" -scheme "NimiqClient-Package" -destination "${destination}" | xcpretty
-          # xcodebuild test-without-building -project "NimiqClient.xcodeproj" -scheme "NimiqClient-Package" -destination "${destination}" | xcpretty
-          xcodebuild clean build build-for-testing -enableCodeCoverage YES -project "NimiqClient.xcodeproj" -scheme "NimiqClient-Package" -destination "platform=macOS,arch=x86_64" | xcpretty
-          xcodebuild test-without-building -enableCodeCoverage YES -resultBundlePath coverage/result.xcresult -project "NimiqClient.xcodeproj" -scheme "NimiqClient-Package" -destination "platform=macOS,arch=x86_64" | xcpretty
+          xcodebuild clean build build-for-testing -enableCodeCoverage YES -project "NimiqClient.xcodeproj" -scheme "NimiqClient-Package" -destination "${destination}" | xcpretty
+          xcodebuild test-without-building -enableCodeCoverage YES -resultBundlePath coverage/result.xcresult -project "NimiqClient.xcodeproj" -scheme "NimiqClient-Package" -destination "${destination}" | xcpretty
           xcrun xccov view --report --json coverage/result.xcresult > coverage/cov.json
           git clone --depth 1 --branch 0.0.5 https://github.com/trax-retail/xccov2lcov
           cd xccov2lcov/
