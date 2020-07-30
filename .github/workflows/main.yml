@@ -26,8 +26,12 @@ jobs:
         env: 
           destination: ${{ matrix.destination }}
         run: |
-          xcodebuild test -project "NimiqClient.xcodeproj" -scheme "NimiqClient-Package" -destination "${destination}" -configuration Debug -enableCodeCoverage YES -resultBundlePath coverage/result.xcresult
+          set -o pipefail
+          xcodebuild clean build test -project "NimiqClient.xcodeproj" -scheme "NimiqClient-Package" -destination "${destination}" -enableCodeCoverage YES -resultBundlePath coverage/result.xcresult | xcpretty
           xcrun xccov view --report --json coverage/result.xcresult > coverage/lcov.json
+          git clone --depth 1 --branch 0.0.5 https://github.com/trax-retail/xccov2lcov
+          cd xccov2lcov
+          swift run xccov2lcov ../coverage/cov.json > ../coverage/lcov.info
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
